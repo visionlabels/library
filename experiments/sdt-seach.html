@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My experiment</title>
+    <script src="../jspsych/dist/jspsych.js"></script>
+    <script src="../jspsych/dist/plugin-html-button-response.js"></script>
+    <script src="../jspsych/dist/plugin-visual-search-circle.js"></script>
+    <script src="../jspsych/dist/plugin-canvas-button-response.js"></script>
+    <script src="../jspsych/dist/plugin-instructions.js"></script>
+    <script src="../jspsych/dist/plugin-preload.js"></script>
+    <link rel="stylesheet" href="../jspsych/dist/jspsych.css" type="text/css">
+  </head>
+  <body></body>
+  <script>
+
+var jsPsych = initJsPsych({
+      on_finish: function () {
+        // jsPsych.data.displayData();
+      },
+      default_iti: 500,
+    });
+
+    var instructions = {
+        type: jsPsychInstructions,
+        pages: [
+        'Welcome to the experiment. Today, we will measure your ability to detect a different object in a briefly flashed set.</br>' +
+        'The experiment takes about 10 minutes and consists of 40 simple trials.',
+
+        'Each trial starts with a fixation cross. </br></br>' + 
+        "Then a set of N's and mirror N's will appear for 0.5 seconds. </br></br>" + 
+        "Your task is to decide if all letters were <b>same</b> (all N's or all mirror N's) " + 
+        "or <b>different</b> (mix of both). </br></br>" + 
+        'Click <b>Next</b> to start'
+        ],
+        show_clickable_nav: true
+    }
+    // https://stackoverflow.com/questions/7342957/how-do-you-round-to-1-decimal-place-in-javascript
+    function roundx(value, precision) {
+        var multiplier = Math.pow(10, precision || 0);
+        return Math.round(value * multiplier) / multiplier;
+    }
+
+    function qnorm20(value) {
+        const q = [     -3, // 0 of 20
+         -1.6448536, -1.2815516, -1.0364334, -0.8416212, -0.6744898, // 1-5
+         -0.5244005, -0.3853205, -0.2533471, -0.1256613,  0.0000000, // 6-10
+         0.1256613,  0.2533471,  0.3853205,  0.5244005,  0.6744898,  // 11-15
+         0.8416212,  1.0364334,  1.2815516,  1.6448536, 3];          // 16-20
+        return q[value];
+    }
+
+    const nn = 'assets/normalN.gif';
+    const bn = 'assets/backwardN.gif';
+    var search_trial = {
+        timeline: 
+        [{
+            type: jsPsychVisualSearchCircle,
+            target: jsPsych.timelineVariable('target'),
+            foil: jsPsych.timelineVariable('foil'),
+            fixation_image: 'assets/fixation.gif',
+            target_present: jsPsych.timelineVariable('different'),
+            trial_duration: 500,
+            set_size: 4
+        },
+        {
+            type: jsPsychHtmlButtonResponse,
+            choices: ['Same', 'Different'],
+            stimulus: "",
+            data: {
+                task: 'response',
+                different: jsPsych.timelineVariable('different'),
+                foil: jsPsych.timelineVariable('foil'),
+                target: jsPsych.timelineVariable('target'),
+            }
+        }],
+        timeline_variables: [
+            { different: true, foil: nn, target: bn },
+            { different: true, foil: bn, target: nn },
+            { different: false, foil: nn, target: nn },
+            { different: false, foil: bn, target: bn },
+        ],
+        sample: {
+            type: 'fixed-repetitions',
+            size: 10,
+        }
+    }
+
+  
+    /* define debrief */
+    var debriefing = {
+      type: jsPsychHtmlButtonResponse,
+      choices: ['END'],
+      stimulus: function() {
+        var trials = jsPsych.data.get().filter({task: 'response'});
+        var different_trials = trials.filter({different: true});
+        var same_trials = trials.filter({different: false});
+        var hit = different_trials.select('response').mean();
+        var fa = same_trials.select('response').mean();
+        var cr = 1 - same_trials.select('response').mean();
+        var miss = 1 - different_trials.select('response').mean();
+        var hits = different_trials.select('response').sum();
+        var fas = same_trials.select('response').sum();
+        // dprime <- qnorm(hit_rate_adjusted) - qnorm(fa_rate_adjusted)
+        // c <- -(qnorm(hit_rate_adjusted) + qnorm(fa_rate_adjusted))/2
+        var dprime = qnorm20(hits) - qnorm20(fas);
+        var crit = -(qnorm20(hits) + qnorm20(fas))/2;
+        
+        var r = `Hit: ${roundx(hit, 3)} False alarm: ${roundx(fa, 3)} ` + 
+        `Miss: ${roundx(miss, 3)} CR: ${roundx(cr, 3)} ` + 
+        `d': ${roundx(dprime, 3)} c: ${roundx(crit, 3)} `;
+        return `<p><b>Results</b></p>
+          <p>Here we summarize your ability to detect different elements in the display using SDT measures:</p>
+          ${r}<br>
+          <p>Press any key to complete the experiment. Thank you!</p>`;
+      }
+    };
+
+    jsPsych.run([
+        instructions,  
+        search_trial,
+        debriefing
+    ]);
+
+  </script>
+</html>
