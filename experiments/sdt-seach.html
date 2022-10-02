@@ -27,7 +27,7 @@ var jsPsych = initJsPsych({
         'The experiment takes about 10 minutes and consists of 40 simple trials.',
 
         'Each trial starts with a fixation cross. </br></br>' + 
-        "Then a set of N's and mirror N's will appear for 0.5 seconds. </br></br>" + 
+        "Then a set of N's and mirror N's will appear for 0.3 seconds. </br></br>" + 
         "Your task is to decide if all letters were <b>same</b> (all N's or all mirror N's) " + 
         "or <b>different</b> (mix of both). </br></br>" + 
         'Click <b>Next</b> to start'
@@ -59,7 +59,7 @@ var jsPsych = initJsPsych({
             foil: jsPsych.timelineVariable('foil'),
             fixation_image: 'assets/fixation.gif',
             target_present: jsPsych.timelineVariable('different'),
-            trial_duration: 500,
+            trial_duration: 300,
             set_size: 4
         },
         {
