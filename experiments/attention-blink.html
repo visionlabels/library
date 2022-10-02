@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Experiment</title>
+    <script src="../jspsych/dist/jspsych.js"></script>
+    <script src="../jspsych/dist/plugin-html-button-response.js"></script>
+    <script src="../jspsych/dist/plugin-canvas-button-response.js"></script>
+    <script src="../jspsych/dist/plugin-instructions.js"></script>
+    <script src="../jspsych/dist/plugin-preload.js"></script>
+    <link rel="stylesheet" href="../jspsych/dist/jspsych.css" type="text/css">
+  </head>
+  <body></body>
+  <script>
+
+var jsPsych = initJsPsych({
+      on_finish: function () {
+        // jsPsych.data.displayData();
+      },
+      default_iti: 500,
+    });
+
+    var instructions = {
+        type: jsPsychInstructions,
+        pages: [
+        'Welcome to the experiment. Today, we will measure your ability to detect particular letters in a stream of letters.<br>' + 
+        'The experiment takes about 15 minutes and consists of 140 simple trials.</br></br>',
+
+        'In each trial, you will see about 20 different letter, each presented for 100 ms.</br>' + 
+        'Your goal is to decide if <b>J</b> or <b>K</b> were present (or <b>both</b> or <b>none</b> of them)</br></br>' + 
+        'Click <b>Next</b> to start.</br></br>'
+        ],
+        show_clickable_nav: true
+    }
+    function fullGrid(nr, nc) {
+        var result = [];
+        for (let i=0; i<nr; i++) {
+            for (let j=0; j<nc; j++) {
+                result.push([i,j]);
+            }
+        }
+        return result;
+    }
+    // shuffle: https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
+    function shuffle(a) {
+        var j, x, i;
+        for (i = a.length - 1; i > 0; i--) {
+            j = Math.floor(Math.random() * (i + 1));
+            x = a[i];
+            a[i] = a[j];
+            a[j] = x;
+        }
+        return a;
+    }
+    // https://stackoverflow.com/questions/7342957/how-do-you-round-to-1-decimal-place-in-javascript
+    function roundx(value, precision) {
+        var multiplier = Math.pow(10, precision || 0);
+        return Math.round(value * multiplier) / multiplier;
+    }
+
+    const letterDuration = 100;
+    const interLetterInterval = 20;
+    var ctx;
+    var presentationStart = 0;
+    var currentArray = ["A", "B", "C"];
+
+    function makeArray(t1, t2, sep) {
+        var allLetters = ["A","B","C","D","E","F","G","H","I","L","M","N","O","P","R","S","T","U","V","X","Y","Z"];
+        var t1Positions = [2, 3, 4, 5, 6];
+        var curArray = shuffle(allLetters).slice(0, 18);
+        var t1Position = shuffle(t1Positions)[0];
+        var t2Position = t1Position + 1 + sep;
+        if (t1) {
+            curArray[t1Position] = "J";
+        }
+        if (t2) {
+            curArray[t2Position] = "K";
+        }
+        return curArray;
+    }
+
+    function redrawDisplay() {
+        var now = jsPsych.getTotalTime() - presentationStart;
+        var currentIndex = Math.floor(now / (letterDuration + interLetterInterval));
+        var remainder = now % (letterDuration + interLetterInterval);
+        //console.log(""+now+" "+currentArray[currentIndex]);
+        ctx.clearRect(0,0,500,500);
+        if (currentIndex < currentArray.length) {
+            if (remainder < letterDuration) {
+                ctx.fillText(currentArray[currentIndex], 250, 200);
+            }
+        }
+        if (currentIndex < currentArray.length) {
+            window.requestAnimationFrame(redrawDisplay);
+        }
+    }
+
+    function searchField(canvas, t1, t2, sep)  {
+        ctx = canvas.getContext("2d");
+        currentArray = makeArray(t1, t2, sep);
+        presentationStart = jsPsych.getTotalTime();
+        ctx.font = '60px sans-serif';
+        ctx.textAlign = "center";
+        redrawDisplay();
+    }
+
+    var searchTrials = {
+      timeline: [{
+        type: jsPsychCanvasButtonResponse,
+        stimulus: function (c) {
+            searchField(c, 
+                jsPsych.timelineVariable('t1'), 
+                jsPsych.timelineVariable('t2'), 
+                jsPsych.timelineVariable('sep'));
+        },
+        choices: ['--', 'J', 'K', 'JK'],
+        prompt: '<p>Letters present</p>',
+        data: { 
+            t1: jsPsych.timelineVariable('t1'), 
+            t2: jsPsych.timelineVariable('t2'), 
+            sep: jsPsych.timelineVariable('sep'), 
+            task: 'response',
+        }
+      }],
+      timeline_variables: [
+      { t1:  true, t2: true, sep: 0, }, 
+      { t1:  true, t2: true, sep: 2, }, 
+      { t1:  true, t2: true, sep: 4, }, 
+      { t1:  true, t2: true, sep: 6, }, 
+      { t1:  true, t2: true, sep: 8, }, 
+
+      { t1:  true, t2: false, sep: 0, }, 
+      { t1:  true, t2: false, sep: 0, }, 
+      { t1:  true, t2: false, sep: 0, }, 
+
+      { t1:  false, t2: false, sep: 0, }, 
+      { t1:  false, t2: false, sep: 0, }, 
+      { t1:  false, t2: false, sep: 0, }, 
+
+      { t1:  false, t2: true, sep: 0, }, 
+      { t1:  false, t2: true, sep: 0, }, 
+      { t1:  false, t2: true, sep: 0, }, 
+
+      ],
+      sample: {
+        type: 'fixed-repetitions',
+        size: 10,
+      }
+    };
+    /* define debrief */
+    var debriefing = {
+      type: jsPsychHtmlButtonResponse,
+      choices: ['END'],
+      stimulus: function() {
+        var trials = jsPsych.data.get().filter({task: 'response'});
+        var bothPresentTrials = trials.filter({t1: true});
+        bothPresentTrials = bothPresentTrials.filter({t2: true});
+        function meanAccuracy(tgt, sepNumber) {
+            var selectedTrials = bothPresentTrials.filter({sep: sepNumber});
+            var noTgt = selectedTrials.filter({response: 0}).values().length;
+            var t1Only = selectedTrials.filter({response: 1}).values().length;
+            var t2Only = selectedTrials.filter({response: 2}).values().length;
+            var bothTgt = selectedTrials.filter({response: 3}).values().length;
+            if (tgt == 1) {
+                return (t1Only + bothTgt) / selectedTrials.values().length;
+            }
+            if (tgt == 2) {
+                return (t2Only + bothTgt) / selectedTrials.values().length;
+            }
+            return -1; 
+        }
+        var r = '<table><tr><th>Separation</th><th>Accuracy T1</th><th>Accuracy T2</th></tr>';
+            r = r + `<tr><td>0</td><td>${meanAccuracy(1, 0)}</td><td>${meanAccuracy(2, 0)}</td></tr>`;
+            r = r + `<tr><td>2</td><td>${meanAccuracy(1, 2)}</td><td>${meanAccuracy(2, 2)}</td></tr>`;
+            r = r + `<tr><td>4</td><td>${meanAccuracy(1, 4)}</td><td>${meanAccuracy(2, 4)}</td></tr>`;
+            r = r + `<tr><td>6</td><td>${meanAccuracy(1, 6)}</td><td>${meanAccuracy(2, 6)}</td></tr>`;
+            r = r + `<tr><td>8</td><td>${meanAccuracy(1, 8)}</td><td>${meanAccuracy(2, 8)}</td></tr>`;
+        r = r + "</table>"
+        return `<p><b>Results</b></p>
+          <p>In the table, you can see accuracy for the first/second target given their separation:</p>
+          ${r}
+          <p>Press any key to complete the experiment. Thank you!</p>`;
+
+      }
+    };
+
+    jsPsych.run([
+        instructions,  
+        searchTrials,
+        debriefing
+    ]);
+
+  </script>
+</html>
