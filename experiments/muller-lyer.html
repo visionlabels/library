@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My experiment</title>
+    <title>Experiment</title>
     <script src="../jspsych/dist/jspsych.js"></script>
     <script src="../jspsych/dist/plugin-html-button-response.js"></script>
     <script src="../jspsych/dist/plugin-canvas-button-response.js"></script>
@@ -120,7 +120,7 @@ var jsPsych = initJsPsych({
             selectedTrials = trials.filter({refLen: v});
             return selectedTrials.select('response').mean(); 
         });
-        var r = '<table><tr><td>Length</td><td>Proportion of "left is longer"</td></tr>';
+        var r = '<table><tr><th>Length</th><th>Proportion of "left is longer"</th></tr>';
         for (let i = 0; i < possibleLens.length; i++) {
             r = r + `<tr><td>${possibleLens[i]}</td><td>${roundx(1-proportionRight[i], 3)}</td></tr>`;
         }
