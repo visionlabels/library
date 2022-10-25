@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Experiment</title>
+    <script src="../jspsych/dist/jspsych.js"></script>
+    <script src="../jspsych/dist/plugin-html-button-response.js"></script>
+    <script src="../jspsych/dist/plugin-instructions.js"></script>
+    <script src="../jspsych/dist/plugin-preload.js"></script>
+    <script src="../jspsych/dist/plugin-call-function.js"></script>
+    <script src="../jspsych/dist/plugin-serial-reaction-time.js"></script>
+    <link rel="stylesheet" href="../jspsych/dist/jspsych.css" type="text/css">
+  </head>
+  <body></body>
+  <script>
+
+var jsPsych = initJsPsych({
+      on_finish: function () {
+        //jsPsych.data.displayData();
+      },
+      default_iti: 0,
+    });
+
+    var instructions = {
+        type: jsPsychInstructions,
+        pages: [
+        'Welcome to the experiment. Today, we will measure your response time.<br>' + 
+        'The experiment takes about 15 minutes and consists of 240 simple trials.<br><br>',
+
+        'In each trial, you will see four squares. Press a corresponding letter (F, G, H, J) <b>as fast as you can</b>. <br>' + 
+        'You can make short breaks at the beginning of each block.<br>' + 
+        'Click <b>Next</b> to start.<br><br>'
+        ],
+        show_clickable_nav: true
+    }
+    // shuffle: https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
+    function shuffle(a) {
+        var j, x, i;
+        for (i = a.length - 1; i > 0; i--) {
+            j = Math.floor(Math.random() * (i + 1));
+            x = a[i];
+            a[i] = a[j];
+            a[j] = x;
+        }
+        return a;
+    }
+    // https://stackoverflow.com/questions/7342957/how-do-you-round-to-1-decimal-place-in-javascript
+    function roundx(value, precision) {
+        var multiplier = Math.pow(10, precision || 0);
+        return Math.round(value * multiplier) / multiplier;
+    }
+
+    const grid = [[1,1,1,1]];
+    var current_idx = -1;
+    var current_sequence = [];
+    function nextTarget() {
+        current_idx++; return [0, current_sequence[current_idx]];
+    }
+    function setupSequence() {
+        var s = jsPsych.timelineVariable('sequence');
+        current_idx = -1; current_sequence = s;
+    }
+    var sequence1 = [0, 1,3,2,0,3,2,0,3,0,3,2,1,2,0,1,2,1,3,0,1,2,1, 0];
+    var sequence2 = [2, 1,3,2,0,3,2,0,3,0,3,2,1,2,0,1,2,1,3,0,1,2,1, 2];
+    var sequenceX = [0, 1,3,1,2,1,2,3,0,1,0,3,1,0,3,1,0,3,0,2,0,3,1, 0];
+    var response_map = [['f','g','h','j']];
+    var clickTrials = {
+      timeline: [
+        { type: jsPsychCallFunction, post_trial_gap: 0, func: setupSequence, },
+        { type: jsPsychHtmlButtonResponse, choices: ["START"], stimulus: function() { return `Block ${jsPsych.timelineVariable('block')}<br><br>`}},
+        { type: jsPsychSerialReactionTime, choices: response_map, target: nextTarget, show_response_feedback: true, data: { block: jsPsych.timelineVariable('block'), task: "response", }, },
+        { type: jsPsychSerialReactionTime, choices: response_map, target: nextTarget, show_response_feedback: true, data: { block: jsPsych.timelineVariable('block'), task: "response", }, },
+        { type: jsPsychSerialReactionTime, choices: response_map, target: nextTarget, show_response_feedback: true, data: { block: jsPsych.timelineVariable('block'), task: "response", }, },
+        { type: jsPsychSerialReactionTime, choices: response_map, target: nextTarget, show_response_feedback: true, data: { block: jsPsych.timelineVariable('block'), task: "response", }, },
+        { type: jsPsychSerialReactionTime, choices: response_map, target: nextTarget, show_response_feedback: true, data: { block: jsPsych.timelineVariable('block'), task: "response", }, },
+        { type: jsPsychSerialReactionTime, choices: response_map, target: nextTarget, show_response_feedback: true, data: { block: jsPsych.timelineVariable('block'), task: "response", }, },
+        { type: jsPsychSerialReactionTime, choices: response_map, target: nextTarget, show_response_feedback: true, data: { block: jsPsych.timelineVariable('block'), task: "response", }, },
+        { type: jsPsychSerialReactionTime, choices: response_map, target: nextTarget, show_response_feedback: true, data: { block: jsPsych.timelineVariable('block'), task: "response", }, },
+        { type: jsPsychSerialReactionTime, choices: response_map, target: nextTarget, show_response_feedback: true, data: { block: jsPsych.timelineVariable('block'), task: "response", }, },
+        { type: jsPsychSerialReactionTime, choices: response_map, target: nextTarget, show_response_feedback: true, data: { block: jsPsych.timelineVariable('block'), task: "response", }, },
+        { type: jsPsychSerialReactionTime, choices: response_map, target: nextTarget, show_response_feedback: true, data: { block: jsPsych.timelineVariable('block'), task: "response", }, },
+        { type: jsPsychSerialReactionTime, choices: response_map, target: nextTarget, show_response_feedback: true, data: { block: jsPsych.timelineVariable('block'), task: "response", }, },
+        { type: jsPsychSerialReactionTime, choices: response_map, target: nextTarget, show_response_feedback: true, data: { block: jsPsych.timelineVariable('block'), task: "response", }, },
+        { type: jsPsychSerialReactionTime, choices: response_map, target: nextTarget, show_response_feedback: true, data: { block: jsPsych.timelineVariable('block'), task: "response", }, },
+        { type: jsPsychSerialReactionTime, choices: response_map, target: nextTarget, show_response_feedback: true, data: { block: jsPsych.timelineVariable('block'), task: "response", }, },
+        { type: jsPsychSerialReactionTime, choices: response_map, target: nextTarget, show_response_feedback: true, data: { block: jsPsych.timelineVariable('block'), task: "response", }, },
+        { type: jsPsychSerialReactionTime, choices: response_map, target: nextTarget, show_response_feedback: true, data: { block: jsPsych.timelineVariable('block'), task: "response", }, },
+        { type: jsPsychSerialReactionTime, choices: response_map, target: nextTarget, show_response_feedback: true, data: { block: jsPsych.timelineVariable('block'), task: "response", }, },
+        { type: jsPsychSerialReactionTime, choices: response_map, target: nextTarget, show_response_feedback: true, data: { block: jsPsych.timelineVariable('block'), task: "response", }, },
+        { type: jsPsychSerialReactionTime, choices: response_map, target: nextTarget, show_response_feedback: true, data: { block: jsPsych.timelineVariable('block'), task: "response", }, },
+        { type: jsPsychSerialReactionTime, choices: response_map, target: nextTarget, show_response_feedback: true, data: { block: jsPsych.timelineVariable('block'), task: "response", }, },
+        { type: jsPsychSerialReactionTime, choices: response_map, target: nextTarget, show_response_feedback: true, data: { block: jsPsych.timelineVariable('block'), task: "response", }, },
+        { type: jsPsychSerialReactionTime, choices: response_map, target: nextTarget, show_response_feedback: true, data: { block: jsPsych.timelineVariable('block'), task: "response", }, },
+        { type: jsPsychSerialReactionTime, choices: response_map, target: nextTarget, show_response_feedback: true, data: { block: jsPsych.timelineVariable('block'), task: "response", }, },
+      ],
+      timeline_variables: [
+      { block:  1, sequence: sequence1, }, 
+      { block:  2, sequence: sequence2, }, 
+      { block:  3, sequence: sequence1, }, 
+      { block:  4, sequence: sequence2, }, 
+      { block:  5, sequence: sequence1, }, 
+      { block:  6, sequence: sequence2, }, 
+      { block:  7, sequence: sequence1, }, 
+      { block:  8, sequence: sequence2, }, 
+      { block:  9, sequence: sequenceX, }, 
+      { block:  10, sequence: sequence2, }, 
+      ],
+    };
+    /* define debrief */
+    var debriefing = {
+      type: jsPsychHtmlButtonResponse,
+      choices: ['END'],
+      stimulus: function() {
+        var trials = jsPsych.data.get().filter({task: 'response'});
+        function meanRT(blockNum) {
+            var selectedTrials = trials.filter({block: blockNum});
+            return selectedTrials.select('rt').mean(); 
+        }
+        var r = '<table><tr><th>Block</th><th>Mean RT</th></tr>';
+        for (let i=1; i<=10; i++) {
+          r += `<tr><td>${i}</td><td>${roundx(meanRT(i), 0)}</td></tr>`;
+        }
+        r = r + "</table>"
+        return `<p><b>Results</b></p>
+          <p>In the table, you can see mean response times for each block:</p>
+          ${r}
+          <p>Press any key to complete the experiment. Thank you!</p>`;
+
+      }
+    };
+
+    jsPsych.run([
+        instructions,  
+        clickTrials,
+        debriefing,
+    ]);
+
+  </script>
+</html>
