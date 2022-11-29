@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Experiment</title>
+    <script src="../jspsych/dist/jspsych.js"></script>
+    <script src="../jspsych/dist/plugin-html-button-response.js"></script>
+    <script src="../jspsych/dist/plugin-canvas-button-response.js"></script>
+    <script src="../jspsych/dist/plugin-canvas-keyboard-response.js"></script>
+    <script src="../jspsych/dist/plugin-html-keyboard-response.js"></script>
+    <script src="../jspsych/dist/plugin-instructions.js"></script>
+    <script src="../jspsych/dist/plugin-preload.js"></script>
+    <link rel="stylesheet" href="../jspsych/dist/jspsych.css" type="text/css">
+  </head>
+  <body></body>
+  <script>
+
+var jsPsych = initJsPsych({
+      on_finish: function () {
+        // jsPsych.data.displayData();
+        jsPsych.data.get().localSave('csv','search.csv');
+      },
+      default_iti: 500,
+    });
+
+    var instructions = {
+        type: jsPsychInstructions,
+        pages: [
+        'Welcome to the experiment. Today, we will measure the efficiency of the visual search.<br>' + 
+        'The experiment takes about 15 minutes and consists of 160 simple trials.<br><br>',
+
+        'In each trial, your goal is to decide if pink right-tilted line is present (e.g., "/")<br>' + 
+        'You will be responding by pressing <b>F</b> when present and <b>J</b> when absent.<br>' + 
+        'Please respond as <b>fast</b> as possible but try <b>not to make mistakes</b>. <br><br>' +
+        'Click <b>Next</b> to start.<br><br>'
+        ],
+        show_clickable_nav: true
+    }
+    function fullGrid(nr, nc) {
+        var result = [];
+        for (let i=0; i<nr; i++) {
+            for (let j=0; j<nc; j++) {
+                result.push([i,j]);
+            }
+        }
+        return result;
+    }
+    // shuffle: https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
+    function shuffle(a) {
+        var j, x, i;
+        for (i = a.length - 1; i > 0; i--) {
+            j = Math.floor(Math.random() * (i + 1));
+            x = a[i];
+            a[i] = a[j];
+            a[j] = x;
+        }
+        return a;
+    }
+    // https://stackoverflow.com/questions/7342957/how-do-you-round-to-1-decimal-place-in-javascript
+    function roundx(value, precision) {
+        var multiplier = Math.pow(10, precision || 0);
+        return Math.round(value * multiplier) / multiplier;
+    }
+
+    function searchField(canvas, na1, na2, nb1, nb2)  {
+        var ctx = canvas.getContext("2d");
+        const x0 = 0, y0 = 0; // offset
+        const w = 50, h = 50; // cell size
+        const pad = 5;
+        const colour1 = "#E16A86", colour2 = "#009ADE"; // http://hclwizard.org:3000/hclwizard/
+        var grid = shuffle(fullGrid(8, 10));
+        const tilt = 8;
+        const lwd = 5;
+        function drawItem(row, col, colour, xOffset) {
+            ctx.beginPath();
+            ctx.moveTo(x0 + w * col + (w/2) + xOffset, y0 + h * row + pad);
+            ctx.lineTo(x0 + w * col + (w/2) - xOffset, y0 + h * row + h - pad);
+            ctx.lineWidth = lwd;
+            ctx.strokeStyle = colour;
+            ctx.stroke();
+        }
+        // target
+        for (let i=0; i<na1; i++) {
+            let coords = grid.pop();
+            drawItem(coords[0], coords[1], colour1, tilt);
+        }
+        // distractor in one dim (colour)
+        for (let i=0; i<na2; i++) {
+            let coords = grid.pop();
+            drawItem(coords[0], coords[1], colour2, tilt);
+        }
+        // distractor in one dim (shape)
+        for (let i=0; i<nb1; i++) {
+            let coords = grid.pop();
+            drawItem(coords[0], coords[1], colour1, -tilt);
+        }
+        // distractor in two dim (colour + shape)
+        for (let i=0; i<nb2; i++) {
+            let coords = grid.pop();
+            drawItem(coords[0], coords[1], colour2, -tilt);
+        }
+    }
+
+    var searchTrials = {
+      timeline: [
+        {
+            type: jsPsychCanvasKeyboardResponse,
+            stimulus: function (c) {
+                searchField(c, jsPsych.timelineVariable('na1'), jsPsych.timelineVariable('na2'), 
+                jsPsych.timelineVariable('nb1'), jsPsych.timelineVariable('nb2'));
+            },
+            choices: ['f', 'j'],
+            prompt: '<p>[f] <b>Present</b> or <b>Absent</b> [j]</p>',
+            data: { 
+                present: jsPsych.timelineVariable('present'), 
+                setSize: jsPsych.timelineVariable('setSize'), 
+                conjuction: jsPsych.timelineVariable('conjuction'), 
+                task: 'response',
+            },
+            on_finish: function(data) {
+                //console.log(data);
+                if ((data.present === true) == (data.response === "f")) {
+                    data.correct = true;
+                } else {
+                    data.correct = false;
+                }
+            }
+        },
+        {
+            type: jsPsychHtmlKeyboardResponse,
+            trial_duration: 1000, 
+            stimulus: function(){
+                var lastTrial = jsPsych.data.get().last(1).values()[0];
+                //console.log(lastTrial);
+                var s = "";
+                if (lastTrial.correct) {
+                    s += `Correct!`;
+                } else {
+                    s += `Wrong`;
+                }
+                if (lastTrial.rt > 2000) {
+                    s += "<br><br><b>Work faster!</b>";
+                }
+                return(s)
+            }
+        }
+        ],
+      timeline_variables: [
+        // feature search - present
+        { na1:  1, na2: 0, nb1: 9, nb2: 0, present: true, setSize: 10, conjuction: false, }, 
+        { na1:  1, na2: 0, nb1: 19, nb2: 0, present: true, setSize: 20, conjuction: false, }, 
+        { na1:  1, na2: 0, nb1: 29, nb2: 0, present: true, setSize: 30, conjuction: false, }, 
+        { na1:  1, na2: 0, nb1: 39, nb2: 0, present: true, setSize: 40, conjuction: false, },
+        // feature search - absent
+        { na1:  0, na2: 0, nb1: 10, nb2: 0, present: false, setSize: 10, conjuction: false, }, 
+        { na1:  0, na2: 0, nb1: 20, nb2: 0, present: false, setSize: 20, conjuction: false, }, 
+        { na1:  0, na2: 0, nb1: 30, nb2: 0, present: false, setSize: 30, conjuction: false, }, 
+        { na1:  0, na2: 0, nb1: 40, nb2: 0, present: false, setSize: 40, conjuction: false, },
+        // conjunction search - present
+        { na1:  1, na2: 3, nb1: 3, nb2: 3, present: true, setSize: 10, conjuction: true, }, 
+        { na1:  1, na2: 6, nb1: 6, nb2: 7, present: true, setSize: 20, conjuction: true, }, 
+        { na1:  1, na2: 10, nb1: 10, nb2: 9, present: true, setSize: 30, conjuction: true, }, 
+        { na1:  1, na2: 13, nb1: 13, nb2: 13, present: true, setSize: 40, conjuction: true, },
+        // feature search - absent
+        { na1:  0, na2: 3, nb1: 3, nb2: 4, present: false, setSize: 10, conjuction: true, }, 
+        { na1:  0, na2: 7, nb1: 7, nb2: 6, present: false, setSize: 20, conjuction: true, }, 
+        { na1:  0, na2: 10, nb1: 10, nb2: 10, present: false, setSize: 30, conjuction: true, }, 
+        { na1:  0, na2: 13, nb1: 13, nb2: 14, present: false, setSize: 40, conjuction: true, },
+      ],
+      sample: {
+        type: 'fixed-repetitions',
+        size: 20,
+      }
+    };
+    /* define debrief */
+    var debriefing = {
+      type: jsPsychHtmlButtonResponse,
+      choices: ['END'],
+      stimulus: function() {
+        var trials = jsPsych.data.get().filter({task: 'response'});
+        function meanRT(targetPresent, setSizeNumber, conjunctionSearch) {
+            var selectedTrials = trials.filter({present: targetPresent});
+            selectedTrials = selectedTrials.filter({setSize: setSizeNumber});
+            selectedTrials = selectedTrials.filter({conjuction: conjunctionSearch});
+            return selectedTrials.select('rt').mean(); 
+        }
+        var r = '<table><tr><th>Search type</th><th>Set size</th><th>Mean RT present</th><th>Mean RT absent</th></tr>';
+            r = r + `<tr><td>Feature</td><td>10</td><td>${meanRT(true, 10, false)}</td><td>${meanRT(false, 10, false)}</td></tr>`;
+            r = r + `<tr><td>Feature</td><td>20</td><td>${meanRT(true, 20, false)}</td><td>${meanRT(false, 20, false)}</td></tr>`;
+            r = r + `<tr><td>Feature</td><td>30</td><td>${meanRT(true, 30, false)}</td><td>${meanRT(false, 30, false)}</td></tr>`;
+            r = r + `<tr><td>Feature</td><td>40</td><td>${meanRT(true, 40, false)}</td><td>${meanRT(false, 40, false)}</td></tr>`;
+            r = r + `<tr><td>Conjunction</td><td>10</td><td>${meanRT(true, 10, true)}</td><td>${meanRT(false, 10, true)}</td></tr>`;
+            r = r + `<tr><td>Conjunction</td><td>20</td><td>${meanRT(true, 20, true)}</td><td>${meanRT(false, 20, true)}</td></tr>`;
+            r = r + `<tr><td>Conjunction</td><td>30</td><td>${meanRT(true, 30, true)}</td><td>${meanRT(false, 30, true)}</td></tr>`;
+            r = r + `<tr><td>Conjunction</td><td>40</td><td>${meanRT(true, 40, true)}</td><td>${meanRT(false, 40, true)}</td></tr>`;
+        r = r + "</table>"
+        return `<p><b>Results</b></p>
+          <p>In the table, you can see mean response times for different search conditions:</p>
+          ${r}
+          <p>Press any key to <b>save</b> the data and complete the experiment. Thank you!</p>`;
+
+      }
+    };
+
+    jsPsych.run([
+        instructions,  
+        searchTrials,
+        debriefing
+    ]);
+
+  </script>
+</html>
