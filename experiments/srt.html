@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Experiment</title>
+    <script src="../jspsych/dist/jspsych.js"></script>
+    <script src="../jspsych/dist/plugin-html-button-response.js"></script>
+    <script src="../jspsych/dist/plugin-html-keyboard-response.js"></script>
+    <script src="../jspsych/dist/plugin-image-keyboard-response.js"></script>
+    <script src="../jspsych/dist/plugin-instructions.js"></script>
+    <script src="../jspsych/dist/plugin-preload.js"></script>
+    <link rel="stylesheet" href="../jspsych/dist/jspsych.css" type="text/css">
+  </head>
+  <body></body>
+  <script>
+
+    var jsPsych = initJsPsych({
+        on_finish: function () {
+        // jsPsych.data.displayData();
+        },
+        default_iti: 000,
+    });
+
+    var images = [
+        'assets/gng/square_red.png',
+        'assets/gng/square_blue.png',
+        'assets/gng/square_green.png',
+        'assets/gng/square_black.png',
+    ];
+
+    var preload = {
+      type: jsPsychPreload,
+      images: images,
+    };
+
+    var instructions = {
+        type: jsPsychInstructions,
+        pages: [
+        'Welcome to the experiment. Today, we will measure your ability to respond quickly.<br>' + 
+        'The experiment takes about 5 minutes and consists of 25 simple trials.<br><br>',
+
+        // original
+        'In each trial, you will see a square painted in black color. <br><br>'+ 
+        'Your task is to <b>press Spacebar as fast as possible</b>.<br><br>' +
+
+        '<br>Click <b>Next</b> to start.<br><br>'
+        ],
+        show_clickable_nav: true
+    }
+    // shuffle: https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
+    function shuffle(a) {
+        var j, x, i;
+        for (i = a.length - 1; i > 0; i--) {
+            j = Math.floor(Math.random() * (i + 1));
+            x = a[i];
+            a[i] = a[j];
+            a[j] = x;
+        }
+        return a;
+    }
+    // https://stackoverflow.com/questions/7342957/how-do-you-round-to-1-decimal-place-in-javascript
+    function roundx(value, precision) {
+        var multiplier = Math.pow(10, precision || 0);
+        return Math.round(value * multiplier) / multiplier;
+    }
+
+    var gonogoTrial =
+    [
+        {
+            type: jsPsychHtmlKeyboardResponse,
+            stimulus: '<div style="font-size:60px;">+</div>',
+            choices: "NO_KEYS",
+            trial_duration: jsPsych.timelineVariable('soa'),
+        },
+        {
+            type: jsPsychImageKeyboardResponse,
+            stimulus: jsPsych.timelineVariable('image_shown'),
+            choices: " ",
+            trial_duration: 2000,
+            data: { 
+                condition: jsPsych.timelineVariable('condition'), 
+                task: 'response',
+            },
+            on_finish: function(data) {
+                if ((data.response === " ") != (data.stimulus === images[0])) {
+                    data.correct = true;
+                } else {
+                    data.correct = false;
+                }
+            }
+        },
+        {
+            type: jsPsychHtmlKeyboardResponse,
+            trial_duration: 1000, 
+            stimulus: function(){
+                var lastTrial = jsPsych.data.get().last(1).values()[0];
+                var s = "";
+                if (lastTrial.correct) {
+                    s += ` `;
+                    if (lastTrial.rt > 1000) {
+                        s += "<br>Work faster!";
+                    }
+                } else {
+                    s += `Wrong`;
+                }
+                return(s)
+            }
+        },
+        {
+            type: jsPsychHtmlKeyboardResponse,
+            stimulus: '',
+            choices: "NO_KEYS",
+            trial_duration: 500,
+        },
+    ]
+
+    var trainingTrials = {
+      timeline: gonogoTrial,
+      timeline_variables: [
+        { image_shown: images[3], soa:  500, condition: "training", }, 
+        { image_shown: images[3], soa: 1000, condition: "training", }, 
+      ],
+      sample: {
+        type: 'fixed-repetitions',
+        size: 2,
+      }
+    };
+    var testTrials = {
+      timeline: gonogoTrial,
+      timeline_variables: [
+        // SOA 500, 625, 750, 875, 1000 ms
+        { image_shown: images[3], soa:  500, condition: "test", }, 
+        { image_shown: images[3], soa:  625, condition: "test", }, 
+        { image_shown: images[3], soa:  750, condition: "test", }, 
+        { image_shown: images[3], soa:  875, condition: "test", }, 
+        { image_shown: images[3], soa: 1000, condition: "test", }, 
+      ],
+      sample: {
+        type: 'fixed-repetitions',
+        size: 4,
+      }
+    };
+
+    var debriefing = {
+      type: jsPsychHtmlButtonResponse,
+      choices: ['END'],
+      stimulus: function() {
+        var trials = jsPsych.data.get().filter({task: 'response'});
+        function meanRT(variantText) {
+            var selectedTrials = trials.filter({condition: variantText});
+            return selectedTrials.select('rt').mean(); 
+        }
+        function accuracy(variantText) {
+            var selectedTrials = trials.filter({condition: variantText});
+            return selectedTrials.select('correct').mean(); 
+        }
+        var r = '<table><tr><th>Stimulus</th><th>Mean RT</th><th>Accuracy</th></tr>';
+            r = r + `<tr><td>SRT</td><td>${roundx(meanRT("test"), 0)}</td><td>${roundx(accuracy("test"), 2)}</td></tr>`;
+            //r = r + `<tr><td>No-Go</td><td> -- </td><td>${roundx(accuracy("testnogo"), 2)}</td></tr>`;
+        r = r + "</table>"
+        return `<p><b>Results</b></p>
+          <p>In the table, you can see mean response times and accuracy:</p>
+          ${r}
+          <p>Press any key to complete the experiment. Thank you!</p>`;
+
+      }
+    };
+
+
+    jsPsych.run([
+        preload,
+        instructions,  
+        trainingTrials,
+        testTrials,
+        debriefing,
+    ]);
+
+  </script>
+</html>
