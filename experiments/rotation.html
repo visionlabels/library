@@ -179,6 +179,38 @@
         testTrials,
         debriefing,
     ]);
+/*
+# code for protocol
+library(tidyverse)
 
+shape <- 1:48
+angle <- c(0, 50, 100, 150)
+version <- c("", "_R")
+
+d <- crossing(shape, angle, version) %>% 
+  mutate(filename = str_c(shape, "_", angle, version, ".jpg"))
+
+s <- c(
+  1,0,0,0,  0,1,0,0,
+  0,1,0,0,  1,0,0,0,
+  0,0,1,0,  0,0,0,1,
+  0,0,0,1,  0,0,1,0
+)
+
+dd <- 
+  d %>% 
+  mutate(selection = rep(s, nrow(d)/length(s))) %>% 
+  filter(shape <= 40)
+  
+dx <- dd %>% filter(selection == 1)
+
+dx %>% count(angle, version)
+dx %>% count(shape)
+
+dx$filename %>% paste(collapse = "\", \"") %>% cat()
+dx$angle %>% paste(collapse = ", ")
+if_else(dx$version == "", 1, 0) %>% paste(collapse = ", ")
+
+    */
   </script>
 </html>
