@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Experiment</title>
+    <script src="../jspsych/dist/jspsych.js"></script>
+    <script src="../jspsych/dist/plugin-html-button-response.js"></script>
+    <script src="../jspsych/dist/plugin-html-keyboard-response.js"></script>
+    <script src="../jspsych/dist/plugin-image-keyboard-response.js"></script>
+    <script src="../jspsych/dist/plugin-instructions.js"></script>
+    <script src="../jspsych/dist/plugin-preload.js"></script>
+    <link rel="stylesheet" href="../jspsych/dist/jspsych.css" type="text/css">
+  </head>
+  <body></body>
+  <script>
+
+    var jsPsych = initJsPsych({
+        on_finish: function () {
+        // jsPsych.data.displayData();
+        },
+        default_iti: 000,
+    });
+
+    var trial_images = [
+        "1_0.jpg", "1_100_R.jpg", "2_0_R.jpg", "2_100.jpg", "3_50.jpg", "3_150_R.jpg", "4_50_R.jpg", "4_150.jpg", 
+        "5_0.jpg", "5_100_R.jpg", "6_0_R.jpg", "6_100.jpg", "7_50.jpg", "7_150_R.jpg", "8_50_R.jpg", "8_150.jpg", 
+        "9_0.jpg", "9_100_R.jpg", "10_0_R.jpg", "10_100.jpg", "11_50.jpg", "11_150_R.jpg", "12_50_R.jpg", "12_150.jpg", 
+        "13_0.jpg", "13_100_R.jpg", "14_0_R.jpg", "14_100.jpg", "15_50.jpg", "15_150_R.jpg", "16_50_R.jpg", "16_150.jpg", 
+        "17_0.jpg", "17_100_R.jpg", "18_0_R.jpg", "18_100.jpg", "19_50.jpg", "19_150_R.jpg", "20_50_R.jpg", "20_150.jpg", 
+        "21_0.jpg", "21_100_R.jpg", "22_0_R.jpg", "22_100.jpg", "23_50.jpg", "23_150_R.jpg", "24_50_R.jpg", "24_150.jpg", 
+        "25_0.jpg", "25_100_R.jpg", "26_0_R.jpg", "26_100.jpg", "27_50.jpg", "27_150_R.jpg", "28_50_R.jpg", "28_150.jpg", 
+        "29_0.jpg", "29_100_R.jpg", "30_0_R.jpg", "30_100.jpg", "31_50.jpg", "31_150_R.jpg", "32_50_R.jpg", "32_150.jpg", 
+        "33_0.jpg", "33_100_R.jpg", "34_0_R.jpg", "34_100.jpg", "35_50.jpg", "35_150_R.jpg", "36_50_R.jpg", "36_150.jpg", 
+        "37_0.jpg", "37_100_R.jpg", "38_0_R.jpg", "38_100.jpg", "39_50.jpg", "39_150_R.jpg", "40_50_R.jpg", "40_150.jpg"
+    ];
+    var trial_angles = [
+        0, 100, 0, 100, 50, 150, 50, 150, 0, 100, 0, 100, 50, 150, 50, 150, 
+        0, 100, 0, 100, 50, 150, 50, 150, 0, 100, 0, 100, 50, 150, 50, 150, 
+        0, 100, 0, 100, 50, 150, 50, 150, 0, 100, 0, 100, 50, 150, 50, 150, 
+        0, 100, 0, 100, 50, 150, 50, 150, 0, 100, 0, 100, 50, 150, 50, 150, 
+        0, 100, 0, 100, 50, 150, 50, 150, 0, 100, 0, 100, 50, 150, 50, 150
+    ];
+    var trial_same = [
+        1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 
+        1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 
+        1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1
+    ];
+    var images = trial_images.map(x => ('assets/rotation/' + x));
+
+    var rotation_timeline = [];
+    for (let i = 0; i < images.length; i++) {
+        rotation_timeline.push({
+            image: images[i], angle: trial_angles[i], same: trial_same[i], 
+        })
+    }
+
+    var preload = {
+      type: jsPsychPreload,
+      images: images,
+    };
+
+    var instructions = {
+        type: jsPsychInstructions,
+        pages: [
+        'Welcome to the experiment. Today, we will measure your spatial cognition.<br>' + 
+        'The experiment takes about 10 minutes and consists of 80 simple trials.<br><br>',
+
+        // original
+        'In each trial, two 3-D block shapes will appear on the screen, <br> ' + 
+        'one to the left and one to the right. <br>' + 
+        'The two shapes are either identical, or different (one is a mirror image of the other). <br>'+
+        'One shape is also rotated around the vertical axis. The rotation was 0, 50, 100, or 150 degrees relative to the orientation of the other shape. '+
+        '<br><br>Your task is to determine whether <b>the two shapes are the same or not</b>. <br>'+ 
+        'Press F for same, and J for different' + 
+        '<br>' +
+
+        '<br>Click <b>Next</b> to start.<br><br>'
+        ],
+        show_clickable_nav: true
+    }
+    // shuffle: https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
+    function shuffle(a) {
+        var j, x, i;
+        for (i = a.length - 1; i > 0; i--) {
+            j = Math.floor(Math.random() * (i + 1));
+            x = a[i];
+            a[i] = a[j];
+            a[j] = x;
+        }
+        return a;
+    }
+    // https://stackoverflow.com/questions/7342957/how-do-you-round-to-1-decimal-place-in-javascript
+    function roundx(value, precision) {
+        var multiplier = Math.pow(10, precision || 0);
+        return Math.round(value * multiplier) / multiplier;
+    }
+
+    var rotationTrial =
+    [
+        {
+            type: jsPsychImageKeyboardResponse,
+            stimulus: jsPsych.timelineVariable('image'),
+            choices: ["f", "j"],
+            prompt: "<br><br>F same, J different",
+            data: { 
+                condition: jsPsych.timelineVariable('angle'), 
+                same: jsPsych.timelineVariable('same'), 
+                task: 'response',
+            },
+            on_finish: function(data) {
+                if ((data.response === "f") == (data.same === 1)) {
+                    data.correct = true;
+                } else {
+                    data.correct = false;
+                }
+            }
+        },
+        {
+            type: jsPsychHtmlKeyboardResponse,
+            trial_duration: 1000, 
+            stimulus: function(){
+                var lastTrial = jsPsych.data.get().last(1).values()[0];
+                var s = "";
+                if (lastTrial.correct) {
+                    s += `Correct`;
+                    if (lastTrial.rt > 3000) {
+                        s += "<br>Work faster!";
+                    }
+                } else {
+                    s += `Wrong`;
+                }
+                return(s)
+            }
+        },
+        {
+            type: jsPsychHtmlKeyboardResponse,
+            stimulus: '',
+            choices: "NO_KEYS",
+            trial_duration: 500,
+        },
+    ]
+
+    var testTrials = {
+      timeline: rotationTrial,
+      timeline_variables: rotation_timeline, 
+      randomize_order: true,
+    };
+
+    var debriefing = {
+      type: jsPsychHtmlButtonResponse,
+      choices: ['END'],
+      stimulus: function() {
+        var trials = jsPsych.data.get().filter({task: 'response'});
+        function meanRT(variantText) {
+            var selectedTrials = trials.filter({condition: variantText});
+            return selectedTrials.select('rt').mean(); 
+        }
+        function accuracy(variantText) {
+            var selectedTrials = trials.filter({condition: variantText});
+            return selectedTrials.select('correct').mean(); 
+        }
+        var r = '<table><tr><th>Rotation</th><th>Mean RT</th><th>Accuracy</th></tr>';
+            r = r + `<tr><td>0</td><td>${roundx(meanRT(0), 0)}</td><td>${roundx(accuracy(0), 2)}</td></tr>`;
+            r = r + `<tr><td>50</td><td>${roundx(meanRT(50), 0)}</td><td>${roundx(accuracy(50), 2)}</td></tr>`;
+            r = r + `<tr><td>100</td><td>${roundx(meanRT(100), 0)}</td><td>${roundx(accuracy(100), 2)}</td></tr>`;
+            r = r + `<tr><td>150</td><td>${roundx(meanRT(150), 0)}</td><td>${roundx(accuracy(150), 2)}</td></tr>`;
+        r = r + "</table>"
+        return `<p><b>Results</b></p>
+          <p>In the table, you can see mean response times and accuracy for different rotation angles:</p>
+          ${r}
+          <p>Press any key to complete the experiment. Thank you!</p>`;
+
+      }
+    };
+
+
+    jsPsych.run([
+        preload,
+        instructions,  
+        testTrials,
+        debriefing,
+    ]);
+
+  </script>
+</html>
