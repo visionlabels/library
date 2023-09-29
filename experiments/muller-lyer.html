@@ -12,12 +12,27 @@
   <body></body>
   <script>
 
+const DIRECTION_IN_OUT = 1;
+const DIRECTION_OUT_IN = 2;
+
 var jsPsych = initJsPsych({
       on_finish: function () {
         // jsPsych.data.displayData();
       },
       default_iti: 500,
     });
+
+    const opts = {
+        shape: DIRECTION_OUT_IN,
+    }
+
+    var params;
+    function loadSettings() {
+        params = Object.fromEntries(new URLSearchParams(location.search));
+        // respond to settings
+        if ("sh" in params) opts.shape = parseInt(params["sh"]);
+    }
+    loadSettings();
 
     var instructions = {
         type: jsPsychInstructions,
@@ -26,7 +41,7 @@ var jsPsych = initJsPsych({
         'The experiment takes about 15 minutes and consists of 150 simple trials.<br><br>',
 
         'In each trial, two vertical lines will appear.  <br><br>' + 
-        'The line on the lower right has outward-drawn wings.  <br>' + 
+        `The line on the lower right has ${opts.shape == 1 ? "outward" : "inward"}-drawn wings.  <br>` + 
         'The line on the upper left has no wings.  <br><br>' + 
         'Your task is to choose which vertical line is longer. <br><br>' + 
         'Click <b>Next</b> to start.<br><br>'
@@ -62,7 +77,7 @@ var jsPsych = initJsPsych({
         ctx.strokeStyle = 'Black';
         ctx.stroke();
         // arrow
-        if (shape == 1) {
+        if (shape == DIRECTION_IN_OUT) {
             // out and right
             ctx.beginPath();
             ctx.moveTo(125 + 250, rend1);
@@ -77,13 +92,28 @@ var jsPsych = initJsPsych({
             ctx.strokeStyle = 'Black';
             ctx.stroke();
         }
+        if (shape == DIRECTION_OUT_IN) {
+            // out and right
+            ctx.beginPath();
+            ctx.moveTo(125 + 250, rend1);
+            ctx.lineTo(125 + 250 + arrowSize / Math.sqrt(2), rend1 - arrowSize / Math.sqrt(2));
+            ctx.moveTo(125 + 250, rend1);
+            ctx.lineTo(125 + 250 - arrowSize / Math.sqrt(2), rend1 - arrowSize / Math.sqrt(2));
+            ctx.moveTo(125 + 250, rend2);
+            ctx.lineTo(125 + 250 + arrowSize / Math.sqrt(2), rend2 + arrowSize / Math.sqrt(2));
+            ctx.moveTo(125 + 250, rend2);
+            ctx.lineTo(125 + 250 - arrowSize / Math.sqrt(2), rend2 + arrowSize / Math.sqrt(2));
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = 'Black';
+            ctx.stroke();
+        }
     }
 
     var mlTrials = {
       timeline: [{
         type: jsPsychCanvasButtonResponse,
         stimulus: function (c) {
-            mullerLyer(c, jsPsych.timelineVariable('refLen'), 100, 1);
+            mullerLyer(c, jsPsych.timelineVariable('refLen'), 100, opts.shape);
         },
         choices: ['Left', 'Right'],
         prompt: '<p>Which line is longer?</p>',
@@ -132,6 +162,8 @@ var jsPsych = initJsPsych({
 
       }
     };
+
+
 
     jsPsych.run([
         instructions,  
