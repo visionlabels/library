@@ -1,0 +1,19 @@
+---
+title: Wasonova úloha výběru karet
+subtitle: (Wason Selection Task) 
+---
+
+Odkazy: Experiment a formulář
+
+V tomto experimentu účastníci řeší několik variant Wasonovy úlohy. Úloha je vysvětlená i účastníkům před začátkem experimentu. Poté vidí 6 obdobných úloh, 3 jsou názorné a 3 abstraktní. Experiment je inspirován výzkumem Wason & Shapiro (1971), kteří tyto podmínky podrobněji testovali.  
+
+Na úrovni analýzy se nabízí hlavní hypotéza, zda dělají lidé víc chyb, když je úloha formulována obecně (není názorná). Předpokládáme, že u názorných variant lidé mohou používat i znalosti o světě, zatímco u abstraktních musí spoléhat pouze na logiku. 
+
+Vyhodnocení dat bude trochu komplikované tím, že účastníci volili vždy dvě odpovědi, v každé buňce v tabulce jsou tedy dvě hodnoty oddělené středníky. Asi nejlepší bude si každou úlohu vyřešit (a najít si tak správné odpovědi) a pak si do kopie tabulky ručně každou odpověď oznámkovat (zda jsou obě odpovědi dobře, nebo jenom jedna). V případném dalším kroku se můžete zamyslet, zda se nějaké chyby často opakují. 
+
+## Zdroje odkud začít 
+
+- <https://en.wikipedia.org/wiki/Wason_selection_task>
+- Wason, P. C., & Shapiro, D. (1971). Natural and contrived experience in a reasoning problem. *Quarterly Journal of Experimental Psychology*, 23(1), 63-71. https://doi.org/10.1080/00335557143000068 
+(pdf např. [zde](http://www.fitelson.org/confirmation/wason.pdf))
+

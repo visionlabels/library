@@ -1,0 +1,21 @@
+---
+title: Prototypy 
+subtitle: (Prototypes) 
+---
+
+Odkazy: [Experiment](/experiments/prototypes.html)
+
+Cílem experimentu je ukázat, jak si osvojujeme a používáme prototypy. Myšlenka prototypů spočívá v tom, že člověk má mentální konstrukt, který identifikuje typické vlastnosti různých kategorií. Když člověk narazí na nový předmět, porovná ho s prototypy v paměti. Pokud se dostatečně shoduje s prototypem židle, bude nový objekt klasifikován a bude s ním nakládáno jako se židlí. Tento přístup umožňuje interpretovat nové objekty na základě dříve naučených informací. Je to účinný přístup, protože nemusíte ukládat všechny dříve viděné židle do dlouhodobé paměti. Místo toho je třeba zachovat pouze prototyp. 
+
+Experiment je volnou variací na experiment Posnera a Keele (1968). Experiment má dvě fáze. V první fázi se metodou pokus-omyl účastník učí dva prototypy (A a B, jsou to různě vybarvené sítě čtverečků). Prototypy nejsou ukázány přímo, ale s mírnými odchylkami (aby to bylo trochu těžší a aby si účastník nevybral nějakou jednoduchou heuristiku, že tenhle malý černý čtvereček znamená vždy A).  
+
+Po 40 trialech přejde experiment plynule do 2.části, kde se ukazují buď prototypy (originály) nebo jejich nové varianty. Podstatné je, že ani jednu variantu v první části účastníci neviděli. Lépe (přesněji a rychleji) by lidé měli klasifikovat prototypy, protože už si jejich reprezentaci vytvořili v první části.  
+
+![](/images/prototypes.jpg)
+
+## Zdroje odkud začít 
+
+- <https://en.wikipedia.org/wiki/Prototype_theory>
+- Posner, M. I., & Keele, S. W. (1968). On the genesis of abstract ideas. *Journal of Experimental Psychology*, 77(3, Pt.1), 353–363. https://doi.org/10.1037/h0025953  
+
+ 

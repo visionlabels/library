@@ -1,0 +1,21 @@
+---
+title: Test kognitivní reflexivity  
+subtitle: (Cognitive Reflection Test) 
+---
+
+Odkazy: Experiment a formulář
+
+Cílem experimentu je seznámit s Testem kognitivní reflexivity. Smyslem tohoto testu je postihnout, do jaké míry člověk spoléhá na intuitivní odpověď anebo zda je schopen odpověď korigovat v následné reflexi.  
+
+Jedná se o poměrně krátký test (v původní verzi měl jen 3 otázky, Frederick, 2005). Současná verze je volně adaptovaná podle Toplak et al. (2014), kde najdete i správné i intuitivní odpovědi.   
+
+Aktivita nemá konkrétní hypotézy. Začněte tím, že odpovědi vyhodnotíte, zda jsou správné nebo ne. Můžete pak pro každou otázku vyhodnotit, jak často lidé došli ke správné a jak často zůstali u intuitivní odpovědi, případně jaké jsou mezi otázkami rozdíly.  
+
+Test je využíván v dalších výzkumech (např. Pennycook & Rand, 2020). 
+
+Zdroje odkud začít 
+
+- <https://en.wikipedia.org/wiki/Cognitive_reflection_test>  
+- Frederick, S. (2005). Cognitive reflection and decision making. *Journal of Economic Perspectives*, 19(4), 25–42. https://doi.org/10.1257/089533005775196732  
+- Toplak, M. E., West, R. F., & Stanovich, K. E. (2014). Assessing miserly information processing: An expansion of the Cognitive Reflection Test. *Thinking & Reasoning*, 20(2), 147-168. https://doi.org/10.1080/13546783.2013.844729  
+- Pennycook, G., & Rand, D. G. (2020). Who falls for fake news? The roles of bullshit receptivity, overclaiming, familiarity, and analytic thinking. *Journal of personality*, 88(2), 185-200. https://doi.org/10.1111/jopy.12476  

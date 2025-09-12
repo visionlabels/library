@@ -1,0 +1,26 @@
+---
+title: Implicitní učení
+subtitle: (Implicit Learning) 
+---
+
+Odkazy: [Experiment](/experiments/implicit-learning-kb.html) / 
+[verze s myší](/experiments/implicit-learning.html)
+
+Cílem experimentu je ukázat, že se lidé dokáží nevědomě učit. Konkrétně lidé odpovídají na „náhodné“ sekvence, které se ale ve skutečnosti opakují. Lidé to většinou nepoznají, ale zlepšují se. Pokud pak nějaká sekvence je odlišná, tak jim to jde hůř. 
+
+Experiment obsahuje 10 bloků (sekvencí). Sekvence 9 je odlišná (níže sequenceX), ostatní sekvence jsou stejné. Aby to nebylo úplně očividné, tak tyto sekvence mají občas jiný začátek a konec. Pro srovnání jsou sekvence vypsané níže, ale asi to nebude důležité (0,1,2,3 odpovídají po řadě F,G,H,J). 
+
+```
+sequence1 = [0, 1,3,2,0,3,2,0,3,0,3,2,1,2,0,1,2,1,3,0,1,2,1, 0]; // Hlavní opakovaná sekvence 
+sequence2 = [2, 1,3,2,0,3,2,0,3,0,3,2,1,2,0,1,2,1,3,0,1,2,1, 2]; // Liší se 1. a poslední prvek 
+sequenceX = [0, 1,3,1,2,1,2,3,0,1,0,3,1,0,3,1,0,3,0,2,0,3,1, 0]; // Liší se víc 
+```
+
+Typický výsledek by měl být, že se lidé budou v blocích 1-8 zlepšovat (RT klesat), u 9 bude zase RT vyšší a u 10 naopak zase menší, protože je to ta sekvence, co se už učili. 
+
+Pro zajímavost: Roli možná hraje to, že se musíte učit obtížnější motorické vzorce na klávesnici. V roce 2022 jsme zkoušeli verzi, kde se klikalo myší. Studentům to šlo poměrně rychle, ale moc se nezlepšovali (byli pomalejší jen v prvním bloku). 
+
+## Zdroje odkud začít 
+
+- <https://en.wikipedia.org/wiki/Implicit_learning>
+- Destrebecqz, A., Cleeremans, A. Can sequence learning be implicit? New evidence with the process dissociation procedure. *Psychonomic Bulletin & Review* 8, 343–350 (2001). https://doi.org/10.3758/BF03196171  

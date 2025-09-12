@@ -1,0 +1,24 @@
+---
+title: Paměťový rozsah
+subtitle: (Memory Span)
+---
+
+Odkazy: [Experiment](/experiments/memory-span.html)
+
+Cílem experimentu je ukázat, jak souvisí rozsah paměti (počet prvků, které si dokážeme zapamatovat) s charakterem učeného materiálu. Účastníci experimentu vidí sekvence podnětů a mají je potom z paměti rekonstruovat klikáním na tlačítka. Experiment obsahuje sekvence pěti podmínek: 
+
+1) číslice 
+2) písmena, která znějí podobně (v češtině jako „bé“, „pé“, „té“, „é“) 
+3) písmena, různá (tj. „em“, „kvé“ apod.) 
+4) krátká slova na jednu slabiku 
+5) dlouhá slova s více slabikami 
+
+Podněty jsou v angličtině. Obecně se očekává rozsah paměti přibližně 7 (+/-2). Pozdější experimenty ukázali, že tento rozsah závisí na charakteru podnětů (pro písmena, která znějí stejně by měl být menší než u těch, která znějí jinak). Podobně pro delší slova by měl být menší než pro krátká slova. Tato pozorování ukazují, že klasické testy rozsahu paměti sice měří paměť ale současně jsou silně ovlivněny verbálními procesy. 
+
+Metodologicky je na experimentu zajímavé, že je postavený na  tzv. stair-case přístupu. Tj. když je odpověď dobře, příští podnět je delší, když špatně, tak kratší. Na konci výsledky ukazují délku poslední sekvence pro každý typ. Tady je to hodně triviální (5 opakování pro každý typ je málo). V praxi se to také často dělá asymetrické asymetrické (např. je třeba mít 2 za sebou dobře, aby se úloha ztížila). Tento přístup se používá například v psychofyzice při hledání absolutního nebo relativního prahu. V současnosti jej ale najdeme i v jiných oborech - například u znalostních či IQ testů, kdy je každá další položka vybírána s ohledem na úspěšnost v předchozích odpovědích, abychom nedávali zbytečně lehké/těžké otázky (adaptivní testování). 
+
+## Zdroje, odkud začít 
+
+- <https://en.wikipedia.org/wiki/Memory_span>
+- <https://en.wikipedia.org/wiki/Psychophysics#Staircase_procedures>
+- <https://en.wikipedia.org/wiki/Computerized_adaptive_testing>

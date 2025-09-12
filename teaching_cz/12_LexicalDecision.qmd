@@ -1,0 +1,30 @@
+---
+title: Lexikální rozhodování  
+subtitle: (Lexical Decision) 
+---
+
+Odkazy: [Experiment](/experiments/lexical-decision.html)
+
+ento experiment se zaměřuje na lidské zpracování psaného jazyka. Každý jazyk předpokládá existenci lexikonu s informacemi o jednotlivých slovech. Takové informace mohou odkazovat k významu slov, k jejich funkci v jazyce (např. slovní druh) a vztahy k dalším slovům (Po jakých slovech může následovat? Co může následovat po něm? Mohou jej jiná slova ovlivňovat?). Psychologie se zajímá o vnitřní organizaci takového lexikonu. V mentálním lexikonu jsou důležité sémantické vztahy, a tak slova s podobným významem budou mít k sobě blízko.  
+
+V tomto experimentu účastník vidí skupiny písmen a má říct, zda se jedná o skutečná slova nebo ne (tzv. pseudoslova). Účastníci se mají rozhodovat přesně a také rychle. Slova jsou zobrazována v párech za sebou. Celkem experiment obsahuje 5 1položek z 5 podmínek. Jednotlivá slova ve dvojicích se lišila tím, zda se jednalo o skutečná slova nebo pseudoslova a také zda spolu významově souvisela (pokud to byla slova – to byla hlavní podmínka): 
+
+- Slovo + slovo (související) - 15x 
+- Slovo + slovo (nesouvisející) - 15x 
+- Slovo + pseudoslovo – 7x 
+- Pseudoslovo + pseudoslovo – 7x 
+- Pseudoslovo  + pseudoslovo – 7x 
+
+V datech máme průměrné časy odpovědí pro druhá slova. Předpokládáme, že související slova budou rozpoznáno rychleji, než když slova spolu nesouvisí. Ostatní podmínky nejsou tak podstatné, v experimentu jsou proto, aby se lidé museli rozhodovat mezi slovy a pseudoslovy (v hlavní podmínce jsou jen samá slova). 
+
+Experiment prezentuje anglická slova. Myslíte, že to mělo vliv na vaše zjištění? 
+
+## Zdroje odkud začít 
+
+- <https://en.wikipedia.org/wiki/Lexical_decision_task>
+
+## Podněty (pokud by se vám to k něčemu hodilo) 
+
+- Související dvojice: butter-bread, mountain-bike, truck-car, snow-cold, hand-glove, glove-hand, rat-mouse, doctor-nurse 
+- Nesouvisející dvojice: bike-rat, bride-hand, bride-nurse, butter-wedding, butter-bike, hand-doctor, mountain-bread, mountain-butter, nurse-bike, nurse-hand, snow-doctor, truck-mountain, truck-snow, wedding-bread 
+- Pseudoslova: pable, pafer, reab, saj, scralt, soam, tofenum, tommal, treim, trief, wednet 

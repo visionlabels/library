@@ -1,0 +1,18 @@
+---
+title: Rozhodování
+subtitle: Decision Making
+---
+
+Odkazy: Experiment a formulář
+
+Tento experiment obsahuje různé úlohy na rozhodování (jako Asijská chřipka). Otázky jsou ve dvou verzích, každý účastník je rozřazen do patřičné verze podle náhodného čísla, které si sám vymyslí (Forms neumožňují náhodné losování, tohle je řešení z nouze). 
+
+Otázky v obou verzích si vzájemně odpovídají (první otázka obou verzí se týká asijské chřipky apod.). Podívejte se na jednotlivé páry otázek a posuďte, zda se poměr voleb liší. Pro statistické testování můžete použít např. chi-kvadrát test [lze i online].  
+
+Pro interpretaci lze použít články Kahnemana a Tverského, např. viz níže. Zařazené efekty jsou robustní, ale všimněte si, že jednotliví lidé se rozhodují podle svých znalostí a preferencí (výsledky nebývají 100% vs 0%, různí lidé volí různě). 
+
+## Zdroje odkud začít 
+
+- Kahneman, D., & Tversky, A. (1984). Choices, values, and frames. *American Psychologist*, 39(4), 341–350. https://doi.org/10.1037/0003-066X.39.4.341  
+
+ 

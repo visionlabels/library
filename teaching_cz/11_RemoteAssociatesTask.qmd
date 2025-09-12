@@ -1,0 +1,19 @@
+---
+title: Test vzdálených asociací  
+subtitle: (Remote Associates Task) 
+---
+
+Odkazy: Experiment a formulář 
+
+Cílem této aktivity je vyzkoušet si Test vzdálených asociací. Tento test kreativity má podobu 20 otázek. Každou otázku tvoří tři na první pohled nesouvisející slova. Úkolem je ke každé trojici slov najít slovo čtvrté, které je ke všem z trojice v nějakém vztahu.  
+
+Slova se vypisují do políčka, proto bude asi nejjednodušší test opravit ručně (např. podívat se do sloupečku s odpověďmi a přidat vedle sloupeček, kam napíšete 1 pro správné odpovědi a 0 pro nesprávné). Správné odpovědi najdete např. v práci Martina Hajného (na s.46).  
+
+Abyste případně mohly vytvářet a testovat nějaké hypotézy, přidali jsme k aktivitě krátký osobnostní test (test TIPI – je to velmi krátká verze Big Five, kde každou z pěti škál sytí 2 položky). Klíč najdete na webu Samuela Goslinga (link níže). Big Five dotazníky obsahují 5 škál (Extraverze, Přívětivost, Svědomitost, Emoční stabilita/Neuroticismus, Otevřenost vůči zkušenosti) - můžete se tak ptát, zda některá osobnostní vlastnost souvisí (koreluje) s kreativitou. 
+
+## Zdroje odkud začít 
+
+- <https://en.wikipedia.org/wiki/Remote_Associates_Test>  
+- Hajný, M. (2014). Konvergentní a diskriminační validita české verze testu RAT (pilotní studie) [Masarykova univerzita, Fakulta sociálních studií]. https://is.muni.cz/th/zqzs3/ 
+- <https://gosling.psy.utexas.edu/scales-weve-developed/ten-item-personality-measure-tipi/>  
+- Thørrisen, M. M., & Sadeghi, T. (2023). The Ten-Item Personality Inventory (TIPI): A scoping review of versions, translations and psychometric properties. *Frontiers in Psychology*, 14. https://www.frontiersin.org/articles/10.3389/fpsyg.2023.1202953 

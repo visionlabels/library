@@ -1,0 +1,18 @@
+---
+title: "Müller-Lyerova iluze"
+subtitle: (Müller-Lyer illusion) 
+---
+
+Odkazy: [Experiment](/experiments/muller-lyer.html) 
+/ [Opačný směr](/experiments/muller-lyer.html?sh=1)
+
+Cílem experimentu je změřit (ověřit) sílu Müller-Lyerovy iluze. Experiment obsahuje dvě úsečky. První úsečka nalevo má různé délky (85-115 pixelů) a má rovné konce. Druhá úsečka napravo má vždy stejnou délku (100 pixelů) a má na koncích šipky (když jsou šipky ohnuté dovnitř/ukazují ven, úsečka se zdá kratší a naopak). V každém trialu účastník vybírá, která úsečka se mu zdá delší.  
+
+Pro grafické znázornění výsledků doporučuji na ose x vynést délku úsečky a na ose y procento voleb, že je delší. Výsledná křivka tvaru S by neměla procházet bodem [100 px; 50%], a měla by být posunutá na jednu stranu. Zkuste si představit, jak by vypadala křivka dokonalého pozorovatele (a případně, jak by tuto křivku ovlivnila nepřesnost vnímání resp. síla M-L iluze). Nepřesností vnímání tady myslíme neschopnost vnímat rozdíly menší než X pixelů. Tvar a posun křivky by se porovnával pomocí analýzy psychometrické křivky (logistické regrese). 
+
+V záhlaví najdete odkaz na variantu experimentu, kde jsou šipky opačným směrem. Můžete si nasbírat svoje data a porovnat, jak výsledky vypadají.  
+
+## Zdroje, odkud začít 
+
+- <https://en.wikipedia.org/wiki/M%C3%BCller-Lyer_illusion>
+- <https://en.wikipedia.org/wiki/Psychometric_function>

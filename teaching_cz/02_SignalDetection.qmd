@@ -1,0 +1,18 @@
+---
+title: Detekce signálu
+subtitle: (Signal detection) 
+---
+
+Odkazy: [Experiment](/experiments/sdt.html)
+
+V psychologii často prezentujeme podněty a chceme po lidech, aby s nimi pracovali a dělali určitá rozhodnutí. Může jít o schopnost rozpoznat pravidelnost v náhodném poli (jako v tomto experimentu), nebo třeba o schopnost rozpoznat lež. Nejjednodušším způsobem vyhodnocení je spočítat procento správných odpovědí. Tento přístup ale ignoruje, že lidé mohou dělat dva druhy chyb (falešný poplach, FA - označovat za lež pravdivé výroky; opomenutí, Miss - nevšimnout si lži a považovat ji za pravdivý výrok). Teorie detekce signálu (Signal Detection Theory, SDT) se snaží tato data vyhodnocovat citlivěji, abychom i s těmito informacemi mohli pracovat. 
+
+V experimentu byly zobrazovány 3 podmínky, které se lišily počtem teček (64, 144, 256). Každá podmínka byla prezentována ve 20 trialech (v 10 cíl byl - tj. pravidelná úsečka tvořená body – v 10 nebyl). Úsečka se objevovala v náhodné části podnětu a měla 2 různé sklony (5x začínala vlevo nahoře, 5x vpravo dole). Závěrečné výsledky ukazují procenta (poměr), pro každou ze 4 variant, jak může trial dopadnout (Hit/FA/Miss/CR - viz např. odkaz na wikipedii). V rámci SDT se dá z hodnot vypočítat citilivost (d’ - neboli “d prime” [dý prájm], ta čárka je důležitá) a bias (c jako criterion, tady čárka není). Větší hodnota d’ znamená, že člověk lépe rozličuje přítomnost podnětu, nula znamená, že toho není schopen. Nulová hodnota c znamená, že falešné poplachy a opomenutí jsou vyvážené; kladná/záporná hodnota znamená vychýlení na jednu stranu (tady je vždy lepší zkontrolovat, zda to dobře interpretujete, podle skutečných hodnot FA a Miss – snadno se to prohodí). 
+
+V rámci vyhodnocení se můžete podívat, zda citlivost d’ klesá s přibývajícím počtem teček (očekávatelné). Současně se můžete podívat, jak se s obtížností mění bias (není jasná predikce).  
+
+## Zdroje odkud začít 
+
+- <https://en.wikipedia.org/wiki/Detection_theory>
+- <http://www.cns.nyu.edu/~david/handouts/sdt/sdt.html>
+- Kalkulátor např. <https://www.computerpsych.com/Research_Software/NormDist/Online/Detection_Theory>

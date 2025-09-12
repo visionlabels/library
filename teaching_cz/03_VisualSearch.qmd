@@ -1,0 +1,15 @@
+---
+title: Zrakové vyhledávání
+subtitle: (Visual search)
+---
+
+Odkazy: [Experiment](/experiments/visual-search.html)
+
+Cílem experimentu je ukázat rozdíl mezi feature-search a conjunction-search vyhledáváním. Obtížnost vyhledávání se měří tak, že měříme čas pro různé počty objektů na obrazovce (tady 10, 20, 30 a 40). Potom výsledky proložíme (regresní) přímku a spočítáme její sklon (angl. slope). Sklon udává, o kolik se prodlouží hledání, když přidáme jeden objekt.  
+
+Data je potřeba rozdělit na 4 skupiny (2x2), podle toho zda se jedná o feature/conjunction search a zda tam cílový objekt je (present/absent). Sklon potřebujeme zjistit pro každou skupinu zvlášť. Skoln by měl být větší u conjunction search než u feature search. Časy a tedy i sklon by měl být větší u absent trialů (zhruba dvojnásobně oproti odpovídajícímu druhu vyhledávání). Je to tím, že zpracovat jeden objekt je sice stejně rychlé, ale musíte jich zpracovat přibližně dvakrát víc (při hledání 1 z 20 musíte v průměru projít polovinu prvků, ale pokud tam není, tak všechny). 
+
+## Zdroje odkud začít
+
+- <https://en.wikipedia.org/wiki/Visual_search>
+- Wolfe, J. M. (2020). Visual Search: How Do We Find What We Are Looking For? *Annual Review of Vision Science*, 6(1), 539–562. https://doi.org/10.1146/annurev-vision-091718-015048 - pokročilejší, ale srozumitelný úvod, dostupné také [zde](https://search.bwh.harvard.edu/new/pubs/Wolfe2020_VisualSearch_annurev-vision.pdf) 

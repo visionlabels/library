@@ -1,0 +1,26 @@
+---
+title: Semantický diferenciál 
+subtitle: (Semantic Differential) 
+---
+
+Odkazy: Formulář
+
+V dotazníku je celkem 12 hudebních ukázek. Úkolem je každou ohodnotit na 8 bipolárních dimenzích. Každá ukázka se dá zařadit pod jednu ze 4 emocí 
+
+- Hněv - 1, 5, 9 (pořadí) 
+- Strach – 3, 7, 10 
+- Smutek – 4, 6, 11 
+- Štěstí - 2, 8, 12 
+
+V tomto cvičení nebudeme testovat hypotézy, ale cílem je porovnat, jak vypadají profily pro jednotlivé emoce. Můžete hodnocení sloučit podle emocí (jako na obrázku níže), nebo se podívat i na to, jak vypadají profily pro jednotlivé skladby. 
+
+![](/images/semdif.png)
+
+Poznámka: Ve staré verzi (2024) byla chyba (skladba 12 je tam 2x, i místo skladby 11). Nechali jsme to tak, protože aspoň jsou počty skladeb pro emoce vyrovnané. Od 26.3.2025 je to správně.
+
+## Zdroje odkud začít 
+
+- <https://en.wikipedia.org/wiki/Semantic_differential>
+- Eerola, T., & Vuoskoski, J. K. (2011). A comparison of the discrete and dimensional models of emotion in music. *Psychology of Music*, 39(1), 18-49. 
+
+ 

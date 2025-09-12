@@ -1,0 +1,20 @@
+---
+title: Go/No-Go Task 
+subtitle: Go/No-Go Task 
+---
+
+Odkazy: Experimenty [SRT](/experiments/srt.html) a [Go/No-Go](/experiments/gonogo.html)
+
+V rámci této aktivity se sbírala data o prostém reakčním času (Simple Reaction Time, SRT) a o reakčním čase v Go/No-Go experimentu.  
+
+Prvním experiment na SRT obsahoval 25 trialů a cílem bylo co nejrychleji zmáčknout mezerník, když se na obrazovce objevil tvar (černý čtverec). Účastník nemusí nic rozhodovat (a pokud odpoví v limitu 2000 ms, tak má vše dobře). Go/No-Go experiment má v experimentální části (tedy po zácviku) 60 trialů, které mohou patřit do 1 ze 3 podmínek (zelený, modrý nebo červený čtverec). Pokud je čtverec zelený nebo modrý, účastníci mají co nejrychleji zmáčknout mezerník. Pokud je čtverec červený, mezerník stisknout nesmí. Měříme reakční čas (první dvě podmínky - zelená/modrá - bereme jako jednu skupinu) a počet chyb. 
+
+Statisticky je možné otestovat, zda existuje rozdíl v reakčních časech mezi SRT a Go/No-Go (když lidé potřebují rozlišit, zda mají odpovídat, mělo by jim to trvat déle), tedy např. T-testem. U chyb je možné podívat se jen na Go/No-Go a podívat se, zda existuje korelace mezi množstvím chyb Go Accuracy a No-Go Accuracy.  
+
+## Zdroje odkud začít 
+
+- <https://www.psytoolkit.org/experiment-library/go-no-go.html>
+- Criaud, M. & Boulinguez, P. (2012). Have we been asking the right questions when assessing response inhibition in go/no-go tasks with fMRI? A meta-analysis and critical review. *Neuroscience & Biobehavioral Reviews*, 37(1), 11-23.
+- Verbruggen, F. & Logan, G.D. (2008). Automatic and controlled response inhibition: Associative learning in the go/no-go and stop-signal paradigms. *Journal of Experimental Psychology: General*, 137(4), 649-672.
+- Meule, A. (2017). Reporting and Interpreting Task Performance in Go/No-Go Affective Shifting Tasks. *Frontiers in Psychology*, 8. https://doi.org/10.3389/fpsyg.2017.00701 
+- Gomez, P., Ratcliff, R., & Perea, M. (2007). A model of the go/no-go task. *Journal of Experimental Psychology: General*, 136(3), 389–413. https://doi.org/10.1037/0096-3445.136.3.389

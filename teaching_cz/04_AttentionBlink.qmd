@@ -1,0 +1,20 @@
+---
+title: Mrknutí pozornosti
+subtitle: (Attentional blink) 
+---
+
+Odkazy: [Experiment](/experiments/attention-blink.html)
+
+Cílem experimentu je ukázat, jak naše schopnost rozpoznat objekty/znaky závisí na jejich časovém odstupu. V rámci experimentu účastníci sledují sled 20 písmen a mají si všímat 2 písmen (J a K). Vždy pak mají rozlišit, zda tam bylo J nebo K nebo obě nebo žádné (tedy 4 možnosti). Experiment celkem obsahuje 140 sledů (trialů). Hlavní podmínkou jsou trialy, kde jsou obě písmena, kde zkoumáme úspěšnost podle rozestupu písmenek (100 trialů - 5x20 – rozestupy 0, 2, 4, 6, 8. Rozestup 0 znamená, že písmena šla rovnou za sebou. Ostatní podmínky, kde je jedno písmeno (30x J, 30x K) nebo ani jedno (30x) jsou důležité proto, aby lidé nemohli pořád hádat, že tam obě písmena jsou. Ideálně by jich také mělo být vždy 50, ale je jich jen 30, aby byl experiment kratší. 
+
+Úspěšnost rozpoznání prvního písmene by měla být pořád stejná, nezávisle na rozestupu (proměnné FirstTarget_sep0 až 8). Úspěšnost u druhého písmene mívá tvar U křivky (SecondTarget_sep0 až 8, celkem dobrý výkon u nulového rozestupu, pak pokles a návrat na původní hodnoty kolem rozestupu 6 nebo 8).  
+
+![](/images/Atten_blink_fig2.jpg)
+
+## Zdroje odkud začít
+
+- <https://en.wikipedia.org/wiki/Attentional_blink>
+- <http://www.scholarpedia.org/article/Attentional_blink>
+- Shapiro, K. L., Raymond, J. E., & Arnell, K. M. (1997). The attentional blink. *Trends in cognitive sciences*, 1(8), 291-296. https://doi.org/10.1016/S1364-6613(97)01094-2  
+
+ 

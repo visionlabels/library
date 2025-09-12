@@ -1,0 +1,8 @@
+---
+title: "Výukové materiály"
+listing:
+  contents:
+    - "teaching_cz/*.qmd"
+  type: table
+  fields: [title, subtitle]
+---

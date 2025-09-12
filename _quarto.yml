@@ -8,6 +8,7 @@ project:
   resources:
     - "experiments"
     - "jspsych"
+    - "images"
 
 website:
   title: "Experiment Library"

@@ -1,0 +1,26 @@
+---
+title: Cattelův Faktor B
+subtitle: Intelligence
+--- 
+
+Odkazy: 
+[Emoční inteligence](https://www.psytoolkit.org/survey-library/emotional-intelligence.html) a 
+[Sociální inteligence](https://www.psytoolkit.org/survey-library/social-intelligence-tsis.html) - Formulář
+
+Cílem tohoto semináře je vyzkoušet si inteligenční test a výsledky porovnat s jinými typy inteligence. 
+
+Inteligenční test vychází z jedné ze škál Cattellova 16tifaktorového osobnostního dotazníku (16PF), která orientačně zjišťuje úroveň obecných rozumových schopností (tzv. Faktor B). Test má formu 15 otázek, kde dotazovaný vybírá jednu ze tří odpovědí. Otázky má každý ve stejném pořadí, ale pořadí nabídky 3 odpovědí u každé otázky je náhodné.  
+
+V tabulce s výsledky najdete list “Vyhodnocovadlo”. Na prvním řádku má uvedeny správné odpovědi pro vaši kontrolu, níže jsou vzorečky, které by měly automaticky dosadit pro vyplněná data 1 a 0 (ve své kopii tabulky můžete vzorečky “roztáhnout” níž a měly by spočítat data pro další účastníky. Nyní jsou tam vyplněni dva testoví účastníci s náhodnými odpověďmi (mají záporné skóry z další testů a jmenují se test a test2) - nezapomeňte je pak vyřadit. Výsledkem testu je počet správných odpovědí (0-15). 
+
+Abyste měli výsledek s čím porovnat a diskutovat, vyplňují se i další dva testy – test emoční inteligence (Schutte et al., 1998) a test sociální inteligence (Tromsø Social Intelligence Scale), který má 3 subškály. Pomocí korelací můžete zjišťovat, zda jednotlivé koncepty spolu souvisí kladně (schopní lidé jsou schopní po všech stránkách) nebo záporně (s našimi omezenými zdroji můžeme vynikat jen v jedné oblasti), případně vůbec. 
+
+## Zdroje odkud začít 
+
+- <https://en.wikipedia.org/wiki/16PF_Questionnaire>
+- <https://www.psytoolkit.org/survey-library/emotional-intelligence.html>
+- <https://www.psytoolkit.org/survey-library/social-intelligence-tsis.html>
+- Schutte, N. S., Malouff, J. M., Hall, L. E., Haggerty, D. J., Cooper, J. T., Golden, C. J., & Dornheim, L. (1998). Development and validation of a measure of emotional intelligence. *Personality and Individual Differences*, 25, 167–177.   
+- D.H. Silvera, M. Martinussen, & T. I. Dahl. (2001). The Tromsø Social Intelligence Scale, a self-report measure of social intelligence. *Scandinavian Journal of Psychology*, 42, 313-319. 
+
+ 
