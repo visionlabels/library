@@ -1,0 +1,19 @@
+---
+title: "Experiment Library"
+---
+
+- Müller-Lyerova iluze (Müller-Lyer illusion) - [demo](experiments/muller-lyer.html)
+- Detekce signálu (Signal detection) - [demo](experiments/sdt.html)
+- Zrakové vyhledávání (Visual search) - [demo](experiments/visual-search.html)
+- Mrknutí pozornosti (Attentional blink) - [demo](experiments/attention-blink.html)
+- Paměťový rozsah (Memory span) - [demo](experiments/memory-span.html)
+- Implicitní učení (Implicit learning) - [demo](experiments/implicit-learning-kb.html)
+- Prototypy (Prototypes) - [demo](experiments/prototypes.html)
+- Rozpoznávání slov (Lexical Decision) - [demo](experiments/lexical-decision.html)
+- Nadřazenost slov (Word Superiority) - [demo](experiments/word-superiority.html)
+- Implicitní asociační test (Implicit Association Test) - [demo](experiments/iat.html)
+- Měření reakčního času (Simple Reaction Time) - [demo](experiments/srt.html)
+- Go/No-Go - [demo](experiments/gonogo.html)
+- Mentální rotace (Mental Rotation) - [demo](experiments/rotation.html)
+
+

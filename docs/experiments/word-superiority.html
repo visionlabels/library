@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Experiment</title>
+    <script src="../jspsych/dist/jspsych.js"></script>
+    <script src="../jspsych/dist/plugin-html-button-response.js"></script>
+    <script src="../jspsych/dist/plugin-html-keyboard-response.js"></script>
+    <script src="../jspsych/dist/plugin-canvas-button-response.js"></script>
+    <script src="../jspsych/dist/plugin-canvas-keyboard-response.js"></script>
+    <script src="../jspsych/dist/plugin-instructions.js"></script>
+    <script src="../jspsych/dist/plugin-preload.js"></script>
+    <link rel="stylesheet" href="../jspsych/dist/jspsych.css" type="text/css">
+  </head>
+  <body></body>
+  <script>
+
+    var jsPsych = initJsPsych({
+        on_finish: function () {
+        // jsPsych.data.displayData();
+        },
+        default_iti: 0,
+    });
+
+    var instructions = {
+        type: jsPsychInstructions,
+        pages: [
+        'Welcome to the experiment. Today, we will measure your ability to process isolated letters and words.<br>' + 
+        'The experiment takes about 10 minutes and consists of 100 simple trials.<br><br>',
+
+        // original
+        'In the beginning of each trial, a fixation cross appears in the middle of the screen.<br>' + 
+        'Look at the cross, after 1 second it will be replaced with a single letter or with a short word.<br>' +
+        'The letter or word are flashed only briefly (for 50 ms) and than they are replaced with a mask (ØØØØ) for 500 ms.<br><br>' +
+        'Finally, a question with two alternatives appears. <br>The question has a form like -*--, which means you should select the letter on the second position (i.e., where * appears).<br>' +
+        'You will be responding with mouse, clicking on one of the two buttons.<br>' +
+        'In this experiment, we do not measure response times, but analyze the accuracy (correct/wrong responses).<br><br>' + 
+        'Click <b>Next</b> to start.<br><br>'
+        ],
+        show_clickable_nav: true
+    }
+    // shuffle: https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
+    function shuffle(a) {
+        var j, x, i;
+        for (i = a.length - 1; i > 0; i--) {
+            j = Math.floor(Math.random() * (i + 1));
+            x = a[i];
+            a[i] = a[j];
+            a[j] = x;
+        }
+        return a;
+    }
+    // https://stackoverflow.com/questions/7342957/how-do-you-round-to-1-decimal-place-in-javascript
+    function roundx(value, precision) {
+        var multiplier = Math.pow(10, precision || 0);
+        return Math.round(value * multiplier) / multiplier;
+    }
+
+    // useful constants & functions
+    const keyPrompt = "<br><br><br>Press F for non-words, J for words";
+    var presentText = function(t, color) { 
+        return `<span style="font-size:48px; font-family: monospace; color:${color};">${t}</span>`
+    };
+    function presentLetter(letter, position) {
+        const empty = presentText("_", "white");
+        const target = presentText(letter, "black");
+        var s1 = (position == 0) ? target : empty;
+        var s2 = (position == 1) ? target : empty;
+        var s3 = (position == 2) ? target : empty;
+        var s4 = (position == 3) ? target : empty;
+        return s1 + s2 + s3 + s4;
+    }
+    function presentCue(position) {
+        const empty = presentText("-", "black");
+        const cue = presentText("*", "black");
+        var s1 = (position == 0) ? cue : empty;
+        var s2 = (position == 1) ? cue : empty;
+        var s3 = (position == 2) ? cue : empty;
+        var s4 = (position == 3) ? cue : empty;
+        return s1 + s2 + s3 + s4;
+    }
+    const wordCode = "J", nonWordCode = "F";
+    const timeLimit = 2000;
+
+    var wordMaskTrial = 
+    [
+        // initial fix
+        {
+            type: jsPsychHtmlKeyboardResponse,
+            trial_duration: 1000, 
+            choices: [],
+            stimulus: presentText("+", "black"),
+            prompt: "",
+        },
+        // word 1
+        {
+            type: jsPsychHtmlKeyboardResponse,
+            trial_duration: 100, 
+            choices: [],
+            stimulus: function() { return presentText(jsPsych.timelineVariable('show')); },
+            prompt: "",
+        },
+        // delay
+        {
+            type: jsPsychHtmlKeyboardResponse,
+            trial_duration: 50, 
+            choices: [],
+            stimulus: presentText("", "black"),
+            prompt: "",
+        },
+        // mask
+        {
+            type: jsPsychHtmlKeyboardResponse,
+            trial_duration: 500, 
+            choices: [],
+            stimulus: presentText("ØØØØ", "black"),
+            prompt: "",
+        },
+        // word 2
+        {
+            type: jsPsychHtmlButtonResponse,
+            choices: jsPsych.timelineVariable('choices'),
+            //button_html: '<button style="font-size:48px; font-family: monospace;" class="jspsych-btn">%choice%</button>',
+            stimulus: function() { return "<br><br><br>" + presentCue(jsPsych.timelineVariable('pos')) + "<br><br>"; },
+            prompt: "<br>What letter did you see",
+            data: {
+                expected: jsPsych.timelineVariable('correctPos'),
+                condition: jsPsych.timelineVariable('cond'),
+                task: "response",
+            }, 
+            on_finish: function(data) {
+                data.correct = (data.expected == data.response);
+            }
+        },
+    ];
+
+    var wordMaskTrials = {
+        timeline: wordMaskTrial,
+        randomize_order: true,
+        timeline_variables: [
+
+{ cond: "Letter", stim:"C", pos: 1, target: "C", distractor: "H", dur: 30, isi: 0, show: presentLetter("C", 1), correctPos: 0, choices: ["C", "H"], },
+{ cond: "Letter", stim:"C", pos: 1, target: "C", distractor: "H", dur: 50, isi: 0, show: presentLetter("C", 1), correctPos: 1, choices: ["H", "C"], },
+{ cond: "Letter", stim:"C", pos: 1, target: "C", distractor: "H", dur: 50, isi: 20, show: presentLetter("C", 1), correctPos: 0, choices: ["C", "H"], },
+{ cond: "Letter", stim:"D", pos: 3, target: "D", distractor: "K", dur: 30, isi: 0, show: presentLetter("D", 3), correctPos: 1, choices: ["K", "D"], },
+{ cond: "Letter", stim:"D", pos: 3, target: "D", distractor: "K", dur: 50, isi: 0, show: presentLetter("D", 3), correctPos: 0, choices: ["D", "K"], },
+{ cond: "Letter", stim:"D", pos: 3, target: "D", distractor: "K", dur: 50, isi: 20, show: presentLetter("D", 3), correctPos: 1, choices: ["K", "D"], },
+{ cond: "Letter", stim:"D", pos: 2, target: "D", distractor: "T", dur: 30, isi: 0, show: presentLetter("D", 2), correctPos: 0, choices: ["D", "T"], },
+{ cond: "Letter", stim:"D", pos: 2, target: "D", distractor: "T", dur: 50, isi: 0, show: presentLetter("D", 2), correctPos: 1, choices: ["T", "D"], },
+{ cond: "Letter", stim:"D", pos: 2, target: "D", distractor: "T", dur: 50, isi: 20, show: presentLetter("D", 2), correctPos: 0, choices: ["D", "T"], },
+{ cond: "Letter", stim:"E", pos: 2, target: "E", distractor: "L", dur: 30, isi: 0, show: presentLetter("E", 2), correctPos: 1, choices: ["L", "E"], },
+{ cond: "Letter", stim:"E", pos: 2, target: "E", distractor: "L", dur: 50, isi: 0, show: presentLetter("E", 2), correctPos: 0, choices: ["E", "L"], },
+{ cond: "Letter", stim:"E", pos: 2, target: "E", distractor: "L", dur: 50, isi: 20, show: presentLetter("E", 2), correctPos: 1, choices: ["L", "E"], },
+{ cond: "Letter", stim:"F", pos: 3, target: "F", distractor: "L", dur: 30, isi: 0, show: presentLetter("F", 3), correctPos: 0, choices: ["F", "L"], },
+{ cond: "Letter", stim:"F", pos: 3, target: "F", distractor: "L", dur: 50, isi: 0, show: presentLetter("F", 3), correctPos: 1, choices: ["L", "F"], },
+{ cond: "Letter", stim:"F", pos: 3, target: "F", distractor: "L", dur: 50, isi: 20, show: presentLetter("F", 3), correctPos: 0, choices: ["F", "L"], },
+{ cond: "Letter", stim:"H", pos: 1, target: "H", distractor: "C", dur: 30, isi: 0, show: presentLetter("H", 1), correctPos: 1, choices: ["C", "H"], },
+{ cond: "Letter", stim:"H", pos: 1, target: "H", distractor: "C", dur: 50, isi: 0, show: presentLetter("H", 1), correctPos: 0, choices: ["H", "C"], },
+{ cond: "Letter", stim:"H", pos: 1, target: "H", distractor: "C", dur: 50, isi: 20, show: presentLetter("H", 1), correctPos: 1, choices: ["C", "H"], },
+{ cond: "Letter", stim:"H", pos: 0, target: "H", distractor: "L", dur: 30, isi: 0, show: presentLetter("H", 0), correctPos: 0, choices: ["H", "L"], },
+{ cond: "Letter", stim:"H", pos: 0, target: "H", distractor: "L", dur: 50, isi: 0, show: presentLetter("H", 0), correctPos: 1, choices: ["L", "H"], },
+{ cond: "Letter", stim:"H", pos: 0, target: "H", distractor: "L", dur: 50, isi: 20, show: presentLetter("H", 0), correctPos: 0, choices: ["H", "L"], },
+{ cond: "Letter", stim:"K", pos: 3, target: "K", distractor: "D", dur: 30, isi: 0, show: presentLetter("K", 3), correctPos: 1, choices: ["D", "K"], },
+{ cond: "Letter", stim:"K", pos: 3, target: "K", distractor: "D", dur: 50, isi: 0, show: presentLetter("K", 3), correctPos: 0, choices: ["K", "D"], },
+{ cond: "Letter", stim:"K", pos: 3, target: "K", distractor: "D", dur: 50, isi: 20, show: presentLetter("K", 3), correctPos: 1, choices: ["D", "K"], },
+{ cond: "Letter", stim:"L", pos: 2, target: "L", distractor: "E", dur: 30, isi: 0, show: presentLetter("L", 2), correctPos: 0, choices: ["L", "E"], },
+{ cond: "Letter", stim:"L", pos: 2, target: "L", distractor: "E", dur: 50, isi: 0, show: presentLetter("L", 2), correctPos: 1, choices: ["E", "L"], },
+{ cond: "Letter", stim:"L", pos: 2, target: "L", distractor: "E", dur: 50, isi: 20, show: presentLetter("L", 2), correctPos: 0, choices: ["L", "E"], },
+{ cond: "Letter", stim:"L", pos: 3, target: "L", distractor: "F", dur: 30, isi: 0, show: presentLetter("L", 3), correctPos: 1, choices: ["F", "L"], },
+{ cond: "Letter", stim:"L", pos: 3, target: "L", distractor: "F", dur: 50, isi: 0, show: presentLetter("L", 3), correctPos: 0, choices: ["L", "F"], },
+{ cond: "Letter", stim:"L", pos: 3, target: "L", distractor: "F", dur: 50, isi: 20, show: presentLetter("L", 3), correctPos: 1, choices: ["F", "L"], },
+{ cond: "Letter", stim:"L", pos: 0, target: "L", distractor: "H", dur: 30, isi: 0, show: presentLetter("L", 0), correctPos: 0, choices: ["L", "H"], },
+{ cond: "Letter", stim:"L", pos: 0, target: "L", distractor: "H", dur: 50, isi: 0, show: presentLetter("L", 0), correctPos: 1, choices: ["H", "L"], },
+{ cond: "Letter", stim:"L", pos: 0, target: "L", distractor: "H", dur: 50, isi: 20, show: presentLetter("L", 0), correctPos: 0, choices: ["L", "H"], },
+{ cond: "Letter", stim:"L", pos: 1, target: "L", distractor: "P", dur: 30, isi: 0, show: presentLetter("L", 1), correctPos: 1, choices: ["P", "L"], },
+{ cond: "Letter", stim:"L", pos: 1, target: "L", distractor: "P", dur: 50, isi: 0, show: presentLetter("L", 1), correctPos: 0, choices: ["L", "P"], },
+{ cond: "Letter", stim:"L", pos: 1, target: "L", distractor: "P", dur: 50, isi: 20, show: presentLetter("L", 1), correctPos: 1, choices: ["P", "L"], },
+{ cond: "Letter", stim:"M", pos: 0, target: "M", distractor: "S", dur: 30, isi: 0, show: presentLetter("M", 0), correctPos: 0, choices: ["M", "S"], },
+{ cond: "Letter", stim:"M", pos: 0, target: "M", distractor: "S", dur: 50, isi: 0, show: presentLetter("M", 0), correctPos: 1, choices: ["S", "M"], },
+{ cond: "Letter", stim:"M", pos: 0, target: "M", distractor: "S", dur: 50, isi: 20, show: presentLetter("M", 0), correctPos: 0, choices: ["M", "S"], },
+{ cond: "Letter", stim:"P", pos: 1, target: "P", distractor: "L", dur: 30, isi: 0, show: presentLetter("P", 1), correctPos: 1, choices: ["L", "P"], },
+{ cond: "Letter", stim:"P", pos: 1, target: "P", distractor: "L", dur: 50, isi: 0, show: presentLetter("P", 1), correctPos: 0, choices: ["P", "L"], },
+{ cond: "Letter", stim:"P", pos: 1, target: "P", distractor: "L", dur: 50, isi: 20, show: presentLetter("P", 1), correctPos: 1, choices: ["L", "P"], },
+{ cond: "Letter", stim:"S", pos: 0, target: "S", distractor: "M", dur: 30, isi: 0, show: presentLetter("S", 0), correctPos: 0, choices: ["S", "M"], },
+{ cond: "Letter", stim:"S", pos: 0, target: "S", distractor: "M", dur: 50, isi: 0, show: presentLetter("S", 0), correctPos: 1, choices: ["M", "S"], },
+{ cond: "Letter", stim:"S", pos: 0, target: "S", distractor: "M", dur: 50, isi: 20, show: presentLetter("S", 0), correctPos: 0, choices: ["S", "M"], },
+{ cond: "Letter", stim:"T", pos: 2, target: "T", distractor: "D", dur: 30, isi: 0, show: presentLetter("T", 2), correctPos: 1, choices: ["D", "T"], },
+{ cond: "Letter", stim:"T", pos: 2, target: "T", distractor: "D", dur: 50, isi: 0, show: presentLetter("T", 2), correctPos: 0, choices: ["T", "D"], },
+{ cond: "Letter", stim:"T", pos: 2, target: "T", distractor: "D", dur: 50, isi: 20, show: presentLetter("T", 2), correctPos: 1, choices: ["D", "T"], },
+{ cond: "Word", stim:"CALF", pos: 3, target: "F", distractor: "L", dur: 30, isi: 0, show: presentText("CALF", "black"), correctPos: 0, choices: ["F", "L"], },
+{ cond: "Word", stim:"CALF", pos: 3, target: "F", distractor: "L", dur: 50, isi: 0, show: presentText("CALF", "black"), correctPos: 1, choices: ["L", "F"], },
+{ cond: "Word", stim:"CALF", pos: 3, target: "F", distractor: "L", dur: 50, isi: 20, show: presentText("CALF", "black"), correctPos: 0, choices: ["F", "L"], },
+{ cond: "Word", stim:"CALL", pos: 3, target: "L", distractor: "F", dur: 30, isi: 0, show: presentText("CALL", "black"), correctPos: 1, choices: ["F", "L"], },
+{ cond: "Word", stim:"CALL", pos: 3, target: "L", distractor: "F", dur: 50, isi: 0, show: presentText("CALL", "black"), correctPos: 0, choices: ["L", "F"], },
+{ cond: "Word", stim:"CALL", pos: 3, target: "L", distractor: "F", dur: 50, isi: 20, show: presentText("CALL", "black"), correctPos: 1, choices: ["F", "L"], },
+{ cond: "Word", stim:"FEET", pos: 2, target: "E", distractor: "L", dur: 30, isi: 0, show: presentText("FEET", "black"), correctPos: 0, choices: ["E", "L"], },
+{ cond: "Word", stim:"FEET", pos: 2, target: "E", distractor: "L", dur: 50, isi: 0, show: presentText("FEET", "black"), correctPos: 1, choices: ["L", "E"], },
+{ cond: "Word", stim:"FEET", pos: 2, target: "E", distractor: "L", dur: 50, isi: 20, show: presentText("FEET", "black"), correctPos: 0, choices: ["E", "L"], },
+{ cond: "Word", stim:"FELT", pos: 2, target: "L", distractor: "E", dur: 30, isi: 0, show: presentText("FELT", "black"), correctPos: 1, choices: ["E", "L"], },
+{ cond: "Word", stim:"FELT", pos: 2, target: "L", distractor: "E", dur: 50, isi: 0, show: presentText("FELT", "black"), correctPos: 0, choices: ["L", "E"], },
+{ cond: "Word", stim:"FELT", pos: 2, target: "L", distractor: "E", dur: 50, isi: 20, show: presentText("FELT", "black"), correctPos: 1, choices: ["E", "L"], },
+{ cond: "Word", stim:"HAND", pos: 0, target: "H", distractor: "L", dur: 30, isi: 0, show: presentText("HAND", "black"), correctPos: 0, choices: ["H", "L"], },
+{ cond: "Word", stim:"HAND", pos: 0, target: "H", distractor: "L", dur: 50, isi: 0, show: presentText("HAND", "black"), correctPos: 1, choices: ["L", "H"], },
+{ cond: "Word", stim:"HAND", pos: 0, target: "H", distractor: "L", dur: 50, isi: 20, show: presentText("HAND", "black"), correctPos: 0, choices: ["H", "L"], },
+{ cond: "Word", stim:"LAND", pos: 0, target: "L", distractor: "H", dur: 30, isi: 0, show: presentText("LAND", "black"), correctPos: 1, choices: ["H", "L"], },
+{ cond: "Word", stim:"LAND", pos: 0, target: "L", distractor: "H", dur: 50, isi: 0, show: presentText("LAND", "black"), correctPos: 0, choices: ["L", "H"], },
+{ cond: "Word", stim:"LAND", pos: 0, target: "L", distractor: "H", dur: 50, isi: 20, show: presentText("LAND", "black"), correctPos: 1, choices: ["H", "L"], },
+{ cond: "Word", stim:"MEAL", pos: 0, target: "M", distractor: "S", dur: 30, isi: 0, show: presentText("MEAL", "black"), correctPos: 0, choices: ["M", "S"], },
+{ cond: "Word", stim:"MEAL", pos: 0, target: "M", distractor: "S", dur: 50, isi: 0, show: presentText("MEAL", "black"), correctPos: 1, choices: ["S", "M"], },
+{ cond: "Word", stim:"MEAL", pos: 0, target: "M", distractor: "S", dur: 50, isi: 20, show: presentText("MEAL", "black"), correctPos: 0, choices: ["M", "S"], },
+{ cond: "Word", stim:"PODS", pos: 2, target: "D", distractor: "T", dur: 30, isi: 0, show: presentText("PODS", "black"), correctPos: 1, choices: ["T", "D"], },
+{ cond: "Word", stim:"PODS", pos: 2, target: "D", distractor: "T", dur: 50, isi: 0, show: presentText("PODS", "black"), correctPos: 0, choices: ["D", "T"], },
+{ cond: "Word", stim:"PODS", pos: 2, target: "D", distractor: "T", dur: 50, isi: 20, show: presentText("PODS", "black"), correctPos: 1, choices: ["T", "D"], },
+{ cond: "Word", stim:"POTS", pos: 2, target: "T", distractor: "D", dur: 30, isi: 0, show: presentText("POTS", "black"), correctPos: 0, choices: ["T", "D"], },
+{ cond: "Word", stim:"POTS", pos: 2, target: "T", distractor: "D", dur: 50, isi: 0, show: presentText("POTS", "black"), correctPos: 1, choices: ["D", "T"], },
+{ cond: "Word", stim:"POTS", pos: 2, target: "T", distractor: "D", dur: 50, isi: 20, show: presentText("POTS", "black"), correctPos: 0, choices: ["T", "D"], },
+{ cond: "Word", stim:"SCAM", pos: 1, target: "C", distractor: "H", dur: 30, isi: 0, show: presentText("SCAM", "black"), correctPos: 1, choices: ["H", "C"], },
+{ cond: "Word", stim:"SCAM", pos: 1, target: "C", distractor: "H", dur: 50, isi: 0, show: presentText("SCAM", "black"), correctPos: 0, choices: ["C", "H"], },
+{ cond: "Word", stim:"SCAM", pos: 1, target: "C", distractor: "H", dur: 50, isi: 20, show: presentText("SCAM", "black"), correctPos: 1, choices: ["H", "C"], },
+{ cond: "Word", stim:"SEAL", pos: 0, target: "S", distractor: "M", dur: 30, isi: 0, show: presentText("SEAL", "black"), correctPos: 0, choices: ["S", "M"], },
+{ cond: "Word", stim:"SEAL", pos: 0, target: "S", distractor: "M", dur: 50, isi: 0, show: presentText("SEAL", "black"), correctPos: 1, choices: ["M", "S"], },
+{ cond: "Word", stim:"SEAL", pos: 0, target: "S", distractor: "M", dur: 50, isi: 20, show: presentText("SEAL", "black"), correctPos: 0, choices: ["S", "M"], },
+{ cond: "Word", stim:"SHAM", pos: 1, target: "H", distractor: "C", dur: 30, isi: 0, show: presentText("SHAM", "black"), correctPos: 1, choices: ["C", "H"], },
+{ cond: "Word", stim:"SHAM", pos: 1, target: "H", distractor: "C", dur: 50, isi: 0, show: presentText("SHAM", "black"), correctPos: 0, choices: ["H", "C"], },
+{ cond: "Word", stim:"SHAM", pos: 1, target: "H", distractor: "C", dur: 50, isi: 20, show: presentText("SHAM", "black"), correctPos: 1, choices: ["C", "H"], },
+{ cond: "Word", stim:"SLOT", pos: 1, target: "L", distractor: "P", dur: 30, isi: 0, show: presentText("SLOT", "black"), correctPos: 0, choices: ["L", "P"], },
+{ cond: "Word", stim:"SLOT", pos: 1, target: "L", distractor: "P", dur: 50, isi: 0, show: presentText("SLOT", "black"), correctPos: 1, choices: ["P", "L"], },
+{ cond: "Word", stim:"SLOT", pos: 1, target: "L", distractor: "P", dur: 50, isi: 20, show: presentText("SLOT", "black"), correctPos: 0, choices: ["L", "P"], },
+{ cond: "Word", stim:"SPOT", pos: 1, target: "P", distractor: "L", dur: 30, isi: 0, show: presentText("SPOT", "black"), correctPos: 1, choices: ["L", "P"], },
+{ cond: "Word", stim:"SPOT", pos: 1, target: "P", distractor: "L", dur: 50, isi: 0, show: presentText("SPOT", "black"), correctPos: 0, choices: ["P", "L"], },
+{ cond: "Word", stim:"SPOT", pos: 1, target: "P", distractor: "L", dur: 50, isi: 20, show: presentText("SPOT", "black"), correctPos: 1, choices: ["L", "P"], },
+{ cond: "Word", stim:"WORD", pos: 3, target: "D", distractor: "K", dur: 30, isi: 0, show: presentText("WORD", "black"), correctPos: 0, choices: ["D", "K"], },
+{ cond: "Word", stim:"WORD", pos: 3, target: "D", distractor: "K", dur: 50, isi: 0, show: presentText("WORD", "black"), correctPos: 1, choices: ["K", "D"], },
+{ cond: "Word", stim:"WORD", pos: 3, target: "D", distractor: "K", dur: 50, isi: 20, show: presentText("WORD", "black"), correctPos: 0, choices: ["D", "K"], },
+{ cond: "Word", stim:"WORK", pos: 3, target: "K", distractor: "D", dur: 30, isi: 0, show: presentText("WORK", "black"), correctPos: 1, choices: ["D", "K"], },
+{ cond: "Word", stim:"WORK", pos: 3, target: "K", distractor: "D", dur: 50, isi: 0, show: presentText("WORK", "black"), correctPos: 0, choices: ["K", "D"], },
+{ cond: "Word", stim:"WORK", pos: 3, target: "K", distractor: "D", dur: 50, isi: 20, show: presentText("WORK", "black"), correctPos: 1, choices: ["D", "K"], },
+    
+    ],
+    }
+
+
+    var debriefing = {
+      type: jsPsychHtmlButtonResponse,
+      choices: ['END'],
+      stimulus: function() {
+        var trials = jsPsych.data.get().filter({task: 'response'});
+        function meanRT(variantText) {
+            var selectedTrials = trials.filter({condition: variantText});
+            return selectedTrials.select('rt').mean(); 
+        }
+        function accuracy(variantText) {
+            var selectedTrials = trials.filter({condition: variantText});
+            return selectedTrials.select('correct').mean() * 100; 
+        }
+        var r = '<table><tr><th>Condition</th><th>Accuracy</th></tr>';
+            r = r + `<tr><td>Target letter in a word</td><td>${roundx(accuracy("Word"), 0)}</td></tr>`;
+            r = r + `<tr><td>Target letter in isolation</td><td>${roundx(accuracy("Letter"), 0)}</td></tr>`;
+        r = r + "</table>"
+        return `<p><b>Results</b></p>
+          <p>In the table, you can see accuracy for isolated letters or letters presented within a word:</p>
+          ${r}
+          <p>Press any key to complete the experiment. Thank you!</p>`;
+
+      }
+    };
+
+
+    jsPsych.run([
+        instructions,
+        wordMaskTrials,
+        debriefing,
+    ]);
+
+  </script>
+</html>

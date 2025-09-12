@@ -1,0 +1,10 @@
+---
+title: "License"
+---
+
+The experiment code is licensed under GNU General Public License.
+
+The jsPsych library code is licensed under [MIT license](https://github.com/jspsych/jsPsych).
+
+The content of this webpage is licensed under 
+[CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/) (Creative Commons Attribution). 

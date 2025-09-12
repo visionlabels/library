@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "license.html",
+    "href": "license.html",
+    "title": "License",
+    "section": "",
+    "text": "The experiment code is licensed under GNU General Public License.\nThe jsPsych library code is licensed under MIT license.\nThe content of this webpage is licensed under CC BY 4.0 license (Creative Commons Attribution)."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Experiment Library is a companion website for the class General and Cognitive Psychology taught at Charles University, Faculty of Arts. The experiments are simplified versions of popular cognitive experiments.\nThe experiments or the website collects no data. All experiments display selected results in the end. If you want to use these results, ask your participants to submit them via other channels.\nThe experiments are written using jsPsych framework. Their source code is publicly available and you are free to study the code or use the experiments for your research or teaching."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Experiment Library",
+    "section": "",
+    "text": "Müller-Lyerova iluze (Müller-Lyer illusion) - demo\nDetekce signálu (Signal detection) - demo\nZrakové vyhledávání (Visual search) - demo\nMrknutí pozornosti (Attentional blink) - demo\nPaměťový rozsah (Memory span) - demo\nImplicitní učení (Implicit learning) - demo\nPrototypy (Prototypes) - demo\nRozpoznávání slov (Lexical Decision) - demo\nNadřazenost slov (Word Superiority) - demo\nImplicitní asociační test (Implicit Association Test) - demo\nMěření reakčního času (Simple Reaction Time) - demo\nGo/No-Go - demo\nMentální rotace (Mental Rotation) - demo"
+  }
+]

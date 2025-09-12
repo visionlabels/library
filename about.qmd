@@ -1,0 +1,16 @@
+---
+title: "About"
+---
+
+**Experiment Library** is a companion website for the class 
+**General and Cognitive Psychology** taught
+at [Charles University, Faculty of Arts](https://kps.ff.cuni.cz/cs/). 
+The experiments are simplified versions of popular cognitive experiments.
+
+The experiments or the website collects no data. 
+All experiments display selected results in the end. 
+If you want to use these results, ask your participants to submit them via other channels.
+
+The experiments are written using [jsPsych](https://www.jspsych.org/latest/) framework.
+Their [source code is publicly available](https://github.com/visionlabels/library) and 
+you are free to study the code or use the experiments for your research or teaching.

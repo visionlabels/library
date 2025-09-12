@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Experiment</title>
+    <script src="../jspsych/dist/jspsych.js"></script>
+    <script src="../jspsych/dist/plugin-html-button-response.js"></script>
+    <script src="../jspsych/dist/plugin-html-keyboard-response.js"></script>
+    <script src="../jspsych/dist/plugin-canvas-button-response.js"></script>
+    <script src="../jspsych/dist/plugin-canvas-keyboard-response.js"></script>
+    <script src="../jspsych/dist/plugin-instructions.js"></script>
+    <script src="../jspsych/dist/plugin-preload.js"></script>
+    <link rel="stylesheet" href="../jspsych/dist/jspsych.css" type="text/css">
+  </head>
+  <body></body>
+  <script>
+
+    var jsPsych = initJsPsych({
+        on_finish: function () {
+        // jsPsych.data.displayData();
+        },
+        default_iti: 0,
+    });
+
+    var instructions = {
+        type: jsPsychInstructions,
+        pages: [
+        'Welcome to the experiment. Today, we will measure your ability to distinguish between words and non-words.<br>' + 
+        'The experiment takes about 10 minutes and consists of 50 simple trials.<br><br>',
+
+        // original
+        'In each trial, you will see a word and you need to decide whether it is a proper English word or not.<br>' + 
+        'You will be responding by pressing <b>F</b> when non-words and <b>J</b> for words.<br>' + 
+        'After your response, another word will immediately appear and <br>you will also decide whether it is a word or non-word.<br>' +
+        'Each pair constitutes one trial. <br><br>' + 
+        'Please respond as <b>fast</b> as possible but try <b>not to make mistakes</b>. <br><br>' +
+        'Click <b>Next</b> to start.<br><br>'
+        ],
+        show_clickable_nav: true
+    }
+    // shuffle: https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
+    function shuffle(a) {
+        var j, x, i;
+        for (i = a.length - 1; i > 0; i--) {
+            j = Math.floor(Math.random() * (i + 1));
+            x = a[i];
+            a[i] = a[j];
+            a[j] = x;
+        }
+        return a;
+    }
+    // https://stackoverflow.com/questions/7342957/how-do-you-round-to-1-decimal-place-in-javascript
+    function roundx(value, precision) {
+        var multiplier = Math.pow(10, precision || 0);
+        return Math.round(value * multiplier) / multiplier;
+    }
+
+    // useful constants & functions
+    const keyPrompt = "<br><br><br>Press F for non-words, J for words";
+    var presentText = function(t) { return `<p style="font-size:48px; color:black;">${t}</p>`};
+    const wordCode = "J", nonWordCode = "F";
+    const timeLimit = 2000;
+
+    var decisionTrialPair = 
+    [
+        // initial gap
+        {
+            type: jsPsychHtmlKeyboardResponse,
+            trial_duration: function() { return jsPsych.randomization.randomInt(1500, 3000)}, 
+            choices: [],
+            stimulus: presentText("."),
+            prompt: keyPrompt,
+        },
+        // word 1
+        {
+            type: jsPsychHtmlKeyboardResponse,
+            trial_duration: null, 
+            choices: ['F', 'J'],
+            stimulus: function() { return presentText(jsPsych.timelineVariable('word1')); },
+            prompt: keyPrompt,
+            data: {
+                expected: jsPsych.timelineVariable('correct1'),
+            }, 
+        },
+        // feedback 1
+        {
+            timeline: [
+                {
+                    type: jsPsychHtmlKeyboardResponse,
+                    trial_duration: 750, 
+                    choices: [],
+                    stimulus: "Wrong or slow response",
+                    prompt: "",
+                },
+            ],
+            conditional_function: function() {
+                var data = jsPsych.data.get().last(1).values()[0];
+                var wasCorrect = jsPsych.pluginAPI.compareKeys(data.response, data.expected);
+                var wasOntime = data.rt < timeLimit;
+                if (wasCorrect && wasOntime) {
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+        },
+        // word 2
+        {
+            type: jsPsychHtmlKeyboardResponse,
+            trial_duration: null, 
+            choices: ['F', 'J'],
+            stimulus: function() { return presentText(jsPsych.timelineVariable('word2')); },
+            prompt: keyPrompt,
+            data: {
+                expected: jsPsych.timelineVariable('correct2'),
+                condition: jsPsych.timelineVariable('condition'),
+                task: "response",
+            }, 
+        },
+        // feedback 2
+        {
+            timeline: [
+                {
+                    type: jsPsychHtmlKeyboardResponse,
+                    trial_duration: 750, 
+                    choices: [],
+                    stimulus: "Wrong or slow response",
+                    prompt: "",
+                },
+            ],
+            conditional_function: function() {
+                var data = jsPsych.data.get().last(1).values()[0];
+                var wasCorrect = jsPsych.pluginAPI.compareKeys(data.response, data.expected);
+                var wasOntime = data.rt < timeLimit;
+                if (wasCorrect && wasOntime) {
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+        },
+    ];
+
+    var decisionTrialPairs = {
+        timeline: decisionTrialPair,
+        randomize_order: true,
+        timeline_variables: [
+            //{ word1: "PressJ", word2: "PressF", correct1: "j", correct2: "f", condition: ""}, 
+            { word1: "DOCTOR", word2: "NURSE", correct1: wordCode, correct2: wordCode, condition: "wwa", },
+            { word1: "SNOW", word2: "COLD", correct1: wordCode, correct2: wordCode, condition: "wwa", },
+            { word1: "TRUCK", word2: "CAR", correct1: wordCode, correct2: wordCode, condition: "wwa", },
+            { word1: "HAND", word2: "GLOVE", correct1: wordCode, correct2: wordCode, condition: "wwa", },
+            { word1: "TRUCK", word2: "CAR", correct1: wordCode, correct2: wordCode, condition: "wwa", },
+            { word1: "BUTTER", word2: "BREAD", correct1: wordCode, correct2: wordCode, condition: "wwa", },
+            { word1: "GLOVE", word2: "HAND", correct1: wordCode, correct2: wordCode, condition: "wwa", },
+            { word1: "SNOW", word2: "COLD", correct1: wordCode, correct2: wordCode, condition: "wwa", },
+            { word1: "BUTTER", word2: "BREAD", correct1: wordCode, correct2: wordCode, condition: "wwa", },
+            { word1: "TRUCK", word2: "CAR", correct1: wordCode, correct2: wordCode, condition: "wwa", },
+            { word1: "GLOVE", word2: "HAND", correct1: wordCode, correct2: wordCode, condition: "wwa", },
+            { word1: "RAT", word2: "MOUSE", correct1: wordCode, correct2: wordCode, condition: "wwa", },
+            { word1: "MOUNTAIN", word2: "BIKE", correct1: wordCode, correct2: wordCode, condition: "wwa", },
+            { word1: "DOCTOR", word2: "NURSE", correct1: wordCode, correct2: wordCode, condition: "wwa", },
+            { word1: "GLOVE", word2: "HAND", correct1: wordCode, correct2: wordCode, condition: "wwa", },
+            { word1: "NART", word2: "BUTTER", correct1: nonWordCode, correct2: wordCode, condition: "nw", },
+            { word1: "TREIM", word2: "SNOW", correct1: nonWordCode, correct2: wordCode, condition: "nw", },
+            { word1: "SOAM", word2: "MOUSE", correct1: nonWordCode, correct2: wordCode, condition: "nw", },
+            { word1: "MORHI", word2: "TRUCK", correct1: nonWordCode, correct2: wordCode, condition: "nw", },
+            { word1: "ARDUN", word2: "TRUCK", correct1: nonWordCode, correct2: wordCode, condition: "nw", },
+            { word1: "PAFER", word2: "DOCTOR", correct1: nonWordCode, correct2: wordCode, condition: "nw", },
+            { word1: "TOMMAL", word2: "HAND", correct1: nonWordCode, correct2: wordCode, condition: "nw", },
+            { word1: "SOAM", word2: "SCRALT", correct1: nonWordCode, correct2: nonWordCode, condition: "nn", },
+            { word1: "TRIEF", word2: "TOMMAL", correct1: nonWordCode, correct2: nonWordCode, condition: "nn", },
+            { word1: "TOMMAL", word2: "WEDNET", correct1: nonWordCode, correct2: nonWordCode, condition: "nn", },
+            { word1: "TRIEF", word2: "PAFER", correct1: nonWordCode, correct2: nonWordCode, condition: "nn", },
+            { word1: "TOFENUM", word2: "SCRALT", correct1: nonWordCode, correct2: nonWordCode, condition: "nn", },
+            { word1: "TREIM", word2: "ARDUN", correct1: nonWordCode, correct2: nonWordCode, condition: "nn", },
+            { word1: "TOMMAL", word2: "TRIEF", correct1: nonWordCode, correct2: nonWordCode, condition: "nn", },
+            { word1: "BRIDE", word2: "HAND", correct1: wordCode, correct2: wordCode, condition: "wwu", },
+            { word1: "WEDDING", word2: "BREAD", correct1: wordCode, correct2: wordCode, condition: "wwu", },
+            { word1: "BRIDE", word2: "NURSE", correct1: wordCode, correct2: wordCode, condition: "wwu", },
+            { word1: "MOUNTAIN", word2: "BREAD", correct1: wordCode, correct2: wordCode, condition: "wwu", },
+            { word1: "NURSE", word2: "BIKE", correct1: wordCode, correct2: wordCode, condition: "wwu", },
+            { word1: "BRIDE", word2: "NURSE", correct1: wordCode, correct2: wordCode, condition: "wwu", },
+            { word1: "BIKE", word2: "RAT", correct1: wordCode, correct2: wordCode, condition: "wwu", },
+            { word1: "HAND", word2: "DOCTOR", correct1: wordCode, correct2: wordCode, condition: "wwu", },
+            { word1: "SNOW", word2: "DOCTOR", correct1: wordCode, correct2: wordCode, condition: "wwu", },
+            { word1: "BUTTER", word2: "WEDDING", correct1: wordCode, correct2: wordCode, condition: "wwu", },
+            { word1: "TRUCK", word2: "MOUNTAIN", correct1: wordCode, correct2: wordCode, condition: "wwu", },
+            { word1: "BUTTER", word2: "BIKE", correct1: wordCode, correct2: wordCode, condition: "wwu", },
+            { word1: "MOUNTAIN", word2: "BUTTER", correct1: wordCode, correct2: wordCode, condition: "wwu", },
+            { word1: "NURSE", word2: "HAND", correct1: wordCode, correct2: wordCode, condition: "wwu", },
+            { word1: "TRUCK", word2: "SNOW ", correct1: wordCode, correct2: wordCode, condition: "wwu", },
+            { word1: "COLD", word2: "MORHI", correct1: wordCode, correct2: nonWordCode, condition: "wn", },
+            { word1: "TRUCK", word2: "SAJ", correct1: wordCode, correct2: nonWordCode, condition: "wn", },
+            { word1: "NURSE", word2: "WEDNET", correct1: wordCode, correct2: nonWordCode, condition: "wn", },
+            { word1: "BUTTER", word2: "GRONT", correct1: wordCode, correct2: nonWordCode, condition: "wn", },
+            { word1: "CAR", word2: "PABLE", correct1: wordCode, correct2: nonWordCode, condition: "wn", },
+            { word1: "HAND", word2: "REAB", correct1: wordCode, correct2: nonWordCode, condition: "wn", },
+            { word1: "MOUSE", word2: "TOMMAL", correct1: wordCode, correct2: nonWordCode, condition: "wn", },
+        ],
+
+    }
+
+
+    var debriefing = {
+      type: jsPsychHtmlButtonResponse,
+      choices: ['END'],
+      stimulus: function() {
+        var trials = jsPsych.data.get().filter({task: 'response'});
+        function meanRT(variantText) {
+            var selectedTrials = trials.filter({condition: variantText});
+            return selectedTrials.select('rt').mean(); 
+        }
+        function accuracy(variantText) {
+            var selectedTrials = trials.filter({condition: variantText});
+            return selectedTrials.select('correct').mean(); 
+        }
+        var r = '<table><tr><th>Condition</th><th>Mean RT</th></tr>';
+            r = r + `<tr><td>Associated words</td><td>${roundx(meanRT("wwa"), 0)}</td></tr>`;
+            r = r + `<tr><td>Unassociated words</td><td>${roundx(meanRT("wwu"), 0)}</td></tr>`;
+            r = r + `<tr><td>Word then nonword</td><td>${roundx(meanRT("wn"), 0)}</td></tr>`;
+            r = r + `<tr><td>Nonword then word</td><td>${roundx(meanRT("nw"), 0)}</td></tr>`;
+            r = r + `<tr><td>Two nonwords</td><td>${roundx(meanRT("nn"), 0)}</td></tr>`;
+        r = r + "</table>"
+        return `<p><b>Results</b></p>
+          <p>In the table, you can see mean response times different word conditions:</p>
+          ${r}
+          <p>Press any key to complete the experiment. Thank you!</p>`;
+
+      }
+    };
+
+
+    jsPsych.run([
+        instructions,
+        decisionTrialPairs,
+        debriefing,
+    ]);
+
+  </script>
+</html>

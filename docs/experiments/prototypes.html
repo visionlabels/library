@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Experiment</title>
+    <script src="../jspsych/dist/jspsych.js"></script>
+    <script src="../jspsych/dist/plugin-html-button-response.js"></script>
+    <script src="../jspsych/dist/plugin-html-keyboard-response.js"></script>
+    <script src="../jspsych/dist/plugin-canvas-button-response.js"></script>
+    <script src="../jspsych/dist/plugin-canvas-keyboard-response.js"></script>
+    <script src="../jspsych/dist/plugin-instructions.js"></script>
+    <script src="../jspsych/dist/plugin-preload.js"></script>
+    <link rel="stylesheet" href="../jspsych/dist/jspsych.css" type="text/css">
+  </head>
+  <body></body>
+  <script>
+
+    var jsPsych = initJsPsych({
+        on_finish: function () {
+        // jsPsych.data.displayData();
+        },
+        default_iti: 500,
+    });
+
+    var setA = [7, 3, 7, 7, 11, 6, 4, 12, 12, 12, 4, 6, 3, 2, 10, 12, 3, 12, 1, 8, 2, 11, 6, 8, 1];
+    var setB = [8, 10, 8, 11, 10, 2, 4, 5, 6, 4, 7, 5, 5, 5, 7, 5, 4, 1, 6, 12, 8, 4, 9, 12, 9];
+    var setA1 = [7, 7, 7, 3, 11, 6, 4, 12, 12, 7, 4, 5, 3, 2, 10, 7, 3, 5, 1, 1, 6, 5, 6, 4, 1];
+    var setB1 = [5, 6, 3, 3, 10, 2, 4, 5, 6, 4, 7, 5, 5, 3, 7, 6, 4, 1, 3, 12, 8, 7, 9, 3, 1];
+    var setA2 = [7, 3, 7, 7, 3, 6, 6, 12, 12, 12, 1, 5, 3, 2, 3, 1, 3, 12, 1, 8, 4, 5, 7, 8, 7];
+    var setB2 = [3, 10, 8, 11, 6, 5, 4, 8, 6, 7, 7, 3, 8, 5, 7, 5, 8, 7, 6, 12, 8, 4, 9, 7, 9];
+
+    var setA3 = [3, 3, 7, 4, 11, 4, 4, 12, 6, 12, 4, 1, 7, 1, 10, 2, 3, 6, 1, 8, 2, 11, 6, 8, 1];
+    var setB3 = [5, 10, 8, 7, 5, 1, 4, 2, 6, 4, 7, 1, 6, 5, 6, 5, 4, 1, 1, 12, 8, 2, 9, 12, 9];
+    var setA4 = [7, 3, 7, 1, 11, 3, 6, 6, 3, 12, 4, 6, 3, 2, 10, 12, 3, 3, 3, 8, 6, 5, 6, 8, 1];
+    var setB4 = [8, 3, 8, 11, 10, 7, 4, 1, 6, 4, 7, 5, 5, 5, 7, 5, 1, 3, 5, 12, 8, 4, 9, 12, 3];
+
+    var instructions = {
+        type: jsPsychInstructions,
+        pages: [
+        'Welcome to the experiment. Today, we will measure your ability to learn how to classify objects.<br>' + 
+        'The experiment takes about 15 minutes and consists of 70 simple trials.<br><br>',
+
+        // original
+        'The experiment consists of separate <b>training</b> and <b>testing</b> phases. <br>' + 
+        'The training phase includes 40 trials and the testing phase contains another 30 trials. ' + 
+        'Each square pattern in the training phase is a variation of one of two fixed prototype random square patterns. '+ 
+        'The variations are made by randomly taking ten squares and selecting new colours for them.<br><br>', 
+
+        'After completing the training phase, a new set of dot patterns is presented. <br>' + 
+        'The transition from training to testing is fairly seamless, and you may not notice when it happens. ' + 
+        'The square patterns in the testing phase are of six types. ' + 
+        'One is the prototype that corresponds to the A category. Another is the prototype that corresponds to the B category. ' +
+        'The other four patterns are new variations of these prototypes (two variations for each prototype). Each square pattern is presented five times in random order.<br>' +
+
+        'Throughout this experiment your task is always the same: <b>As quickly as possible classify the pattern as A or B</b>. ' +
+
+        '<br><br>Click <b>Next</b> to start.<br><br>'
+        ],
+        show_clickable_nav: true
+    }
+    // shuffle: https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
+    function shuffle(a) {
+        var j, x, i;
+        for (i = a.length - 1; i > 0; i--) {
+            j = Math.floor(Math.random() * (i + 1));
+            x = a[i];
+            a[i] = a[j];
+            a[j] = x;
+        }
+        return a;
+    }
+    // https://stackoverflow.com/questions/7342957/how-do-you-round-to-1-decimal-place-in-javascript
+    function roundx(value, precision) {
+        var multiplier = Math.pow(10, precision || 0);
+        return Math.round(value * multiplier) / multiplier;
+    }
+
+    function prototypeField(canvas, setx)  {
+        var ctx = canvas.getContext("2d");
+        const x0 = 110, y0 = 110; // offset
+        const w = 50, h = 50; // cell size
+        const pad = 5;
+        function drawItem(row, col, colourCode) {
+            let c = Math.floor(30 + colourCode * 15);
+            ctx.fillStyle = `rgb(${c}, ${c}, ${c})`;
+            ctx.fillRect(x0 + (w + pad) * col, y0 + (h + pad) * row, w, h);
+        }
+        for (let rr=0; rr<5; rr++) {
+            for (let cc=0; cc<5; cc++) {
+                let ix = rr * 5 + cc;
+                drawItem(rr, cc, setx[ix]);
+            }
+        }
+    }
+
+    var prototypeTrial =
+    [
+        {
+            type: jsPsychCanvasKeyboardResponse,
+            stimulus: function (c) {
+                prototypeField(c, jsPsych.timelineVariable('set'));
+            },
+            choices: ['ArrowLeft', 'ArrowRight'],
+            prompt: '<p>Category</p>A left, B right',
+            data: { 
+                present: jsPsych.timelineVariable('set'), 
+                condition: jsPsych.timelineVariable('condition'), 
+                prototype: jsPsych.timelineVariable('prototype'), 
+                task: 'response',
+            },
+            on_finish: function(data) {
+                //console.log(data);
+                if ((data.response === "arrowleft") == (data.prototype === "A")) {
+                    data.correct = true;
+                } else {
+                    data.correct = false;
+                }
+            }
+        },
+        {
+            type: jsPsychHtmlKeyboardResponse,
+            trial_duration: 1000, 
+            stimulus: function(){
+                var lastTrial = jsPsych.data.get().last(1).values()[0];
+                //console.log(lastTrial);
+                var s = "";
+                if (lastTrial.correct) {
+                    s += `Correct! <br>It was <b>${lastTrial.prototype}</b>`;
+                } else {
+                    s += `Wrong <br>It was <b>${lastTrial.prototype}</b>`;
+                }
+                if (lastTrial.rt > 2000) {
+                    s += "<br><br>Work faster!";
+                }
+                return(s)
+            }
+        }
+    ]
+
+    var trainingTrials = {
+      timeline: prototypeTrial,
+      timeline_variables: [
+      { set: setA3, prototype: 'A', condition: 'exact-training', }, 
+      { set: setB3, prototype: 'B', condition: 'exact-training', }, 
+      { set: setA4, prototype: 'A', condition: 'exact-training', }, 
+      { set: setB4, prototype: 'B', condition: 'exact-training', }, 
+      ],
+      sample: {
+        type: 'fixed-repetitions',
+        size: 10,
+      }
+    };
+    var testTrials = {
+      timeline: prototypeTrial,
+      timeline_variables: [
+      { set: setA, prototype: 'A', condition: 'exact', }, 
+      { set: setB, prototype: 'B', condition: 'exact', }, 
+      { set: setA1, prototype: 'A', condition: 'variant', }, 
+      { set: setB1, prototype: 'B', condition: 'variant', }, 
+      { set: setA2, prototype: 'A', condition: 'variant', }, 
+      { set: setB2, prototype: 'B', condition: 'variant', }, 
+      ],
+      sample: {
+        type: 'fixed-repetitions',
+        size: 5,
+      }
+    };
+
+    var debriefing = {
+      type: jsPsychHtmlButtonResponse,
+      choices: ['END'],
+      stimulus: function() {
+        var trials = jsPsych.data.get().filter({task: 'response'});
+        function meanRT(variantText) {
+            var selectedTrials = trials.filter({condition: variantText});
+            return selectedTrials.select('rt').mean(); 
+        }
+        function accuracy(variantText) {
+            var selectedTrials = trials.filter({condition: variantText});
+            return selectedTrials.select('correct').mean(); 
+        }
+        var r = '<table><tr><th>Stimulus</th><th>Mean RT</th><th></th></tr>';
+            r = r + `<tr><td>Prototype</td><td>${roundx(meanRT("exact"), 0)}</td><td>${roundx(accuracy("exact"), 2)}</td></tr>`;
+            r = r + `<tr><td>Variant</td><td>${roundx(meanRT("variant"), 0)}</td><td>${roundx(accuracy("variant"), 2)}</td></tr>`;
+        r = r + "</table>"
+        return `<p><b>Results</b></p>
+          <p>In the table, you can see mean response times and accuracy for different stimulus conditions:</p>
+          ${r}
+          <p>Press any key to complete the experiment. Thank you!</p>`;
+
+      }
+    };
+
+
+    jsPsych.run([
+        instructions,  
+        trainingTrials,
+        testTrials,
+        debriefing,
+    ]);
+
+  </script>
+</html>

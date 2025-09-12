@@ -1,0 +1,29 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - "*.qmd"
+    - "!experiments/"
+    - "!jspsych/"
+  resources:
+    - "experiments"
+    - "jspsych"
+
+website:
+  title: "Experiment Library"
+  search: false
+  page-footer: No data are stored on the server. [License](/license.qmd). 
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: false
+
+
+
