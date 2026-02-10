@@ -23,4 +23,21 @@ Poznámka: Ve staré verzi (2024) byla chyba (skladba 12 je tam 2x, i místo skl
 - <https://en.wikipedia.org/wiki/Semantic_differential>
 - Eerola, T., & Vuoskoski, J. K. (2011). A comparison of the discrete and dimensional models of emotion in music. *Psychology of Music*, 39(1), 18-49. 
 
- 
+::: {.callout-caution title="Spoiler/Podněty" collapse="true"}
+
+|Order|File|Link|
+|-----|----|----|
+|1|01_Anger-Lethal_weapon.mp4| [link](https://youtu.be/PkvYEZKARMI) |
+|2|11_Happy_Shallow_Grave.mp4| [link](https://youtu.be/Uk4mzd0xigU) |
+|3|05_Fear_Batman_Returns.mp4| [link](https://youtu.be/XCS6_FPzhlE) |
+|4|07_Sad_Big_Fish.mp4| [link](https://youtu.be/uUwDshpdBCE) |
+|5|02_Anger_The fifth_element.mp4| [link](https://youtu.be/025z12JweZU) |
+|6|09_Sad_The_Portait_of_ a_Lady.mp4| [link](https://youtu.be/AvmH_M2Dd4Q) |
+|7|04_Fear_Lethal_Weapon.mp4| [link](https://youtu.be/pKtceOtpTg8) |
+|8|10_Happy - Nostradamus.mp4| [link](https://youtu.be/bNi41vHd93w) |
+|9|03_Anger_Allien.mp4| [link](https://youtu.be/pWrrJY4z1vo) |
+|10|06_Fear_The Fifth_Element.mp4| [link](https://youtu.be/mLtbdUvJeLE) |
+|11|08_Sad_Ehnglish_Patient.mp4| [link](https://youtu.be/-fo-gwmQuTg) |
+|12|12_Happy_Oliver Twist.mp4| [link](https://youtu.be/U80z20bpEXY) |
+
+:::
