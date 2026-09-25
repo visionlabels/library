@@ -1,0 +1,15 @@
+## How to work with the repository
+
+After making changes, you can preview them:
+
+```bash
+quarto preview
+```
+
+When finished, run this. Then commit and push.
+
+```bash
+quarto render 
+```
+
+See also https://quarto.org/docs/websites/
