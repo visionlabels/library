@@ -1,0 +1,18 @@
+---
+title: Remote Associates Task
+---
+
+Links: Experiment and form
+
+The aim of this activity is to try out the Remote Associates Task. This creativity test takes the form of 20 questions. Each question consists of three words that seem unrelated at first glance. The task is to find, for each triplet of words, a fourth word that has some relationship to all three of them.
+
+The words are written into a field, so it will probably be easiest to grade the test by hand (e.g. look at the column with the answers and add a column next to it where you write 1 for correct answers and 0 for incorrect ones). You can find the correct answers, for example, in the work of Martin Hajný (on p. 46).
+
+So that you can also create and test some hypotheses, we added a short personality test to the activity (the TIPI test - a very brief version of the Big Five, where each of the five scales is covered by 2 items). You will find the scoring key on Samuel Gosling's website (link below). Big Five questionnaires contain 5 scales (Extraversion, Agreeableness, Conscientiousness, Emotional Stability/Neuroticism, Openness to Experience) - so you can ask whether some personality trait is related to (correlates with) creativity.
+
+## Sources to start with 
+
+- <https://en.wikipedia.org/wiki/Remote_Associates_Test>  
+- Hajný, M. (2014). Konvergentní a diskriminační validita české verze testu RAT (pilotní studie) [Masarykova univerzita, Fakulta sociálních studií]. https://is.muni.cz/th/zqzs3/ 
+- <https://gosling.psy.utexas.edu/scales-weve-developed/ten-item-personality-measure-tipi/>  
+- Thørrisen, M. M., & Sadeghi, T. (2023). The Ten-Item Personality Inventory (TIPI): A scoping review of versions, translations and psychometric properties. *Frontiers in Psychology*, 14. https://www.frontiersin.org/articles/10.3389/fpsyg.2023.1202953 

@@ -1,0 +1,20 @@
+---
+title: Prototypes
+---
+
+Links: [Experiment](/experiments/prototypes.html)
+
+The aim of the experiment is to show how we acquire and use prototypes. The idea of prototypes is that a person has a mental construct that identifies the typical properties of various categories. When a person encounters a new object, they compare it with the prototypes in memory. If it sufficiently matches the prototype of a chair, the new object will be classified and treated as a chair. This approach allows new objects to be interpreted based on previously learned information. It is an efficient approach, because you don't have to store all previously seen chairs in long-term memory. Instead, only the prototype needs to be retained.
+
+The experiment is a loose variation on the experiment by Posner and Keele (1968). The experiment has two phases. In the first phase, using trial and error, the participant learns two prototypes (A and B, which are differently colored grids of small squares). The prototypes are not shown directly, but with slight deviations (to make it a bit harder and so that the participant doesn't pick up some simple heuristic, such as that this particular small black square always means A).
+
+After 40 trials, the experiment smoothly transitions into part 2, where either the prototypes (originals) or their new variants are shown. What matters is that participants did not see either variant in the first part. People should classify the prototypes better (more accurately and faster), because they had already formed a representation of them in the first part.
+
+![](/images/prototypes.jpg)
+
+## Sources to start with 
+
+- <https://en.wikipedia.org/wiki/Prototype_theory>
+- Posner, M. I., & Keele, S. W. (1968). On the genesis of abstract ideas. *Journal of Experimental Psychology*, 77(3, Pt.1), 353–363. https://doi.org/10.1037/h0025953  
+
+ 

@@ -1,0 +1,23 @@
+---
+title: Wisconsin Card Sorting Test 
+subtitle: Wisconsin Card Sorting Test 
+---
+
+Odkazy: [Experiment](https://www.psytoolkit.org/experiment-library/wcst.html)
+
+Wisconsin Card Sorting Test (WCST) je jedním z testů exekutivních funkcí. Hlavním cílem této aktivity je test si vyzkoušet (nejsou zde hypotézy o rozdílech mezi podmínkami apod.).  
+
+Použitá varianta testu na konci uvádí počet chyb a jak se chyby dělí na perseverativní a ne-perseverativní chyby (perseverativní chyby jsou chyby, které spočívají v používání předchozího, už neplatného, pravidla). Podrobnější popis těchto a dalších měřítek je možné najít v Bowden et al. (1998). Pro přehled, jak výsledky testu mohou souviset např. s poruchami pozornosti/chování, je možné použít Romine et. (2004). Modernější reflexi vyhodnocování textu najdete v Miles et al. (2021). 
+
+Původní záměr je hlavně popisný - jaké chyby obvykle (zdraví) účastníci dělají, jak vypadá průměrný výkon, jak vypadá nejlepší výkon. Pokud budete chtít, můžete data spojit s některým staršími výzkumy 
+(např. [inteligence](/teaching_cz/14_Cattell.qmd), 
+[kognitivní reflexivita](/teaching_cz/10_CognitiveReflectionTest.qmd)), 
+a hledat korelace (je třeba přiřadit správně řádky podle nicku). 
+
+## Zdroje odkud začít 
+
+- <https://en.wikipedia.org/wiki/Wisconsin_Card_Sorting_Test>  
+- Bowden, S. C., Fowler, K. S., Bell, R. C., Whelan, G., Clifford, C. C., Ritter, A. J., & Long, C. M. (1998). The Reliability and Internal Validity of the Wisconsin Card Sorting Test. *Neuropsychological Rehabilitation*, 8(3), 243–254. https://doi.org/10.1080/713755573  
+- Miles, S., Howlett, C. A., Berryman, C., Nedeljkovic, M., Moseley, G. L., & Phillipou, A. (2021). Considerations for using the Wisconsin Card Sorting Test to assess cognitive flexibility. *Behavior Research Methods*, 53(5), 2083–2091. https://doi.org/10.3758/s13428-021-01551-3 
+- Romine, C. B., Lee, D., Wolfe, M. E., Homack, S., George, C., & Riccio, C. A. (2004). Wisconsin Card Sorting Test with children: A meta-analytic study of sensitivity and specificity. *Archives of Clinical Neuropsychology*, 19(8), 1027–1041. https://doi.org/10.1016/j.acn.2003.12.009 
+

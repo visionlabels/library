@@ -1,0 +1,17 @@
+---
+title: "Müller-Lyer illusion"
+---
+
+Links: [Experiment](/experiments/muller-lyer.html)
+/ [Opposite direction](/experiments/muller-lyer.html?sh=1)
+
+The aim of the experiment is to measure the strength of the Müller-Lyer illusion. The experiment contains two lines. The first line, on the left, has varying lengths (85-115 pixels) and straight ends. The second line, on the right, always has the same length (100 pixels) and has arrows at the ends (when the arrows point inward/outward, the line appears shorter or longer respectively). In each trial the participant chooses which line appears longer.
+
+For a graphical representation of the results, I recommend plotting the line length on the x-axis and the percentage of "longer" choices on the y-axis. The resulting S-shaped curve should not pass through the midpoint [100 px; 50%], and should be shifted to one side. Try to imagine what the curve of a perfect observer would look like (and how this curve would be affected by imprecision of perception, i.e. the strength of the M-L illusion). By the imprecision of perception we mean here the inability to perceive differences smaller than X pixels. The shape and shift of the curve would be compared using an analysis of the psychometric function (logistic regression).
+
+In the header you will find a link to a variant of the experiment where the arrows point in the opposite direction. You can collect your own data and compare how the results look.
+
+## Sources to start with
+
+- <https://en.wikipedia.org/wiki/M%C3%BCller-Lyer_illusion>
+- <https://en.wikipedia.org/wiki/Psychometric_function>

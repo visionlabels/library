@@ -1,0 +1,18 @@
+---
+title: Wason Selection Task
+---
+
+Links: Experiment and form
+
+In this experiment, participants solve several variants of the Wason task. The task is also explained to participants before the experiment begins. They then see 6 similar tasks, 3 concrete and 3 abstract. The experiment is inspired by the research of Wason & Shapiro (1971), who tested these conditions in more detail.
+
+At the level of analysis, the main hypothesis is whether people make more errors when the task is formulated in general terms (not concrete). We assume that with the concrete variants, people can also use knowledge of the world, whereas with the abstract ones they have to rely on logic alone.
+
+Evaluating the data will be a bit complicated by the fact that participants always chose two answers, so each cell in the table contains two values separated by semicolons. Probably the best approach is to solve each task yourself (and thus find the correct answers) and then manually grade each answer in a copy of the table (whether both answers are correct, or only one). As a possible next step, you could consider whether certain errors recur more often.
+
+## Sources to start with 
+
+- <https://en.wikipedia.org/wiki/Wason_selection_task>
+- Wason, P. C., & Shapiro, D. (1971). Natural and contrived experience in a reasoning problem. *Quarterly Journal of Experimental Psychology*, 23(1), 63-71. https://doi.org/10.1080/00335557143000068 
+(pdf e.g. [here](http://www.fitelson.org/confirmation/wason.pdf))
+

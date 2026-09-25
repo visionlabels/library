@@ -1,0 +1,30 @@
+---
+title: Lexical Decision
+subtitle: (Lexical Decision)
+---
+
+Links: [Experiment](/experiments/lexical-decision.html)
+
+This experiment focuses on human processing of written language. Every language presupposes the existence of a lexicon with information about individual words. Such information may refer to the meaning of words, their function in the language (e.g. part of speech), and relationships to other words (What words can it follow? What can follow it? Can other words influence it?). Psychology is interested in the internal organization of such a lexicon. Semantic relationships are important in the mental lexicon, so words with similar meanings will be close to each other.
+
+In this experiment, the participant sees groups of letters and has to say whether they are real words or not (so-called pseudowords). Participants have to decide both accurately and quickly. The words are shown in pairs, one after another. In total the experiment contains items from 5 conditions. The individual words in the pairs differed in whether they were real words or pseudowords, and also whether they were related in meaning (if they were words - that was the main condition):
+
+- Word + word (related) - 15x
+- Word + word (unrelated) - 15x
+- Word + pseudoword - 7x
+- Pseudoword + word - 7x
+- Pseudoword + pseudoword - 7x
+
+In the data we have the average response times for the second words. We assume that related words will be recognized faster than when the words are unrelated. The other conditions are not as important; they are in the experiment so that people have to decide between words and pseudowords (in the main condition there are only words).
+
+The experiment presents English words. Do you think that had an effect on your findings?
+
+## Sources to start with
+
+- <https://en.wikipedia.org/wiki/Lexical_decision_task>
+
+## Stimuli (in case it's useful to you)
+
+- Related pairs: butter-bread, mountain-bike, truck-car, snow-cold, hand-glove, glove-hand, rat-mouse, doctor-nurse
+- Unrelated pairs: bike-rat, bride-hand, bride-nurse, butter-wedding, butter-bike, hand-doctor, mountain-bread, mountain-butter, nurse-bike, nurse-hand, snow-doctor, truck-mountain, truck-snow, wedding-bread
+- Pseudowords: pable, pafer, reab, saj, scralt, soam, tofenum, tommal, treim, trief, wednet

@@ -1,0 +1,25 @@
+---
+title: Implicit Learning
+---
+
+Links: [Experiment](/experiments/implicit-learning-kb.html) /
+[mouse version](/experiments/implicit-learning.html)
+
+The aim of the experiment is to show that people are able to learn unconsciously. Specifically, people respond to "random" sequences that are in fact repeating. People usually don't notice this, but they improve. If a sequence is then different, they perform worse.
+
+The experiment contains 10 blocks (sequences). Sequence 9 is different (sequenceX below), the other sequences are the same. So that it isn't completely obvious, these sequences sometimes have a different beginning and end. For comparison, the sequences are listed below, but this probably won't matter much (0,1,2,3 correspond in order to F,G,H,J).
+
+```
+sequence1 = [0, 1,3,2,0,3,2,0,3,0,3,2,1,2,0,1,2,1,3,0,1,2,1, 0]; // Main repeated sequence
+sequence2 = [2, 1,3,2,0,3,2,0,3,0,3,2,1,2,0,1,2,1,3,0,1,2,1, 2]; // 1st and last element differ
+sequenceX = [0, 1,3,1,2,1,2,3,0,1,0,3,1,0,3,1,0,3,0,2,0,3,1, 0]; // Differs more
+```
+
+A typical result should be that people improve in blocks 1-8 (RT decreases), in block 9 the RT is higher again, and in block 10 it is lower again, because it is the sequence they had already learned.
+
+Fun fact: it's possible that it is important that you have to learn harder motor patterns on the keyboard. In 2022, we tried a version where people clicked with a mouse. Students picked it up quite quickly, but did not improve much (they were only slower in the first block).
+
+## Sources to start with
+
+- <https://en.wikipedia.org/wiki/Implicit_learning>
+- Destrebecqz, A., Cleeremans, A. Can sequence learning be implicit? New evidence with the process dissociation procedure. *Psychonomic Bulletin & Review* 8, 343–350 (2001). https://doi.org/10.3758/BF03196171  

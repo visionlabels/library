@@ -1,0 +1,62 @@
+---
+title: Nadřazenost slov
+subtitle: (Word Superiority) 
+---
+
+Odkazy: [Experiment](/experiments/word-superiority.html)
+
+V tomto experimentu se zaměříme na vnímání písmen. U vnímání písmen je důležitý kontext, a proto je podstatné, zda jsou písmena prezentována izolovaně nebo jako součást slova.  
+
+Efekt nadřazenosti slov (Reicher, 1969) spočívá v tom, že jsou prezentována izolovaná písmena nebo krátká slova a po velmi krátké době jsou překryty maskou. Dejme tomu, že se ptáme na písmeno K nebo na písmeno K ze slova WORK. Nabízené volby (D a K) jsou zvoleny tak, aby v obou případech vzniklo smysluplné slovo. Je to proto, aby výsledek nešlo vysvětlit jen tím, že lidé raději volí smysluplná slova. I tak je písmeno K lépe rozpoznáno, když je součástí slova. To je vlastně paradoxní, protože musíme vlastně přečíst 4 písmena, zatímco pro rozpoznání izolovaného písmena by mělo stačit přečíst jedno.  
+
+Experiment se skládá z 96 úloh (polovina prezentuje izolovaná písmena, polovina slova). Poloha/pořadí písmene ve slově se mění. Každé písmeno/slovo je prezentováno 3x, vždy v různé obtížnosti dané tím, jak rychle je přemazáno maskou: 1) zobrazeno na 30 ms, ISI 0 ms; 2) zobrazeno 50 ms, ISI 0 ms; 3) zobrazeno na 50, ISI 20 ms. ISI znamená inter-stimulus-interval a udává jako dlouho byla po smazání písmena zobrazena prázdná plocha, než se ukázala maska. Tyhle různé podmínky jsou tam proto, že sbíráme data online a nevíme, jak přesně půjde časy dodržet na různých počítačích. Proto prezentujeme směs lehčích i těžších úloh. V laboratoři bychom pravděpodobně výběr zúžili. 
+
+Hlavní hypotéza experimentu tedy zní, zda se liší úspěšnost při rozpoznávání písmen ve slovech oproti izolovaným (případně konkrétně zda je úspěšnost lepší). 
+
+## Zdroje odkud začít 
+
+- <https://en.wikipedia.org/wiki/Word_superiority_effect>
+- Reicher, G. M. (1969). Perceptual recognition as a function of meaningfulness of stimulus material. *Journal of Experimental Psychology*, 81(2), 275–280. https://doi.org/10.1037/h0027768  
+
+## Podněty 
+
+::: {.callout-note collapse="true"}
+## Tabulka
+Pokud by se vám to k něčemu hodilo, podněty najdete v tabulce níže. 
+
+Stimulus type|Word or letter|Target location|CorrectLetter|DistractLetter
+:---:|:---:|:---:|:---:|:---:
+Letter|C|2|C|H
+Letter|D|4|D|K
+Letter|D|3|D|T
+Letter|E|3|E|L
+Letter|F|4|F|L
+Letter|H|2|H|C
+Letter|H|1|H|L
+Letter|K|4|K|D
+Letter|L|3|L|E
+Letter|L|4|L|F
+Letter|L|1|L|H
+Letter|L|2|L|P
+Letter|M|1|M|S
+Letter|P|2|P|L
+Letter|S|1|S|M
+Letter|T|3|T|D
+Word|CALF|4|F|L
+Word|CALL|4|L|F
+Word|FEET|3|E|L
+Word|FELT|3|L|E
+Word|HAND|1|H|L
+Word|LAND|1|L|H
+Word|MEAL|1|M|S
+Word|PODS|3|D|T
+Word|POTS|3|T|D
+Word|SCAM|2|C|H
+Word|SEAL|1|S|M
+Word|SHAM|2|H|C
+Word|SLOT|2|L|P
+Word|SPOT|2|P|L
+Word|WORD|4|D|K
+Word|WORK|4|K|D
+
+:::

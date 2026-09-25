@@ -7,6 +7,153 @@
     "text": "Order By\n      Default\n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\n\nSubtitle\n\n\n\n\n\n\n\n\nCattelův Faktor B\n\n\nIntelligence\n\n\n\n\n\n\nDetekce signálu\n\n\n(Signal detection)\n\n\n\n\n\n\nDotazník morálních základů\n\n\n(The Moral Foundations Questionnaire)\n\n\n\n\n\n\nGo/No-Go Task\n\n\nGo/No-Go Task\n\n\n\n\n\n\nImplicitní Asociační Test\n\n\n(Implicit Association Test)\n\n\n\n\n\n\nImplicitní učení\n\n\n(Implicit Learning)\n\n\n\n\n\n\nLexikální rozhodování\n\n\n(Lexical Decision)\n\n\n\n\n\n\nMentální rotace\n\n\n(Mental Rotation)\n\n\n\n\n\n\nMrknutí pozornosti\n\n\n(Attentional blink)\n\n\n\n\n\n\nMüller-Lyerova iluze\n\n\n(Müller-Lyer illusion)\n\n\n\n\n\n\nNadřazenost slov\n\n\n(Word Superiority)\n\n\n\n\n\n\nPaměťový rozsah\n\n\n(Memory Span)\n\n\n\n\n\n\nPrototypy\n\n\n(Prototypes)\n\n\n\n\n\n\nRozhodování\n\n\nDecision Making\n\n\n\n\n\n\nSemantický diferenciál\n\n\n(Semantic Differential)\n\n\n\n\n\n\nTest kognitivní reflexivity\n\n\n(Cognitive Reflection Test)\n\n\n\n\n\n\nTest vzdálených asociací\n\n\n(Remote Associates Task)\n\n\n\n\n\n\nWasonova úloha výběru karet\n\n\n(Wason Selection Task)\n\n\n\n\n\n\nWisconsin Card Sorting Test\n\n\nWisconsin Card Sorting Test\n\n\n\n\n\n\nZrakové vyhledávání\n\n\n(Visual search)\n\n\n\n\n\n\nNo matching items"
   },
   {
+    "objectID": "teaching_en/waitinglist/X20_MoralFoundations.html",
+    "href": "teaching_en/waitinglist/X20_MoralFoundations.html",
+    "title": "Dotazník morálních základů",
+    "section": "",
+    "text": "Odkazy: Dotazník jako Excel\nCílem této aktivity je seznámit se s konceptem Dotazníku morálních základů (MFQ) a související teorií. V rámci obecné psychologie toto téma souvisí s problematikou motivace.\nDotazník si účastníci dělají sami u sebe v Excelu a vyhodnocovací arch je seznamuje s hlavními škálami. V tomto experimentu nemáme hypotézy, které by bylo vhodné testovat, stačí jen popisná statistika. V literatuře je možné najít, jaké profily vychází např. pro liberály a konzervativce, můžete spekulovat, kterému profilu jsou výsledky podobnější (samozřejmě článek je z jiné kultury a doby). Pokud by vás napadlo, že by některé škály mohly korelovat s něčím dalším, co jsme v průběhu roku měřili (IAT, exekutivní funkce, …), můžete to zkusit porovnat (pozor na pořadí řádků v tabulkách, aby si odpovídaly záznamy od jednotlivých účastníků), ale není to nutné.\nK MFQ a související teorii je mnoho zdrojů, některé jsou níže v seznamu literatury. Pokuste se je zmapovat a seznámit spolužáky s původem metody a s kritikou."
+  },
+  {
+    "objectID": "teaching_en/waitinglist/X20_MoralFoundations.html#zdroje-odkud-začít",
+    "href": "teaching_en/waitinglist/X20_MoralFoundations.html#zdroje-odkud-začít",
+    "title": "Dotazník morálních základů",
+    "section": "Zdroje odkud začít",
+    "text": "Zdroje odkud začít\n\nhttps://en.wikipedia.org/wiki/Moral_foundations_theory\nhttps://moralfoundations.org/questionnaires/ (i další podstránky na tom webu – zejm. other materials)\nAtari, M., Haidt, J., Graham, J., Koleva, S., Stevens, S. T., & Dehghani, M. (2023). Morality beyond the WEIRD: How the nomological network of morality varies across cultures. Journal of Personality and Social Psychology, 125(5), 1157–1188. https://doi.org/10.1037/pspp0000470\nGraham, J., Haidt, J., & Nosek, B. A. (2009). Liberals and conservatives rely on different sets of moral foundations. Journal of Personality and Social Psychology, 96(5), 1029–1046. https://doi.org/10.1037/a0015141\nGraham, J., Nosek, B. A., Haidt, J., Iyer, R., Koleva, S., & Ditto, P. H. (2011). Mapping the moral domain. Journal of Personality and Social Psychology, 101(2), 366–385. https://doi.org/10.1037/a0021847\nHaidt, J., & Joseph, C. (2004). Intuitive ethics: How innately prepared intuitions generate culturally variable virtues. Daedalus, 133(4), 55–66. https://doi.org/10.1162/0011526042365555"
+  },
+  {
+    "objectID": "teaching_en/waitinglist/X18_SemanticDifferential.html",
+    "href": "teaching_en/waitinglist/X18_SemanticDifferential.html",
+    "title": "Semantický diferenciál",
+    "section": "",
+    "text": "Odkazy: Formulář\nV dotazníku je celkem 12 hudebních ukázek. Úkolem je každou ohodnotit na 8 bipolárních dimenzích. Každá ukázka se dá zařadit pod jednu ze 4 emocí\nV tomto cvičení nebudeme testovat hypotézy, ale cílem je porovnat, jak vypadají profily pro jednotlivé emoce. Můžete hodnocení sloučit podle emocí (jako na obrázku níže), nebo se podívat i na to, jak vypadají profily pro jednotlivé skladby.\nPoznámka: Ve staré verzi (2024) byla chyba (skladba 12 je tam 2x, i místo skladby 11). Nechali jsme to tak, protože aspoň jsou počty skladeb pro emoce vyrovnané. Od 26.3.2025 je to správně."
+  },
+  {
+    "objectID": "teaching_en/waitinglist/X18_SemanticDifferential.html#zdroje-odkud-začít",
+    "href": "teaching_en/waitinglist/X18_SemanticDifferential.html#zdroje-odkud-začít",
+    "title": "Semantický diferenciál",
+    "section": "Zdroje odkud začít",
+    "text": "Zdroje odkud začít\n\nhttps://en.wikipedia.org/wiki/Semantic_differential\nEerola, T., & Vuoskoski, J. K. (2011). A comparison of the discrete and dimensional models of emotion in music. Psychology of Music, 39(1), 18-49.\n\n\n\n\n\n\n\nCautionSpoiler/Podněty\n\n\n\n\n\n\n\n\nOrder\nFile\nLink\n\n\n\n\n1\n01_Anger-Lethal_weapon.mp4\nlink\n\n\n2\n11_Happy_Shallow_Grave.mp4\nlink\n\n\n3\n05_Fear_Batman_Returns.mp4\nlink\n\n\n4\n07_Sad_Big_Fish.mp4\nlink\n\n\n5\n02_Anger_The fifth_element.mp4\nlink\n\n\n6\n09_Sad_The_Portait_of_ a_Lady.mp4\nlink\n\n\n7\n04_Fear_Lethal_Weapon.mp4\nlink\n\n\n8\n10_Happy - Nostradamus.mp4\nlink\n\n\n9\n03_Anger_Allien.mp4\nlink\n\n\n10\n06_Fear_The Fifth_Element.mp4\nlink\n\n\n11\n08_Sad_Ehnglish_Patient.mp4\nlink\n\n\n12\n12_Happy_Oliver Twist.mp4\nlink"
+  },
+  {
+    "objectID": "teaching_en/waitinglist/X15_IAT.html",
+    "href": "teaching_en/waitinglist/X15_IAT.html",
+    "title": "Implicitní Asociační Test",
+    "section": "",
+    "text": "Odkazy: Experiment\nCílem tohoto experimentu je vyzkoušet si Implicitní Asociační Test (IAT), který byl svého času velmi populární. Implicitní testy (jako je IAT) staví na předpokladu, že se nebudeme lidí ptát, jací jsou (jako v dotazníku), ale změříme charakteristiky z jejich reakcí. Metoda zažívala největší ohlas na začátku tisíciletí, dnes je přijímána spíš kriticky. K IAT existuje řada zdrojů (viz níže).\nV naší variantě se jedná o tzv. Age IAT, tedy test, který měří sílu předsudků proti starým lidem. Test má 5 fází:\nExperiment měří reakční časy - jak rychle lidé třídí zobrazené podněty do kategorií vlevo/vpravo. Kritický je rozdíl mezi (3) a (5), výsledný efekt se označuje D, který trochu odpovídá míře efektu (Cohen d), podrobně je popsán v Greenwald et al. (2003).\nV testu nejsou konkrétní hypotézy - můžete se podívat, jak se nalezené efekty liší od jiných IAT popsaných v literatuře. Efekty IAT bývají nejvyšší, když děláte test poprvé, možná to půjde porovnat i v našem datasetu."
+  },
+  {
+    "objectID": "teaching_en/waitinglist/X15_IAT.html#zdroje-odkud-začít",
+    "href": "teaching_en/waitinglist/X15_IAT.html#zdroje-odkud-začít",
+    "title": "Implicitní Asociační Test",
+    "section": "Zdroje odkud začít",
+    "text": "Zdroje odkud začít\n\nhttps://en.wikipedia.org/wiki/Implicit-association_test\nhttps://implicit.harvard.edu/implicit/\nGreenwald, A. G., McGhee, D. E., & Schwartz, J. K. L. (1998). Measuring individual differences in implicit cognition: The Implicit Association Test. Journal of Personality and Social Psychology, 74, 1464-1480.\nhttps://faculty.washington.edu/agg/iat_validity.htm\nGreenwald, A. G., Nosek, B. A., & Banaji, M. R. (2003). Understanding and using the implicit association test: I. An improved scoring algorithm. Journal of personality and social psychology, 85(2), 197. (pdf)\nhttps://www.vox.com/identities/2017/3/7/14637626/implicit-association-test-racism\nGreenwald, A. G., Brendl, M., Cai, H., Cvencek, D., Dovidio, J. F., Friese, M., Hahn, A., Hehman, E., Hofmann, W., Hughes, S., Hussey, I., Jordan, C., Kirby, T. A., Lai, C. K., Lang, J. W. B., Lindgren, K. P., Maison, D., Ostafin, B. D., Rae, J. R., … Wiers, R. W. (2022). Best research practices for using the Implicit Association Test. Behavior Research Methods, 54(3), 1161–1180. https://doi.org/10.3758/s13428-021-01624-3"
+  },
+  {
+    "objectID": "teaching_en/waitinglist/X13_WordSuperiority.html",
+    "href": "teaching_en/waitinglist/X13_WordSuperiority.html",
+    "title": "Nadřazenost slov",
+    "section": "",
+    "text": "Odkazy: Experiment\nV tomto experimentu se zaměříme na vnímání písmen. U vnímání písmen je důležitý kontext, a proto je podstatné, zda jsou písmena prezentována izolovaně nebo jako součást slova.\nEfekt nadřazenosti slov (Reicher, 1969) spočívá v tom, že jsou prezentována izolovaná písmena nebo krátká slova a po velmi krátké době jsou překryty maskou. Dejme tomu, že se ptáme na písmeno K nebo na písmeno K ze slova WORK. Nabízené volby (D a K) jsou zvoleny tak, aby v obou případech vzniklo smysluplné slovo. Je to proto, aby výsledek nešlo vysvětlit jen tím, že lidé raději volí smysluplná slova. I tak je písmeno K lépe rozpoznáno, když je součástí slova. To je vlastně paradoxní, protože musíme vlastně přečíst 4 písmena, zatímco pro rozpoznání izolovaného písmena by mělo stačit přečíst jedno.\nExperiment se skládá z 96 úloh (polovina prezentuje izolovaná písmena, polovina slova). Poloha/pořadí písmene ve slově se mění. Každé písmeno/slovo je prezentováno 3x, vždy v různé obtížnosti dané tím, jak rychle je přemazáno maskou: 1) zobrazeno na 30 ms, ISI 0 ms; 2) zobrazeno 50 ms, ISI 0 ms; 3) zobrazeno na 50, ISI 20 ms. ISI znamená inter-stimulus-interval a udává jako dlouho byla po smazání písmena zobrazena prázdná plocha, než se ukázala maska. Tyhle různé podmínky jsou tam proto, že sbíráme data online a nevíme, jak přesně půjde časy dodržet na různých počítačích. Proto prezentujeme směs lehčích i těžších úloh. V laboratoři bychom pravděpodobně výběr zúžili.\nHlavní hypotéza experimentu tedy zní, zda se liší úspěšnost při rozpoznávání písmen ve slovech oproti izolovaným (případně konkrétně zda je úspěšnost lepší)."
+  },
+  {
+    "objectID": "teaching_en/waitinglist/X13_WordSuperiority.html#zdroje-odkud-začít",
+    "href": "teaching_en/waitinglist/X13_WordSuperiority.html#zdroje-odkud-začít",
+    "title": "Nadřazenost slov",
+    "section": "Zdroje odkud začít",
+    "text": "Zdroje odkud začít\n\nhttps://en.wikipedia.org/wiki/Word_superiority_effect\nReicher, G. M. (1969). Perceptual recognition as a function of meaningfulness of stimulus material. Journal of Experimental Psychology, 81(2), 275–280. https://doi.org/10.1037/h0027768"
+  },
+  {
+    "objectID": "teaching_en/waitinglist/X13_WordSuperiority.html#podněty",
+    "href": "teaching_en/waitinglist/X13_WordSuperiority.html#podněty",
+    "title": "Nadřazenost slov",
+    "section": "Podněty",
+    "text": "Podněty\n\n\n\n\n\n\nNoteTabulka\n\n\n\n\n\nPokud by se vám to k něčemu hodilo, podněty najdete v tabulce níže.\n\n\n\n\n\n\n\n\n\n\nStimulus type\nWord or letter\nTarget location\nCorrectLetter\nDistractLetter\n\n\n\n\nLetter\nC\n2\nC\nH\n\n\nLetter\nD\n4\nD\nK\n\n\nLetter\nD\n3\nD\nT\n\n\nLetter\nE\n3\nE\nL\n\n\nLetter\nF\n4\nF\nL\n\n\nLetter\nH\n2\nH\nC\n\n\nLetter\nH\n1\nH\nL\n\n\nLetter\nK\n4\nK\nD\n\n\nLetter\nL\n3\nL\nE\n\n\nLetter\nL\n4\nL\nF\n\n\nLetter\nL\n1\nL\nH\n\n\nLetter\nL\n2\nL\nP\n\n\nLetter\nM\n1\nM\nS\n\n\nLetter\nP\n2\nP\nL\n\n\nLetter\nS\n1\nS\nM\n\n\nLetter\nT\n3\nT\nD\n\n\nWord\nCALF\n4\nF\nL\n\n\nWord\nCALL\n4\nL\nF\n\n\nWord\nFEET\n3\nE\nL\n\n\nWord\nFELT\n3\nL\nE\n\n\nWord\nHAND\n1\nH\nL\n\n\nWord\nLAND\n1\nL\nH\n\n\nWord\nMEAL\n1\nM\nS\n\n\nWord\nPODS\n3\nD\nT\n\n\nWord\nPOTS\n3\nT\nD\n\n\nWord\nSCAM\n2\nC\nH\n\n\nWord\nSEAL\n1\nS\nM\n\n\nWord\nSHAM\n2\nH\nC\n\n\nWord\nSLOT\n2\nL\nP\n\n\nWord\nSPOT\n2\nP\nL\n\n\nWord\nWORD\n4\nD\nK\n\n\nWord\nWORK\n4\nK\nD"
+  },
+  {
+    "objectID": "teaching_en/waitinglist/X11_RemoteAssociatesTask.html",
+    "href": "teaching_en/waitinglist/X11_RemoteAssociatesTask.html",
+    "title": "Remote Associates Task",
+    "section": "",
+    "text": "Links: Experiment and form\nThe aim of this activity is to try out the Remote Associates Task. This creativity test takes the form of 20 questions. Each question consists of three words that seem unrelated at first glance. The task is to find, for each triplet of words, a fourth word that has some relationship to all three of them.\nThe words are written into a field, so it will probably be easiest to grade the test by hand (e.g. look at the column with the answers and add a column next to it where you write 1 for correct answers and 0 for incorrect ones). You can find the correct answers, for example, in the work of Martin Hajný (on p. 46).\nSo that you can also create and test some hypotheses, we added a short personality test to the activity (the TIPI test - a very brief version of the Big Five, where each of the five scales is covered by 2 items). You will find the scoring key on Samuel Gosling’s website (link below). Big Five questionnaires contain 5 scales (Extraversion, Agreeableness, Conscientiousness, Emotional Stability/Neuroticism, Openness to Experience) - so you can ask whether some personality trait is related to (correlates with) creativity."
+  },
+  {
+    "objectID": "teaching_en/waitinglist/X11_RemoteAssociatesTask.html#sources-to-start-with",
+    "href": "teaching_en/waitinglist/X11_RemoteAssociatesTask.html#sources-to-start-with",
+    "title": "Remote Associates Task",
+    "section": "Sources to start with",
+    "text": "Sources to start with\n\nhttps://en.wikipedia.org/wiki/Remote_Associates_Test\n\nHajný, M. (2014). Konvergentní a diskriminační validita české verze testu RAT (pilotní studie) [Masarykova univerzita, Fakulta sociálních studií]. https://is.muni.cz/th/zqzs3/\nhttps://gosling.psy.utexas.edu/scales-weve-developed/ten-item-personality-measure-tipi/\n\nThørrisen, M. M., & Sadeghi, T. (2023). The Ten-Item Personality Inventory (TIPI): A scoping review of versions, translations and psychometric properties. Frontiers in Psychology, 14. https://www.frontiersin.org/articles/10.3389/fpsyg.2023.1202953"
+  },
+  {
+    "objectID": "teaching_en/09_DecisionMaking.html",
+    "href": "teaching_en/09_DecisionMaking.html",
+    "title": "Decision Making",
+    "section": "",
+    "text": "Links: Experiment and form\nThis experiment contains various decision-making tasks (such as the Asian Flu problem). The questions come in two versions, and each participant is assigned to the appropriate version based on a random number that they make up themselves (Forms doesn’t allow random assignment, so this is a makeshift solution).\nThe questions in both versions correspond to each other (the first question in both versions concerns the Asian flu, etc.). Look at the individual pairs of questions and assess whether the ratio of choices differs. For statistical testing you can use, for example, a chi-square test [can also be done online].\nFor interpretation you can use articles by Kahneman and Tversky, see e.g. below. The effects included are robust, but note that individual people decide according to their own knowledge and preferences (the results are usually not 100% vs 0%, different people choose differently)."
+  },
+  {
+    "objectID": "teaching_en/09_DecisionMaking.html#sources-to-start-with",
+    "href": "teaching_en/09_DecisionMaking.html#sources-to-start-with",
+    "title": "Decision Making",
+    "section": "Sources to start with",
+    "text": "Sources to start with\n\nKahneman, D., & Tversky, A. (1984). Choices, values, and frames. American Psychologist, 39(4), 341–350. https://doi.org/10.1037/0003-066X.39.4.341"
+  },
+  {
+    "objectID": "teaching_en/07_Prototypes.html",
+    "href": "teaching_en/07_Prototypes.html",
+    "title": "Prototypes",
+    "section": "",
+    "text": "Links: Experiment\nThe aim of the experiment is to show how we acquire and use prototypes. The idea of prototypes is that a person has a mental construct that identifies the typical properties of various categories. When a person encounters a new object, they compare it with the prototypes in memory. If it sufficiently matches the prototype of a chair, the new object will be classified and treated as a chair. This approach allows new objects to be interpreted based on previously learned information. It is an efficient approach, because you don’t have to store all previously seen chairs in long-term memory. Instead, only the prototype needs to be retained.\nThe experiment is a loose variation on the experiment by Posner and Keele (1968). The experiment has two phases. In the first phase, using trial and error, the participant learns two prototypes (A and B, which are differently colored grids of small squares). The prototypes are not shown directly, but with slight deviations (to make it a bit harder and so that the participant doesn’t pick up some simple heuristic, such as that this particular small black square always means A).\nAfter 40 trials, the experiment smoothly transitions into part 2, where either the prototypes (originals) or their new variants are shown. What matters is that participants did not see either variant in the first part. People should classify the prototypes better (more accurately and faster), because they had already formed a representation of them in the first part."
+  },
+  {
+    "objectID": "teaching_en/07_Prototypes.html#sources-to-start-with",
+    "href": "teaching_en/07_Prototypes.html#sources-to-start-with",
+    "title": "Prototypes",
+    "section": "Sources to start with",
+    "text": "Sources to start with\n\nhttps://en.wikipedia.org/wiki/Prototype_theory\nPosner, M. I., & Keele, S. W. (1968). On the genesis of abstract ideas. Journal of Experimental Psychology, 77(3, Pt.1), 353–363. https://doi.org/10.1037/h0025953"
+  },
+  {
+    "objectID": "teaching_en/05_MemorySpan.html",
+    "href": "teaching_en/05_MemorySpan.html",
+    "title": "Memory Span",
+    "section": "",
+    "text": "Links: Experiment\nThe aim of the experiment is to show how memory span (the number of elements we can remember) relates to the character of the learned material. Participants in the experiment see sequences of stimuli and then have to reconstruct them from memory by clicking on buttons. The experiment contains sequences from five conditions:\nThe stimuli are in English. In general, a memory span of approximately 7 (+/-2) is expected. Later experiments showed that this span depends on the character of the stimuli (for letters that sound alike, it should be smaller than for those that sound different). Similarly, it should be smaller for longer words than for short words. These observations show that classic memory span tests do measure memory, but at the same time are strongly influenced by verbal processes.\nMethodologically, what is interesting about this experiment is that it is built on a so-called staircase approach. That is, when the answer is correct, the next stimulus is longer; when it is wrong, it is shorter. At the end, the results show the length of the last sequence for each type. Here it is quite trivial (5 repetitions per type is not many). In practice this is also often done asymmetrically (e.g. you need 2 correct in a row for the task to get harder). This approach is used, for example, in psychophysics when looking for an absolute or relative thresholds. Nowadays, however, we also find it in other fields - for example in knowledge or IQ tests, where each subsequent item is selected based on success in previous answers, so that we don’t give unnecessarily easy/hard questions (adaptive testing)."
+  },
+  {
+    "objectID": "teaching_en/05_MemorySpan.html#sources-to-start-with",
+    "href": "teaching_en/05_MemorySpan.html#sources-to-start-with",
+    "title": "Memory Span",
+    "section": "Sources to start with",
+    "text": "Sources to start with\n\nhttps://en.wikipedia.org/wiki/Memory_span\nhttps://en.wikipedia.org/wiki/Psychophysics#Staircase_procedures\nhttps://en.wikipedia.org/wiki/Computerized_adaptive_testing"
+  },
+  {
+    "objectID": "teaching_en/03_VisualSearch.html",
+    "href": "teaching_en/03_VisualSearch.html",
+    "title": "Visual Search",
+    "section": "",
+    "text": "Links: Experiment\nThe aim of the experiment is to show the difference between feature-search and conjunction-search. Search difficulty is measured by measuring the time for different numbers of objects on the screen (here 10, 20, 30 and 40). We then fit a (regression) line to the results and calculate its slope. The slope value indicates how much longer the search takes when we add one object.\nThe data needs to be split into 4 groups (2x2), based on whether it is feature/conjunction search and whether the target object is present or absent. The slope needs to be determined separately for each group. The slope should be larger for conjunction search than for feature search. The times, and thus also the slope, should be larger for absent trials (roughly double compared to the corresponding type of search). This is because although processing one object is equally fast in both cases, you have to process approximately twice as many of them (when looking for 1 out of 20, on average you have to go through half of the elements, but if it’s not there, you have to go through all of them)."
+  },
+  {
+    "objectID": "teaching_en/03_VisualSearch.html#sources-to-start-with",
+    "href": "teaching_en/03_VisualSearch.html#sources-to-start-with",
+    "title": "Visual Search",
+    "section": "Sources to start with",
+    "text": "Sources to start with\n\nhttps://en.wikipedia.org/wiki/Visual_search\nWolfe, J. M. (2020). Visual Search: How Do We Find What We Are Looking For? Annual Review of Vision Science, 6(1), 539–562. https://doi.org/10.1146/annurev-vision-091718-015048 - more advanced, but comprehensive introduction also here"
+  },
+  {
+    "objectID": "teaching_en/01_MullerLyer.html",
+    "href": "teaching_en/01_MullerLyer.html",
+    "title": "Müller-Lyer illusion",
+    "section": "",
+    "text": "Links: Experiment / Opposite direction\nThe aim of the experiment is to measure the strength of the Müller-Lyer illusion. The experiment contains two lines. The first line, on the left, has varying lengths (85-115 pixels) and straight ends. The second line, on the right, always has the same length (100 pixels) and has arrows at the ends (when the arrows point inward/outward, the line appears shorter or longer respectively). In each trial the participant chooses which line appears longer.\nFor a graphical representation of the results, I recommend plotting the line length on the x-axis and the percentage of “longer” choices on the y-axis. The resulting S-shaped curve should not pass through the midpoint [100 px; 50%], and should be shifted to one side. Try to imagine what the curve of a perfect observer would look like (and how this curve would be affected by imprecision of perception, i.e. the strength of the M-L illusion). By the imprecision of perception we mean here the inability to perceive differences smaller than X pixels. The shape and shift of the curve would be compared using an analysis of the psychometric function (logistic regression).\nIn the header you will find a link to a variant of the experiment where the arrows point in the opposite direction. You can collect your own data and compare how the results look."
+  },
+  {
+    "objectID": "teaching_en/01_MullerLyer.html#sources-to-start-with",
+    "href": "teaching_en/01_MullerLyer.html#sources-to-start-with",
+    "title": "Müller-Lyer illusion",
+    "section": "Sources to start with",
+    "text": "Sources to start with\n\nhttps://en.wikipedia.org/wiki/M%C3%BCller-Lyer_illusion\nhttps://en.wikipedia.org/wiki/Psychometric_function"
+  },
+  {
     "objectID": "teaching_cz/20_MoralFoundations.html",
     "href": "teaching_cz/20_MoralFoundations.html",
     "title": "Dotazník morálních základů",
@@ -154,11 +301,11 @@
     "text": "Zdroje, odkud začít\n\nhttps://en.wikipedia.org/wiki/M%C3%BCller-Lyer_illusion\nhttps://en.wikipedia.org/wiki/Psychometric_function"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Experiment Library",
+    "objectID": "license.html",
+    "href": "license.html",
+    "title": "License",
     "section": "",
-    "text": "Müller-Lyerova iluze (Müller-Lyer illusion) - demo\nDetekce signálu (Signal detection) - demo\nZrakové vyhledávání (Visual search) - demo\nMrknutí pozornosti (Attentional blink) - demo\nPaměťový rozsah (Memory span) - demo\nImplicitní učení (Implicit learning) - demo\nPrototypy (Prototypes) - demo\nRozpoznávání slov (Lexical Decision) - demo\nNadřazenost slov (Word Superiority) - demo\nImplicitní asociační test (Implicit Association Test) - demo\nMěření reakčního času (Simple Reaction Time) - demo\nGo/No-Go - demo\nMentální rotace (Mental Rotation) - demo"
+    "text": "The experiment code is licensed under GNU General Public License.\nThe jsPsych library code is licensed under MIT license.\nThe content of this webpage is licensed under CC BY 4.0 license (Creative Commons Attribution)."
   },
   {
     "objectID": "about.html",
@@ -168,11 +315,18 @@
     "text": "Experiment Library is a companion website for the class General and Cognitive Psychology taught at Charles University, Faculty of Arts. The experiments are simplified versions of popular cognitive experiments.\nThe experiments or the website collects no data. All experiments display selected results in the end. If you want to use these results, ask your participants to submit them via other channels.\nThe experiments are written using jsPsych framework. Their source code is publicly available and you are free to study the code or use the experiments for your research or teaching."
   },
   {
-    "objectID": "license.html",
-    "href": "license.html",
-    "title": "License",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Experiment Library",
     "section": "",
-    "text": "The experiment code is licensed under GNU General Public License.\nThe jsPsych library code is licensed under MIT license.\nThe content of this webpage is licensed under CC BY 4.0 license (Creative Commons Attribution)."
+    "text": "Müller-Lyerova iluze (Müller-Lyer illusion) - demo\nDetekce signálu (Signal detection) - demo\nZrakové vyhledávání (Visual search) - demo\nMrknutí pozornosti (Attentional blink) - demo\nPaměťový rozsah (Memory span) - demo\nImplicitní učení (Implicit learning) - demo\nPrototypy (Prototypes) - demo\nRozpoznávání slov (Lexical Decision) - demo\nNadřazenost slov (Word Superiority) - demo\nImplicitní asociační test (Implicit Association Test) - demo\nMěření reakčního času (Simple Reaction Time) - demo\nGo/No-Go - demo\nMentální rotace (Mental Rotation) - demo"
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching materials",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\n\n\n\n\n\n\nAttentional Blink\n\n\n\n\n\n\nCognitive Reflection Test\n\n\n\n\n\n\nDecision Making\n\n\n\n\n\n\nImplicit Learning\n\n\n\n\n\n\nMemory Span\n\n\n\n\n\n\nMüller-Lyer illusion\n\n\n\n\n\n\nPrototypes\n\n\n\n\n\n\nSignal Detection\n\n\n\n\n\n\nVisual Search\n\n\n\n\n\n\nWason Selection Task\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "teaching_cz/02_SignalDetection.html",
@@ -310,6 +464,146 @@
   {
     "objectID": "teaching_cz/21_MentalRotation.html#zdroje-odkud-začít",
     "href": "teaching_cz/21_MentalRotation.html#zdroje-odkud-začít",
+    "title": "Mentální rotace",
+    "section": "Zdroje odkud začít",
+    "text": "Zdroje odkud začít\n\nhttps://en.wikipedia.org/wiki/Mental_rotation\n\nGanis, G., & Kievit, R. A. (2015). A New Set of Three-Dimensional Shapes for Investigating Mental Rotation Processes: Validation Data and Stimulus Set (1). 3(1), Article 1. https://doi.org/10.5334/jopd.ai\n\nStewart, E. E. M., Hartmann, F. T., Morgenstern, Y., Storrs, K. R., Maiello, G., & Fleming, R. W. (2022). Mental object rotation based on two-dimensional visual representations. Current Biology, 32(21), R1224–R1225. https://doi.org/10.1016/j.cub.2022.09.036"
+  },
+  {
+    "objectID": "teaching_en/02_SignalDetection.html",
+    "href": "teaching_en/02_SignalDetection.html",
+    "title": "Signal Detection",
+    "section": "",
+    "text": "Links: Experiment\nIn psychology we often present stimuli and want people to work with them and make certain decisions. This can involve the ability to recognize a regularity in a random field (as in this experiment), or, for example, the ability to detect a lie. The simplest way of evaluating this is to calculate the percentage of correct answers. However, this approach ignores the fact that people can make two kinds of errors (false alarm, FA - labeling true statements as lies; omission, Miss - failing to notice a lie and considering it a true statement). Signal Detection Theory (SDT) tries to evaluate this data more sensitively, so that we can also work with this information.\nThe experiment displayed 3 conditions, which differed in the number of dots (64, 144, 256). Each condition was presented in 20 trials (the target - i.e. a regular line formed by dots - was present in 10 and absent in 10). The line appeared in a random part of the stimulus and had 2 different slopes (5x starting top-left, 5x bottom-right). The final results show the percentages (proportions) for each of the 4 possible trial outcomes (Hit/FA/Miss/CR - see e.g. the Wikipedia link below). Within SDT, sensitivity (d’ - or “d prime”, that apostrophe is important) and bias (c as in criterion, here there is no apostrophe) can be calculated from these values. A higher d’ value means the person distinguishes the presence of the stimulus better; zero means they are unable to do so. A zero value of c means that false alarms and omissions are balanced; a positive/negative value means a bias toward one side (here it is always better to check whether you are interpreting it correctly based on the actual FA and Miss values - it’s easy to mix them up).\nAs part of the evaluation, you can check whether sensitivity d’ decreases as the number of dots increases (expected). At the same time, you can look at how bias changes with difficulty (there is no clear prediction)."
+  },
+  {
+    "objectID": "teaching_en/02_SignalDetection.html#sources-to-start-with",
+    "href": "teaching_en/02_SignalDetection.html#sources-to-start-with",
+    "title": "Signal Detection",
+    "section": "Sources to start with",
+    "text": "Sources to start with\n\nhttps://en.wikipedia.org/wiki/Detection_theory\nhttp://www.cns.nyu.edu/~david/handouts/sdt/sdt.html\nCalculator, e.g., https://www.computerpsych.com/Research_Software/NormDist/Online/Detection_Theory"
+  },
+  {
+    "objectID": "teaching_en/04_AttentionBlink.html",
+    "href": "teaching_en/04_AttentionBlink.html",
+    "title": "Attentional Blink",
+    "section": "",
+    "text": "Links: Experiment\nThe aim of the experiment is to show how our ability to recognize objects/characters depends on their temporal spacing. In the experiment, participants watch a stream of 20 letters and have to pay attention to 2 letters (J and K). They then have to indicate whether J, K, both, or neither was present (i.e. 4 possibilities). The experiment contains a total of 140 streams (trials). The main condition consists of trials where both letters are present, where we examine success rate depending on the spacing between the letters (100 trials - 5x20 - spacings of 0, 2, 4, 6, 8). A spacing of 0 means the letters followed immediately one after another. The other conditions, where only one letter is present (30x J, 30x K) or neither (30x), are important so that people cannot simply keep guessing that both letters are present. Ideally there should also always be 50 of these, but there are only 30, to keep the experiment shorter.\nThe success rate for recognizing the first letter should stay the same regardless of the spacing (variables FirstTarget_sep0 to 8). The success rate for the second letter tends to have a U-shaped curve (SecondTarget_sep0 to 8: quite good performance at zero spacing, then a drop, and a return to the original values around a spacing of 6 or 8)."
+  },
+  {
+    "objectID": "teaching_en/04_AttentionBlink.html#sources-to-start-with",
+    "href": "teaching_en/04_AttentionBlink.html#sources-to-start-with",
+    "title": "Attentional Blink",
+    "section": "Sources to start with",
+    "text": "Sources to start with\n\nhttps://en.wikipedia.org/wiki/Attentional_blink\nhttp://www.scholarpedia.org/article/Attentional_blink\nShapiro, K. L., Raymond, J. E., & Arnell, K. M. (1997). The attentional blink. Trends in cognitive sciences, 1(8), 291-296. https://doi.org/10.1016/S1364-6613(97)01094-2"
+  },
+  {
+    "objectID": "teaching_en/06_ImplicitLearning.html",
+    "href": "teaching_en/06_ImplicitLearning.html",
+    "title": "Implicit Learning",
+    "section": "",
+    "text": "Links: Experiment / mouse version\nThe aim of the experiment is to show that people are able to learn unconsciously. Specifically, people respond to “random” sequences that are in fact repeating. People usually don’t notice this, but they improve. If a sequence is then different, they perform worse.\nThe experiment contains 10 blocks (sequences). Sequence 9 is different (sequenceX below), the other sequences are the same. So that it isn’t completely obvious, these sequences sometimes have a different beginning and end. For comparison, the sequences are listed below, but this probably won’t matter much (0,1,2,3 correspond in order to F,G,H,J).\nA typical result should be that people improve in blocks 1-8 (RT decreases), in block 9 the RT is higher again, and in block 10 it is lower again, because it is the sequence they had already learned.\nFun fact: it’s possible that it is important that you have to learn harder motor patterns on the keyboard. In 2022, we tried a version where people clicked with a mouse. Students picked it up quite quickly, but did not improve much (they were only slower in the first block)."
+  },
+  {
+    "objectID": "teaching_en/06_ImplicitLearning.html#sources-to-start-with",
+    "href": "teaching_en/06_ImplicitLearning.html#sources-to-start-with",
+    "title": "Implicit Learning",
+    "section": "Sources to start with",
+    "text": "Sources to start with\n\nhttps://en.wikipedia.org/wiki/Implicit_learning\nDestrebecqz, A., Cleeremans, A. Can sequence learning be implicit? New evidence with the process dissociation procedure. Psychonomic Bulletin & Review 8, 343–350 (2001). https://doi.org/10.3758/BF03196171"
+  },
+  {
+    "objectID": "teaching_en/08_Wason.html",
+    "href": "teaching_en/08_Wason.html",
+    "title": "Wason Selection Task",
+    "section": "",
+    "text": "Links: Experiment and form\nIn this experiment, participants solve several variants of the Wason task. The task is also explained to participants before the experiment begins. They then see 6 similar tasks, 3 concrete and 3 abstract. The experiment is inspired by the research of Wason & Shapiro (1971), who tested these conditions in more detail.\nAt the level of analysis, the main hypothesis is whether people make more errors when the task is formulated in general terms (not concrete). We assume that with the concrete variants, people can also use knowledge of the world, whereas with the abstract ones they have to rely on logic alone.\nEvaluating the data will be a bit complicated by the fact that participants always chose two answers, so each cell in the table contains two values separated by semicolons. Probably the best approach is to solve each task yourself (and thus find the correct answers) and then manually grade each answer in a copy of the table (whether both answers are correct, or only one). As a possible next step, you could consider whether certain errors recur more often."
+  },
+  {
+    "objectID": "teaching_en/08_Wason.html#sources-to-start-with",
+    "href": "teaching_en/08_Wason.html#sources-to-start-with",
+    "title": "Wason Selection Task",
+    "section": "Sources to start with",
+    "text": "Sources to start with\n\nhttps://en.wikipedia.org/wiki/Wason_selection_task\nWason, P. C., & Shapiro, D. (1971). Natural and contrived experience in a reasoning problem. Quarterly Journal of Experimental Psychology, 23(1), 63-71. https://doi.org/10.1080/00335557143000068 (pdf e.g. here)"
+  },
+  {
+    "objectID": "teaching_en/10_CognitiveReflectionTest.html",
+    "href": "teaching_en/10_CognitiveReflectionTest.html",
+    "title": "Cognitive Reflection Test",
+    "section": "",
+    "text": "Links: Experiment and form\nThe aim of the experiment is to introduce the Cognitive Reflection Test. The purpose of this test is to capture the extent to which a person relies on an intuitive answer, or whether they are able to correct the answer through subsequent reflection.\nIt is a relatively short test (the original version had only 3 questions, Frederick, 2005). The current version is loosely adapted from Toplak et al. (2014), where you will also find both the correct and the intuitive answers.\nThe activity does not have specific hypotheses. Start by evaluating whether the answers are correct or not. For each question you can then evaluate how often people arrived at the correct answer and how often they stayed with the intuitive answer, and what the differences between questions are, if any.\nThe test is used in further research (e.g. Pennycook & Rand, 2020).\nSources to start with\n\nhttps://en.wikipedia.org/wiki/Cognitive_reflection_test\n\nFrederick, S. (2005). Cognitive reflection and decision making. Journal of Economic Perspectives, 19(4), 25–42. https://doi.org/10.1257/089533005775196732\n\nToplak, M. E., West, R. F., & Stanovich, K. E. (2014). Assessing miserly information processing: An expansion of the Cognitive Reflection Test. Thinking & Reasoning, 20(2), 147-168. https://doi.org/10.1080/13546783.2013.844729\n\nPennycook, G., & Rand, D. G. (2020). Who falls for fake news? The roles of bullshit receptivity, overclaiming, familiarity, and analytic thinking. Journal of personality, 88(2), 185-200. https://doi.org/10.1111/jopy.12476"
+  },
+  {
+    "objectID": "teaching_en/waitinglist/X12_LexicalDecision.html",
+    "href": "teaching_en/waitinglist/X12_LexicalDecision.html",
+    "title": "Lexical Decision",
+    "section": "",
+    "text": "Links: Experiment\nThis experiment focuses on human processing of written language. Every language presupposes the existence of a lexicon with information about individual words. Such information may refer to the meaning of words, their function in the language (e.g. part of speech), and relationships to other words (What words can it follow? What can follow it? Can other words influence it?). Psychology is interested in the internal organization of such a lexicon. Semantic relationships are important in the mental lexicon, so words with similar meanings will be close to each other.\nIn this experiment, the participant sees groups of letters and has to say whether they are real words or not (so-called pseudowords). Participants have to decide both accurately and quickly. The words are shown in pairs, one after another. In total the experiment contains items from 5 conditions. The individual words in the pairs differed in whether they were real words or pseudowords, and also whether they were related in meaning (if they were words - that was the main condition):\nIn the data we have the average response times for the second words. We assume that related words will be recognized faster than when the words are unrelated. The other conditions are not as important; they are in the experiment so that people have to decide between words and pseudowords (in the main condition there are only words).\nThe experiment presents English words. Do you think that had an effect on your findings?"
+  },
+  {
+    "objectID": "teaching_en/waitinglist/X12_LexicalDecision.html#sources-to-start-with",
+    "href": "teaching_en/waitinglist/X12_LexicalDecision.html#sources-to-start-with",
+    "title": "Lexical Decision",
+    "section": "Sources to start with",
+    "text": "Sources to start with\n\nhttps://en.wikipedia.org/wiki/Lexical_decision_task"
+  },
+  {
+    "objectID": "teaching_en/waitinglist/X12_LexicalDecision.html#stimuli-in-case-its-useful-to-you",
+    "href": "teaching_en/waitinglist/X12_LexicalDecision.html#stimuli-in-case-its-useful-to-you",
+    "title": "Lexical Decision",
+    "section": "Stimuli (in case it’s useful to you)",
+    "text": "Stimuli (in case it’s useful to you)\n\nRelated pairs: butter-bread, mountain-bike, truck-car, snow-cold, hand-glove, glove-hand, rat-mouse, doctor-nurse\nUnrelated pairs: bike-rat, bride-hand, bride-nurse, butter-wedding, butter-bike, hand-doctor, mountain-bread, mountain-butter, nurse-bike, nurse-hand, snow-doctor, truck-mountain, truck-snow, wedding-bread\nPseudowords: pable, pafer, reab, saj, scralt, soam, tofenum, tommal, treim, trief, wednet"
+  },
+  {
+    "objectID": "teaching_en/waitinglist/X14_Cattell.html",
+    "href": "teaching_en/waitinglist/X14_Cattell.html",
+    "title": "Cattelův Faktor B",
+    "section": "",
+    "text": "Odkazy: Emoční inteligence a Sociální inteligence - Formulář\nCílem tohoto semináře je vyzkoušet si inteligenční test a výsledky porovnat s jinými typy inteligence.\nInteligenční test vychází z jedné ze škál Cattellova 16tifaktorového osobnostního dotazníku (16PF), která orientačně zjišťuje úroveň obecných rozumových schopností (tzv. Faktor B). Test má formu 15 otázek, kde dotazovaný vybírá jednu ze tří odpovědí. Otázky má každý ve stejném pořadí, ale pořadí nabídky 3 odpovědí u každé otázky je náhodné.\nV tabulce s výsledky najdete list “Vyhodnocovadlo”. Na prvním řádku má uvedeny správné odpovědi pro vaši kontrolu, níže jsou vzorečky, které by měly automaticky dosadit pro vyplněná data 1 a 0 (ve své kopii tabulky můžete vzorečky “roztáhnout” níž a měly by spočítat data pro další účastníky. Nyní jsou tam vyplněni dva testoví účastníci s náhodnými odpověďmi (mají záporné skóry z další testů a jmenují se test a test2) - nezapomeňte je pak vyřadit. Výsledkem testu je počet správných odpovědí (0-15).\nAbyste měli výsledek s čím porovnat a diskutovat, vyplňují se i další dva testy – test emoční inteligence (Schutte et al., 1998) a test sociální inteligence (Tromsø Social Intelligence Scale), který má 3 subškály. Pomocí korelací můžete zjišťovat, zda jednotlivé koncepty spolu souvisí kladně (schopní lidé jsou schopní po všech stránkách) nebo záporně (s našimi omezenými zdroji můžeme vynikat jen v jedné oblasti), případně vůbec."
+  },
+  {
+    "objectID": "teaching_en/waitinglist/X14_Cattell.html#zdroje-odkud-začít",
+    "href": "teaching_en/waitinglist/X14_Cattell.html#zdroje-odkud-začít",
+    "title": "Cattelův Faktor B",
+    "section": "Zdroje odkud začít",
+    "text": "Zdroje odkud začít\n\nhttps://en.wikipedia.org/wiki/16PF_Questionnaire\nhttps://www.psytoolkit.org/survey-library/emotional-intelligence.html\nhttps://www.psytoolkit.org/survey-library/social-intelligence-tsis.html\nSchutte, N. S., Malouff, J. M., Hall, L. E., Haggerty, D. J., Cooper, J. T., Golden, C. J., & Dornheim, L. (1998). Development and validation of a measure of emotional intelligence. Personality and Individual Differences, 25, 167–177.\n\nD.H. Silvera, M. Martinussen, & T. I. Dahl. (2001). The Tromsø Social Intelligence Scale, a self-report measure of social intelligence. Scandinavian Journal of Psychology, 42, 313-319."
+  },
+  {
+    "objectID": "teaching_en/waitinglist/X16_WCST.html",
+    "href": "teaching_en/waitinglist/X16_WCST.html",
+    "title": "Wisconsin Card Sorting Test",
+    "section": "",
+    "text": "Odkazy: Experiment\nWisconsin Card Sorting Test (WCST) je jedním z testů exekutivních funkcí. Hlavním cílem této aktivity je test si vyzkoušet (nejsou zde hypotézy o rozdílech mezi podmínkami apod.).\nPoužitá varianta testu na konci uvádí počet chyb a jak se chyby dělí na perseverativní a ne-perseverativní chyby (perseverativní chyby jsou chyby, které spočívají v používání předchozího, už neplatného, pravidla). Podrobnější popis těchto a dalších měřítek je možné najít v Bowden et al. (1998). Pro přehled, jak výsledky testu mohou souviset např. s poruchami pozornosti/chování, je možné použít Romine et. (2004). Modernější reflexi vyhodnocování textu najdete v Miles et al. (2021).\nPůvodní záměr je hlavně popisný - jaké chyby obvykle (zdraví) účastníci dělají, jak vypadá průměrný výkon, jak vypadá nejlepší výkon. Pokud budete chtít, můžete data spojit s některým staršími výzkumy (např. inteligence, kognitivní reflexivita), a hledat korelace (je třeba přiřadit správně řádky podle nicku)."
+  },
+  {
+    "objectID": "teaching_en/waitinglist/X16_WCST.html#zdroje-odkud-začít",
+    "href": "teaching_en/waitinglist/X16_WCST.html#zdroje-odkud-začít",
+    "title": "Wisconsin Card Sorting Test",
+    "section": "Zdroje odkud začít",
+    "text": "Zdroje odkud začít\n\nhttps://en.wikipedia.org/wiki/Wisconsin_Card_Sorting_Test\n\nBowden, S. C., Fowler, K. S., Bell, R. C., Whelan, G., Clifford, C. C., Ritter, A. J., & Long, C. M. (1998). The Reliability and Internal Validity of the Wisconsin Card Sorting Test. Neuropsychological Rehabilitation, 8(3), 243–254. https://doi.org/10.1080/713755573\n\nMiles, S., Howlett, C. A., Berryman, C., Nedeljkovic, M., Moseley, G. L., & Phillipou, A. (2021). Considerations for using the Wisconsin Card Sorting Test to assess cognitive flexibility. Behavior Research Methods, 53(5), 2083–2091. https://doi.org/10.3758/s13428-021-01551-3\nRomine, C. B., Lee, D., Wolfe, M. E., Homack, S., George, C., & Riccio, C. A. (2004). Wisconsin Card Sorting Test with children: A meta-analytic study of sensitivity and specificity. Archives of Clinical Neuropsychology, 19(8), 1027–1041. https://doi.org/10.1016/j.acn.2003.12.009"
+  },
+  {
+    "objectID": "teaching_en/waitinglist/X19_GoNoGo.html",
+    "href": "teaching_en/waitinglist/X19_GoNoGo.html",
+    "title": "Go/No-Go Task",
+    "section": "",
+    "text": "Odkazy: Experimenty SRT a Go/No-Go\nV rámci této aktivity se sbírala data o prostém reakčním času (Simple Reaction Time, SRT) a o reakčním čase v Go/No-Go experimentu.\nPrvním experiment na SRT obsahoval 25 trialů a cílem bylo co nejrychleji zmáčknout mezerník, když se na obrazovce objevil tvar (černý čtverec). Účastník nemusí nic rozhodovat (a pokud odpoví v limitu 2000 ms, tak má vše dobře). Go/No-Go experiment má v experimentální části (tedy po zácviku) 60 trialů, které mohou patřit do 1 ze 3 podmínek (zelený, modrý nebo červený čtverec). Pokud je čtverec zelený nebo modrý, účastníci mají co nejrychleji zmáčknout mezerník. Pokud je čtverec červený, mezerník stisknout nesmí. Měříme reakční čas (první dvě podmínky - zelená/modrá - bereme jako jednu skupinu) a počet chyb.\nStatisticky je možné otestovat, zda existuje rozdíl v reakčních časech mezi SRT a Go/No-Go (když lidé potřebují rozlišit, zda mají odpovídat, mělo by jim to trvat déle), tedy např. T-testem. U chyb je možné podívat se jen na Go/No-Go a podívat se, zda existuje korelace mezi množstvím chyb Go Accuracy a No-Go Accuracy."
+  },
+  {
+    "objectID": "teaching_en/waitinglist/X19_GoNoGo.html#zdroje-odkud-začít",
+    "href": "teaching_en/waitinglist/X19_GoNoGo.html#zdroje-odkud-začít",
+    "title": "Go/No-Go Task",
+    "section": "Zdroje odkud začít",
+    "text": "Zdroje odkud začít\n\nhttps://www.psytoolkit.org/experiment-library/go-no-go.html\nCriaud, M. & Boulinguez, P. (2012). Have we been asking the right questions when assessing response inhibition in go/no-go tasks with fMRI? A meta-analysis and critical review. Neuroscience & Biobehavioral Reviews, 37(1), 11-23.\nVerbruggen, F. & Logan, G.D. (2008). Automatic and controlled response inhibition: Associative learning in the go/no-go and stop-signal paradigms. Journal of Experimental Psychology: General, 137(4), 649-672.\nMeule, A. (2017). Reporting and Interpreting Task Performance in Go/No-Go Affective Shifting Tasks. Frontiers in Psychology, 8. https://doi.org/10.3389/fpsyg.2017.00701\nGomez, P., Ratcliff, R., & Perea, M. (2007). A model of the go/no-go task. Journal of Experimental Psychology: General, 136(3), 389–413. https://doi.org/10.1037/0096-3445.136.3.389"
+  },
+  {
+    "objectID": "teaching_en/waitinglist/X21_MentalRotation.html",
+    "href": "teaching_en/waitinglist/X21_MentalRotation.html",
+    "title": "Mentální rotace",
+    "section": "",
+    "text": "Odkazy: Experiment\nV experimentu jsou vždy zobrazovány páry 3D tvarů (složených z menších kostiček) a úkolem je rozhodnout, zda jsou stejné nebo ne. Cílem této aktivity je replikovat zjištění ohledně metntální rotace – tj. rychlost rozhodování o tvaru bude postupně pomalejší, když bude potřeba provést větší otočení.\nVe výsledcích najdete jako základ 4 reakční časy pro rotace 0, 50, 100 a 150 stupňů. V experimentu je celkem 80 trialů, pro každý úhel je 5 stejných a 5 zrcadlových trialů (pro vyhodnocení jsou sloučené). Ve výsledcích je také četnost správných odpovědí (accuracy), pro kterou nemáme přímou hypotézu. Základní hypotéza rotace by se měla testovat lineární regresí pro reakční čas v závislosti na úhlu. Accuracy je spíš do diskuze, zda byly chyby rovnoměrné, nebo častější u větších rotací.\nPoužité podněty jsou volně dostupné z OSF (https://osf.io/pn96e/) a je k nim článek, z kterého můžete čerpat (Ganis & Kievit, 2015)."
+  },
+  {
+    "objectID": "teaching_en/waitinglist/X21_MentalRotation.html#zdroje-odkud-začít",
+    "href": "teaching_en/waitinglist/X21_MentalRotation.html#zdroje-odkud-začít",
     "title": "Mentální rotace",
     "section": "Zdroje odkud začít",
     "text": "Zdroje odkud začít\n\nhttps://en.wikipedia.org/wiki/Mental_rotation\n\nGanis, G., & Kievit, R. A. (2015). A New Set of Three-Dimensional Shapes for Investigating Mental Rotation Processes: Validation Data and Stimulus Set (1). 3(1), Article 1. https://doi.org/10.5334/jopd.ai\n\nStewart, E. E. M., Hartmann, F. T., Morgenstern, Y., Storrs, K. R., Maiello, G., & Fleming, R. W. (2022). Mental object rotation based on two-dimensional visual representations. Current Biology, 32(21), R1224–R1225. https://doi.org/10.1016/j.cub.2022.09.036"

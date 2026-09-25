@@ -1,0 +1,18 @@
+---
+title: Decision Making
+subtitle: Decision Making
+---
+
+Links: Experiment and form
+
+This experiment contains various decision-making tasks (such as the Asian Flu problem). The questions come in two versions, and each participant is assigned to the appropriate version based on a random number that they make up themselves (Forms doesn't allow random assignment, so this is a makeshift solution).
+
+The questions in both versions correspond to each other (the first question in both versions concerns the Asian flu, etc.). Look at the individual pairs of questions and assess whether the ratio of choices differs. For statistical testing you can use, for example, a chi-square test [can also be done online].
+
+For interpretation you can use articles by Kahneman and Tversky, see e.g. below. The effects included are robust, but note that individual people decide according to their own knowledge and preferences (the results are usually not 100% vs 0%, different people choose differently).
+
+## Sources to start with 
+
+- Kahneman, D., & Tversky, A. (1984). Choices, values, and frames. *American Psychologist*, 39(4), 341–350. https://doi.org/10.1037/0003-066X.39.4.341  
+
+ 

@@ -1,0 +1,20 @@
+---
+title: Mentální rotace
+subtitle: (Mental Rotation) 
+---
+
+Odkazy: [Experiment](/experiments/rotation.html)
+
+V experimentu jsou vždy zobrazovány páry 3D tvarů (složených z menších kostiček) a úkolem je rozhodnout, zda jsou stejné nebo ne. Cílem této aktivity je replikovat zjištění ohledně metntální rotace – tj. rychlost rozhodování o tvaru bude postupně pomalejší, když bude potřeba provést větší otočení.  
+
+Ve výsledcích najdete jako základ 4 reakční časy pro rotace 0, 50, 100 a 150 stupňů. V experimentu je celkem 80 trialů, pro každý úhel je 5 stejných a 5 zrcadlových trialů (pro vyhodnocení jsou sloučené). Ve výsledcích je také četnost správných odpovědí (accuracy), pro kterou nemáme přímou hypotézu. Základní hypotéza rotace by se měla testovat lineární regresí pro reakční čas v závislosti na úhlu. Accuracy je spíš do diskuze, zda byly chyby rovnoměrné, nebo častější u větších rotací. 
+
+Použité podněty jsou volně dostupné z OSF (<https://osf.io/pn96e/>) a je k nim článek, z kterého můžete čerpat (Ganis & Kievit, 2015).  
+
+## Zdroje odkud začít 
+
+- <https://en.wikipedia.org/wiki/Mental_rotation>  
+- Ganis, G., & Kievit, R. A. (2015). A New Set of Three-Dimensional Shapes for Investigating Mental Rotation Processes: Validation Data and Stimulus Set (1). 3(1), Article 1. https://doi.org/10.5334/jopd.ai  
+- Stewart, E. E. M., Hartmann, F. T., Morgenstern, Y., Storrs, K. R., Maiello, G., & Fleming, R. W. (2022). Mental object rotation based on two-dimensional visual representations. *Current Biology*, 32(21), R1224–R1225. https://doi.org/10.1016/j.cub.2022.09.036 
+
+ 

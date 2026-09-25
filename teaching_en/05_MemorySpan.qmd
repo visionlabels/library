@@ -1,0 +1,23 @@
+---
+title: Memory Span
+---
+
+Links: [Experiment](/experiments/memory-span.html)
+
+The aim of the experiment is to show how memory span (the number of elements we can remember) relates to the character of the learned material. Participants in the experiment see sequences of stimuli and then have to reconstruct them from memory by clicking on buttons. The experiment contains sequences from five conditions:
+
+1) digits
+2) letters that sound similar
+3) letters that sound different
+4) short, one-syllable words
+5) long words with multiple syllables
+
+The stimuli are in English. In general, a memory span of approximately 7 (+/-2) is expected. Later experiments showed that this span depends on the character of the stimuli (for letters that sound alike, it should be smaller than for those that sound different). Similarly, it should be smaller for longer words than for short words. These observations show that classic memory span tests do measure memory, but at the same time are strongly influenced by verbal processes.
+
+Methodologically, what is interesting about this experiment is that it is built on a so-called staircase approach. That is, when the answer is correct, the next stimulus is longer; when it is wrong, it is shorter. At the end, the results show the length of the last sequence for each type. Here it is quite trivial (5 repetitions per type is not many). In practice this is also often done asymmetrically (e.g. you need 2 correct in a row for the task to get harder). This approach is used, for example, in psychophysics when looking for an absolute or relative thresholds. Nowadays, however, we also find it in other fields - for example in knowledge or IQ tests, where each subsequent item is selected based on success in previous answers, so that we don't give unnecessarily easy/hard questions (adaptive testing).
+
+## Sources to start with
+
+- <https://en.wikipedia.org/wiki/Memory_span>
+- <https://en.wikipedia.org/wiki/Psychophysics#Staircase_procedures>
+- <https://en.wikipedia.org/wiki/Computerized_adaptive_testing>

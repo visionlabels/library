@@ -1,0 +1,34 @@
+---
+title: Implicitní Asociační Test  
+subtitle: (Implicit Association Test) 
+---
+
+Odkazy: [Experiment](/experiments/iat.html)
+
+Cílem tohoto experimentu je vyzkoušet si Implicitní Asociační Test (IAT), který byl svého času velmi populární. Implicitní testy (jako je IAT) staví na předpokladu, že se nebudeme lidí ptát, jací jsou (jako v dotazníku), ale změříme charakteristiky z jejich reakcí. Metoda zažívala největší ohlas na začátku tisíciletí, dnes je přijímána spíš kriticky. K IAT existuje řada zdrojů (viz níže). 
+
+V naší variantě se jedná o tzv. Age IAT, tedy test, který měří sílu předsudků proti starým lidem. Test má 5 fází: 
+
+1) OLD x YOUNG (fotografie) 
+2) BAD x GOOD (slova) 
+3) BAD, OLD x GOOD, YOUNG 
+4) YOUNG x OLD 
+5) BAD, YOUNG x GOOD, OLD 
+
+Experiment měří reakční časy - jak rychle lidé třídí zobrazené podněty do kategorií vlevo/vpravo. Kritický je rozdíl mezi (3) a (5), výsledný efekt se označuje D, který trochu odpovídá míře efektu (Cohen d), podrobně je popsán v Greenwald et al. (2003).  
+
+V testu nejsou konkrétní hypotézy - můžete se podívat, jak se nalezené efekty liší od jiných IAT popsaných v literatuře. Efekty IAT bývají nejvyšší, když děláte test poprvé, možná to půjde porovnat i v našem datasetu. 
+
+## Zdroje odkud začít 
+
+- <https://en.wikipedia.org/wiki/Implicit-association_test>
+- <https://implicit.harvard.edu/implicit/>
+- Greenwald, A. G., McGhee, D. E., & Schwartz, J. K. L. (1998). Measuring individual differences in implicit cognition: The Implicit Association Test. *Journal of Personality and Social Psychology*, 74, 1464-1480. 
+- <https://faculty.washington.edu/agg/iat_validity.htm>
+- Greenwald, A. G., Nosek, B. A., & Banaji, M. R. (2003). Understanding and using the implicit association test: I. An improved scoring algorithm. *Journal of personality and social psychology*, 85(2), 197. 
+([pdf](https://faculty.washington.edu/agg/pdf/GB&N.JPSP.2003.pdf)) 
+- <https://www.vox.com/identities/2017/3/7/14637626/implicit-association-test-racism>
+- Greenwald, A. G., Brendl, M., Cai, H., Cvencek, D., Dovidio, J. F., Friese, M., Hahn, A., Hehman, E., Hofmann, W., Hughes, S., Hussey, I., Jordan, C., Kirby, T. A., Lai, C. K., Lang, J. W. B., Lindgren, K. P., Maison, D., Ostafin, B. D., Rae, J. R., … Wiers, R. W. (2022). Best research practices for using the Implicit Association Test. *Behavior Research Methods*, 54(3), 1161–1180. https://doi.org/10.3758/s13428-021-01624-3
+
+
+ 

@@ -1,0 +1,17 @@
+---
+title: Signal Detection
+---
+
+Links: [Experiment](/experiments/sdt.html)
+
+In psychology we often present stimuli and want people to work with them and make certain decisions. This can involve the ability to recognize a regularity in a random field (as in this experiment), or, for example, the ability to detect a lie. The simplest way of evaluating this is to calculate the percentage of correct answers. However, this approach ignores the fact that people can make two kinds of errors (false alarm, FA - labeling true statements as lies; omission, Miss - failing to notice a lie and considering it a true statement). Signal Detection Theory (SDT) tries to evaluate this data more sensitively, so that we can also work with this information.
+
+The experiment displayed 3 conditions, which differed in the number of dots (64, 144, 256). Each condition was presented in 20 trials (the target - i.e. a regular line formed by dots - was present in 10 and absent in 10). The line appeared in a random part of the stimulus and had 2 different slopes (5x starting top-left, 5x bottom-right). The final results show the percentages (proportions) for each of the 4 possible trial outcomes (Hit/FA/Miss/CR - see e.g. the Wikipedia link below). Within SDT, sensitivity (d' - or "d prime", that apostrophe is important) and bias (c as in criterion, here there is no apostrophe) can be calculated from these values. A higher d' value means the person distinguishes the presence of the stimulus better; zero means they are unable to do so. A zero value of c means that false alarms and omissions are balanced; a positive/negative value means a bias toward one side (here it is always better to check whether you are interpreting it correctly based on the actual FA and Miss values - it's easy to mix them up).
+
+As part of the evaluation, you can check whether sensitivity d' decreases as the number of dots increases (expected). At the same time, you can look at how bias changes with difficulty (there is no clear prediction).
+
+## Sources to start with
+
+- <https://en.wikipedia.org/wiki/Detection_theory>
+- <http://www.cns.nyu.edu/~david/handouts/sdt/sdt.html>
+- Calculator, e.g., <https://www.computerpsych.com/Research_Software/NormDist/Online/Detection_Theory>

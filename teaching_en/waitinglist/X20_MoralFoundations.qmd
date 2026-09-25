@@ -1,0 +1,21 @@
+---
+title: Dotazník morálních základů  
+subtitle: (The Moral Foundations Questionnaire) 
+---
+
+Odkazy: Dotazník jako Excel
+
+Cílem této aktivity je seznámit se s konceptem Dotazníku morálních základů (MFQ) a související teorií. V rámci obecné psychologie toto téma souvisí s problematikou motivace.  
+
+Dotazník si účastníci dělají sami u sebe v Excelu a vyhodnocovací arch je seznamuje s hlavními škálami. V tomto experimentu nemáme hypotézy, které by bylo vhodné testovat, stačí jen popisná statistika. V literatuře je možné najít, jaké profily vychází např. pro liberály a konzervativce, můžete spekulovat, kterému profilu jsou výsledky podobnější (samozřejmě článek je z jiné kultury a doby). Pokud by vás napadlo, že by některé škály mohly korelovat s něčím dalším, co jsme v průběhu roku měřili (IAT, exekutivní funkce, ...), můžete to zkusit porovnat (pozor na pořadí řádků v tabulkách, aby si odpovídaly záznamy od jednotlivých účastníků), ale není to nutné. 
+
+K MFQ a související teorii je mnoho zdrojů, některé jsou níže v seznamu literatury. Pokuste se je zmapovat a seznámit spolužáky s původem metody a s kritikou. 
+
+## Zdroje odkud začít 
+
+- <https://en.wikipedia.org/wiki/Moral_foundations_theory>
+- <https://moralfoundations.org/questionnaires/> (i další podstránky na tom webu – zejm. other materials) 
+- Atari, M., Haidt, J., Graham, J., Koleva, S., Stevens, S. T., & Dehghani, M. (2023). Morality beyond the WEIRD: How the nomological network of morality varies across cultures. *Journal of Personality and Social Psychology*, 125(5), 1157–1188. https://doi.org/10.1037/pspp0000470 
+- Graham, J., Haidt, J., & Nosek, B. A. (2009). Liberals and conservatives rely on different sets of moral foundations. *Journal of Personality and Social Psychology*, 96(5), 1029–1046. https://doi.org/10.1037/a0015141 
+- Graham, J., Nosek, B. A., Haidt, J., Iyer, R., Koleva, S., & Ditto, P. H. (2011). Mapping the moral domain. *Journal of Personality and Social Psychology*, 101(2), 366–385. https://doi.org/10.1037/a0021847
+- Haidt, J., & Joseph, C. (2004). Intuitive ethics: How innately prepared intuitions generate culturally variable virtues. *Daedalus*, 133(4), 55–66. https://doi.org/10.1162/0011526042365555 

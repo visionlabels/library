@@ -23,5 +23,20 @@
       "/teaching_cz/16_WCST.html",
       "/teaching_cz/03_VisualSearch.html"
     ]
+  },
+  {
+    "listing": "/teaching.html",
+    "items": [
+      "/teaching_en/04_AttentionBlink.html",
+      "/teaching_en/10_CognitiveReflectionTest.html",
+      "/teaching_en/09_DecisionMaking.html",
+      "/teaching_en/06_ImplicitLearning.html",
+      "/teaching_en/05_MemorySpan.html",
+      "/teaching_en/01_MullerLyer.html",
+      "/teaching_en/07_Prototypes.html",
+      "/teaching_en/02_SignalDetection.html",
+      "/teaching_en/03_VisualSearch.html",
+      "/teaching_en/08_Wason.html"
+    ]
   }
 ]

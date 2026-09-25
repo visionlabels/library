@@ -1,0 +1,14 @@
+---
+title: Visual Search
+---
+
+Links: [Experiment](/experiments/visual-search.html)
+
+The aim of the experiment is to show the difference between feature-search and conjunction-search. Search difficulty is measured by measuring the time for different numbers of objects on the screen (here 10, 20, 30 and 40). We then fit a (regression) line to the results and calculate its slope. The slope value indicates how much longer the search takes when we add one object.
+
+The data needs to be split into 4 groups (2x2), based on whether it is feature/conjunction search and whether the target object is present or absent. The slope needs to be determined separately for each group. The slope should be larger for conjunction search than for feature search. The times, and thus also the slope, should be larger for absent trials (roughly double compared to the corresponding type of search). This is because although processing one object is equally fast in both cases, you have to process approximately twice as many of them (when looking for 1 out of 20, on average you have to go through half of the elements, but if it's not there, you have to go through all of them).
+
+## Sources to start with
+
+- <https://en.wikipedia.org/wiki/Visual_search>
+- Wolfe, J. M. (2020). Visual Search: How Do We Find What We Are Looking For? *Annual Review of Vision Science*, 6(1), 539–562. https://doi.org/10.1146/annurev-vision-091718-015048 - more advanced, but comprehensive introduction also [here](https://search.bwh.harvard.edu/new/pubs/Wolfe2020_VisualSearch_annurev-vision.pdf) 

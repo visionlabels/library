@@ -1,0 +1,19 @@
+---
+title: Attentional Blink
+---
+
+Links: [Experiment](/experiments/attention-blink.html)
+
+The aim of the experiment is to show how our ability to recognize objects/characters depends on their temporal spacing. In the experiment, participants watch a stream of 20 letters and have to pay attention to 2 letters (J and K). They then have to indicate whether J, K, both, or neither was present (i.e. 4 possibilities). The experiment contains a total of 140 streams (trials). The main condition consists of trials where both letters are present, where we examine success rate depending on the spacing between the letters (100 trials - 5x20 - spacings of 0, 2, 4, 6, 8). A spacing of 0 means the letters followed immediately one after another. The other conditions, where only one letter is present (30x J, 30x K) or neither (30x), are important so that people cannot simply keep guessing that both letters are present. Ideally there should also always be 50 of these, but there are only 30, to keep the experiment shorter.
+
+The success rate for recognizing the first letter should stay the same regardless of the spacing (variables FirstTarget_sep0 to 8). The success rate for the second letter tends to have a U-shaped curve (SecondTarget_sep0 to 8: quite good performance at zero spacing, then a drop, and a return to the original values around a spacing of 6 or 8).
+
+![](/images/Atten_blink_fig2.jpg)
+
+## Sources to start with
+
+- <https://en.wikipedia.org/wiki/Attentional_blink>
+- <http://www.scholarpedia.org/article/Attentional_blink>
+- Shapiro, K. L., Raymond, J. E., & Arnell, K. M. (1997). The attentional blink. *Trends in cognitive sciences*, 1(8), 291-296. https://doi.org/10.1016/S1364-6613(97)01094-2  
+
+ 

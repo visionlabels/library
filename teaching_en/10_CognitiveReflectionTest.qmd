@@ -1,0 +1,20 @@
+---
+title: Cognitive Reflection Test
+---
+
+Links: Experiment and form
+
+The aim of the experiment is to introduce the Cognitive Reflection Test. The purpose of this test is to capture the extent to which a person relies on an intuitive answer, or whether they are able to correct the answer through subsequent reflection.
+
+It is a relatively short test (the original version had only 3 questions, Frederick, 2005). The current version is loosely adapted from Toplak et al. (2014), where you will also find both the correct and the intuitive answers.
+
+The activity does not have specific hypotheses. Start by evaluating whether the answers are correct or not. For each question you can then evaluate how often people arrived at the correct answer and how often they stayed with the intuitive answer, and what the differences between questions are, if any.
+
+The test is used in further research (e.g. Pennycook & Rand, 2020).
+
+Sources to start with
+
+- <https://en.wikipedia.org/wiki/Cognitive_reflection_test>  
+- Frederick, S. (2005). Cognitive reflection and decision making. *Journal of Economic Perspectives*, 19(4), 25–42. https://doi.org/10.1257/089533005775196732  
+- Toplak, M. E., West, R. F., & Stanovich, K. E. (2014). Assessing miserly information processing: An expansion of the Cognitive Reflection Test. *Thinking & Reasoning*, 20(2), 147-168. https://doi.org/10.1080/13546783.2013.844729  
+- Pennycook, G., & Rand, D. G. (2020). Who falls for fake news? The roles of bullshit receptivity, overclaiming, familiarity, and analytic thinking. *Journal of personality*, 88(2), 185-200. https://doi.org/10.1111/jopy.12476  
