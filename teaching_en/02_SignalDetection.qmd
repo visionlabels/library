@@ -14,4 +14,4 @@ As part of the evaluation, you can check whether sensitivity d' decreases as the
 
 - <https://en.wikipedia.org/wiki/Detection_theory>
 - <http://www.cns.nyu.edu/~david/handouts/sdt/sdt.html>
-- Calculator, e.g., <https://www.computerpsych.com/Research_Software/NormDist/Online/Detection_Theory>
+- Calculator, e.g., <https://dprime-calculator.vercel.app/>

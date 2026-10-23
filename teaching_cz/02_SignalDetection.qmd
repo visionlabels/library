@@ -15,4 +15,4 @@ V rámci vyhodnocení se můžete podívat, zda citlivost d’ klesá s přibýv
 
 - <https://en.wikipedia.org/wiki/Detection_theory>
 - <http://www.cns.nyu.edu/~david/handouts/sdt/sdt.html>
-- Kalkulátor např. <https://www.computerpsych.com/Research_Software/NormDist/Online/Detection_Theory>
+- Kalkulátor např. <https://dprime-calculator.vercel.app/>
